@@ -49,7 +49,7 @@ ts_finalize_subtest
 ## mount the device 
 ts_init_subtest "rw-mount"
 $TS_CMD_MOUNT -orw $DEVICE $A_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /prod/mounts"
 ts_finalize_subtest
 
 

@@ -72,7 +72,7 @@ ENDPOINTS=
 	    echo 'ENDPOINTS[STR]:' $?
 	    echo 'ENDPOINTS:' "$ENDPOINTS"
 	    echo 'lsfd:' "$tmp"
-	    grep mqueue /proc/self/mountinfo
+	    grep mqueue /prod/self/mountinfo
 	fi
 
 	echo DONE >&"${MKFDS[1]}"

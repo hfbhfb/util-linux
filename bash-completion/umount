@@ -43,7 +43,7 @@ _umount_module()
 			local TYPES
 			TYPES="
 				$(\ls /lib/modules/$(uname -r)/kernel/fs | awk '{print $1, "no" $1}')
-				$(awk '{print $NF, "no" $NF}' /proc/filesystems)
+				$(awk '{print $NF, "no" $NF}' /prod/filesystems)
 			"
 			COMPREPLY=( $(compgen -W "$TYPES" -- $cur) )
 			return 0

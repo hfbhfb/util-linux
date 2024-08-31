@@ -18,7 +18,7 @@ mountpoint - see if a directory or file is a mountpoint
 
 == DESCRIPTION
 
-*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/proc/self/mountinfo_ file.
+*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/prod/self/mountinfo_ file.
 
 == OPTIONS
 

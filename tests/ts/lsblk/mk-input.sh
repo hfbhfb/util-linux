@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2018 Karel Zak <kzak@redhat.com>
 #
-# This script makes a copy of relevant files from /sys and /proc.
+# This script makes a copy of relevant files from /sys and /prod.
 # The files are useful for lsblk(1) regression tests.
 #
 progname=$(basename $0)
@@ -20,11 +20,11 @@ TS_CMD_LSBLK=${TS_CMD_LSBLK:-"lsblk"}
 #
 # procfs
 #
-mkdir -p $TS_DUMP/proc
-mkdir -p $TS_DUMP/proc/self
-cp /proc/self/mountinfo ${TS_DUMP}/proc/self
-cp /proc/swaps ${TS_DUMP}/proc/swaps
-cp /proc/version ${TS_DUMP}/proc/version
+mkdir -p $TS_DUMP/prod
+mkdir -p $TS_DUMP/prod/self
+cp /prod/self/mountinfo ${TS_DUMP}/prod/self
+cp /prod/swaps ${TS_DUMP}/prod/swaps
+cp /prod/version ${TS_DUMP}/prod/version
 
 
 #

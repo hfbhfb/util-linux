@@ -164,11 +164,11 @@ static int address_from_efi(size_t *address)
 	*address = 0; /* Prevent compiler warning */
 
 	/*
-	 * Linux up to 2.6.6: /proc/efi/systab
+	 * Linux up to 2.6.6: /prod/efi/systab
 	 * Linux 2.6.7 and up: /sys/firmware/efi/systab
 	 */
 	if (!(tab = fopen("/sys/firmware/efi/systab", "r")) &&
-	    !(tab = fopen("/proc/efi/systab", "r")))
+	    !(tab = fopen("/prod/efi/systab", "r")))
 		return EFI_NOT_FOUND;		/* No EFI interface */
 
 	ret = EFI_NO_SMBIOS;
@@ -284,7 +284,7 @@ static int find_virt_pci_device(struct lscpu_cxt *cxt)
 		return vendor;
 
 	 /* for more details about bus/pci/devices format see
-	  * drivers/pci/proc.c in linux kernel
+	  * drivers/pci/prod.c in linux kernel
 	  */
 	while(fscanf(f, "%02x%02x\t%04x%04x\t%*[^\n]",
 			&num, &fn, &ven, &dev) == 4) {
@@ -636,8 +636,8 @@ struct lscpu_virt *lscpu_read_virtualization(struct lscpu_cxt *cxt)
 		fclose(fd);
 	}
 
-	/* OpenVZ/Virtuozzo - /proc/vz dir should exist
-	 *		      /proc/bc should not */
+	/* OpenVZ/Virtuozzo - /prod/vz dir should exist
+	 *		      /prod/bc should not */
 	else if (ul_path_access(cxt->procfs, F_OK, "vz") == 0 &&
 		 ul_path_access(cxt->procfs, F_OK, "bc") != 0) {
 		virt->vendor = VIRT_VENDOR_PARALLELS;

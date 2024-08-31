@@ -1018,7 +1018,7 @@ static char **append_pid_tabfile(char **files, int *nfiles, pid_t pid)
 {
 	char *path = NULL;
 
-	xasprintf(&path, "/proc/%d/mountinfo", (int) pid);
+	xasprintf(&path, "/prod/%d/mountinfo", (int) pid);
 	return append_tabfile(files, nfiles, path);
 }
 
@@ -1493,7 +1493,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_(" -i, --invert           invert the sense of matching\n"), out);
 	fputs(_(" -J, --json             use JSON output format\n"), out);
 	fputs(_(" -l, --list             use list format output\n"), out);
-	fputs(_(" -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"), out);
+	fputs(_(" -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"), out);
 	fputs(_(" -n, --noheadings       don't print column headings\n"), out);
 	fputs(_(" -O, --options <list>   limit the set of filesystems by mount options\n"), out);
 	fputs(_(" -o, --output <list>    output columns (see --list-columns)\n"), out);

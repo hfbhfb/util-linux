@@ -124,7 +124,7 @@ def test_find_pair(ts, argv):
 
 def test_is_mounted(ts, argv):
 	rc = -1
-	tb = mnt.Tab(path="/proc/self/mountinfo")
+	tb = mnt.Tab(path="/prod/self/mountinfo")
 	if not tb:
 		print("failed to parse mountinto")
 		return rc
@@ -142,7 +142,7 @@ def test_is_mounted(ts, argv):
 
 def test_find_mountpoint(ts, argv):
 	rc = -1
-	tb = mnt.Table("/proc/self/mountinfo")
+	tb = mnt.Table("/prod/self/mountinfo")
 	if not tb:
 		return rc
 	fs = tb.find_mountpoint(argv[1], mnt.MNT_ITER_BACKWARD)

@@ -567,7 +567,7 @@ static int test_one_process(int argc, char *argv[], const char *prefix)
 
 static int test_isprocfs(int argc, char *argv[])
 {
-	const char *name = argc > 1 ? argv[1] : "/proc";
+	const char *name = argc > 1 ? argv[1] : "/prod";
 	int fd = open(name, O_RDONLY);
 	int is = 0;
 

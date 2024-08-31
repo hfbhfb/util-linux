@@ -2506,7 +2506,7 @@ msgstr "%s: %s no és un dispositiu lp.\n"
 
 #: disk-utils/fsck.c:1479
 #, fuzzy
-msgid "Is /proc mounted?"
+msgid "Is /prod mounted?"
 msgstr "%s desmuntat\n"
 
 #: disk-utils/fsck.c:1487
@@ -12743,8 +12743,8 @@ msgstr "  -Q, --quiet-output           No hi ha sortida normal\n"
 
 #: misc-utils/findmnt.c:1443
 #, fuzzy
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr "-N, --task <tid> utilitza un espai de noms alternatiu (/proc/<tid>/mountinfo fitxer)"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr "-N, --task <tid> utilitza un espai de noms alternatiu (/prod/<tid>/mountinfo fitxer)"
 
 #: misc-utils/findmnt.c:1444
 #, fuzzy
@@ -14847,8 +14847,8 @@ msgstr "associació entre fitxer i procés"
 
 #: misc-utils/lsfd.c:153
 #, fuzzy
-msgid "block device driver name resolved by /proc/devices"
-msgstr "bloca el nom del controlador del dispositiu resolt per /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "bloca el nom del controlador del dispositiu resolt per /prod/devices"
 
 #: misc-utils/lsfd.c:156
 msgid "bpf map id associated with the fd"
@@ -14887,8 +14887,8 @@ msgstr "Tipus no permès\n"
 
 #: misc-utils/lsfd.c:177
 #, fuzzy
-msgid "character device driver name resolved by /proc/devices"
-msgstr "nom del controlador del dispositiu de caràcter resolt per /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "nom del controlador del dispositiu de caràcter resolt per /prod/devices"
 
 #: misc-utils/lsfd.c:180
 #, fuzzy
@@ -14993,8 +14993,8 @@ msgstr "longitud del mapatge de fitxers (a la pàgina)"
 
 #: misc-utils/lsfd.c:243
 #, fuzzy
-msgid "misc character device name resolved by /proc/misc"
-msgstr "nom de dispositiu de caràcter misc resolt per /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
+msgstr "nom de dispositiu de caràcter misc resolt per /prod/misc"
 
 #: misc-utils/lsfd.c:246
 #, fuzzy
@@ -15056,8 +15056,8 @@ msgstr ""
 
 #: misc-utils/lsfd.c:282
 #, fuzzy
-msgid "block device name resolved by /proc/partition"
-msgstr "bloca el nom del dispositiu resolt per /proc/partition"
+msgid "block device name resolved by /prod/partition"
+msgstr "bloca el nom del dispositiu resolt per /prod/partition"
 
 #: misc-utils/lsfd.c:285
 #, fuzzy
@@ -15381,7 +15381,7 @@ msgstr "No s'ha pogut assignar la memòria temporal.\n"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "%s: s'ha produït un error en obrir: %s\n"
 
 #: misc-utils/lsfd.c:1857
@@ -18640,7 +18640,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -18659,7 +18659,7 @@ msgstr ""
 " -m, --no-unmount no desmunta el dispositiu encara que estigui muntat\n"
 " -M, --no-partitions-unmount no desmunta cap altra partició\n"
 " -n, --noop no expulsa, només mostra el dispositiu trobat\n"
-" -p, --proc usa /proc/mounts en lloc de /etc/mtab\n"
+" -p, --proc usa /prod/mounts en lloc de /etc/mtab\n"
 " -q, --tape expulsa la cinta\n"
 " -r, --cdrom expulsa el CD-ROM\n"
 " -s, --scsi expulsa el dispositiu SCSI\n"
@@ -23250,7 +23250,7 @@ msgstr ""
 #: sys-utils/mount.c:500
 #, fuzzy
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "--target-prefix <path>\n"
@@ -25474,10 +25474,10 @@ msgstr "Desactiva els dispositius i fitxers per a paginar i intercanviar."
 #: sys-utils/swapoff.c:160
 #, fuzzy
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-"-a, --all desactiva totes les swap des de /proc/swaps\n"
+"-a, --all desactiva totes les swap des de /prod/swaps\n"
 " -v, --verbose mode detallat"
 
 #: sys-utils/swapoff.c:166
@@ -26104,13 +26104,13 @@ msgstr "mount: no ha estat possible muntar"
 
 #: sys-utils/unshare.c:224
 #, fuzzy
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "no s'ha pogut obrir /proc/self/timensoffsets"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "no s'ha pogut obrir /prod/self/timensoffsets"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "no s'ha pogut escriure a /proc/self/timensoffsets"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "no s'ha pogut escriure a /prod/self/timensoffsets"
 
 #: sys-utils/unshare.c:294
 #, fuzzy

@@ -125,7 +125,7 @@ done:
 static int switchroot(const char *newroot)
 {
 	/*  Don't try to unmount the old "/", there's no way to do it. */
-	const char *umounts[] = { "/dev", "/proc", "/sys", "/run", NULL };
+	const char *umounts[] = { "/dev", "/prod", "/sys", "/run", NULL };
 	int i;
 	int cfd = -1;
 	struct stat newroot_stat, oldroot_stat, sb;

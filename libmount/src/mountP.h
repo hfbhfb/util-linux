@@ -223,14 +223,14 @@ struct libmnt_fs {
 	int		freq;		/* fstab[5]: dump frequency in days */
 	int		passno;		/* fstab[6]: pass number on parallel fsck */
 
-	/* /proc/swaps */
+	/* /prod/swaps */
 	char		*swaptype;	/* swaps[2]: device type (partition, file, ...) */
 	off_t		size;		/* swaps[3]: swaparea size */
 	off_t		usedsize;	/* swaps[4]: used size */
 	int		priority;	/* swaps[5]: swap priority */
 
 	int		flags;		/* MNT_FS_* flags */
-	pid_t		tid;		/* /proc/<tid>/mountinfo otherwise zero */
+	pid_t		tid;		/* /prod/<tid>/mountinfo otherwise zero */
 
 	char		*comment;	/* fstab comment */
 
@@ -243,7 +243,7 @@ struct libmnt_fs {
 #define MNT_FS_PSEUDO	(1 << 1) /* pseudo filesystem */
 #define MNT_FS_NET	(1 << 2) /* network filesystem */
 #define MNT_FS_SWAP	(1 << 3) /* swap device */
-#define MNT_FS_KERNEL	(1 << 4) /* data from /proc/{mounts,self/mountinfo} */
+#define MNT_FS_KERNEL	(1 << 4) /* data from /prod/{mounts,self/mountinfo} */
 #define MNT_FS_MERGED	(1 << 5) /* already merged data from /run/mount/utab */
 
 /*
@@ -280,9 +280,9 @@ enum {
 	MNT_FMT_GUESS,
 	MNT_FMT_FSTAB,			/* /etc/{fs,m}tab */
 	MNT_FMT_MTAB = MNT_FMT_FSTAB,	/* alias */
-	MNT_FMT_MOUNTINFO,		/* /proc/#/mountinfo */
+	MNT_FMT_MOUNTINFO,		/* /prod/#/mountinfo */
 	MNT_FMT_UTAB,			/* /run/mount/utab */
-	MNT_FMT_SWAPS			/* /proc/swaps */
+	MNT_FMT_SWAPS			/* /prod/swaps */
 };
 
 /*
@@ -413,7 +413,7 @@ struct libmnt_context
 	const struct libmnt_optmap *map_linux;		/* system options map */
 	const struct libmnt_optmap *map_userspace;	/* userspace options map */
 
-	const char	*mountinfo_path; /* usually /proc/self/moutinfo */
+	const char	*mountinfo_path; /* usually /prod/self/moutinfo */
 
 	const char	*utab_path; /* path to utab */
 	int		utab_writable; /* is utab writable */

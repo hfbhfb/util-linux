@@ -10,7 +10,7 @@
  * The test heavily uses shared memory, to enlarge maximal size of shared
  * segment use:
  *
- *	echo "4294967295" > /proc/sys/kernel/shmm
+ *	echo "4294967295" > /prod/sys/kernel/shmm
  *
  * The test is compiled against in-tree libuuid, if you want to test uuidd
  * installed to the system then make sure that libuuid uses the same socket

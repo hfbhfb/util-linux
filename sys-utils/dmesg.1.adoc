@@ -99,7 +99,7 @@ Prepending it will include all lower levels.
 *-n*, *--console-level* _level_::
 Set the _level_ at which printing of messages is done to the console. The _level_ is a level number or abbreviation of the level name. For all supported levels see the *--help* output.
 +
-For example, *-n 1* or *-n emerg* prevents all messages, except emergency (panic) messages, from appearing on the console. All levels of messages are still written to _/proc/kmsg_, so *syslogd*(8) can still be used to control exactly where kernel messages appear. When the *-n* option is used, *dmesg* will _not_ print or clear the kernel ring buffer.
+For example, *-n 1* or *-n emerg* prevents all messages, except emergency (panic) messages, from appearing on the console. All levels of messages are still written to _/prod/kmsg_, so *syslogd*(8) can still be used to control exactly where kernel messages appear. When the *-n* option is used, *dmesg* will _not_ print or clear the kernel ring buffer.
 
 *--noescape*::
 The unprintable and potentially unsafe characters (e.g., broken multi-byte sequences, terminal controlling chars, etc.) are escaped in format \x<hex> for security reason by default. This option disables this feature at all. It's usable for example for debugging purpose together with *--raw*. Be careful and don't use it by default.

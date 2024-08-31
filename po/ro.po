@@ -2042,8 +2042,8 @@ msgid "too many devices"
 msgstr "prea multe dispozitive"
 
 #: disk-utils/fsck.c:1475
-msgid "Is /proc mounted?"
-msgstr "Este „/proc” montat?"
+msgid "Is /prod mounted?"
+msgstr "Este „/prod” montat?"
 
 #: disk-utils/fsck.c:1483
 #, c-format
@@ -10518,10 +10518,10 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             utilizează formatul de ieșire din listă\n"
 
 #: misc-utils/findmnt.c:1354
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 " -N, --task <tid>       utilizează un spațiu de nume alternativ (fișierul\n"
-"                        „/proc/<tid>/mountinfo”)\n"
+"                        „/prod/<tid>/mountinfo”)\n"
 
 #: misc-utils/findmnt.c:1355
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12059,12 +12059,12 @@ msgid "association between file and process"
 msgstr "asocierea dintre fișier și proces"
 
 #: misc-utils/lsfd.c:131
-msgid "block device driver name resolved by /proc/devices"
-msgstr "numele controlorului de dispozitiv de blocuri rezolvat de „/proc/devices”"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "numele controlorului de dispozitiv de blocuri rezolvat de „/prod/devices”"
 
 #: misc-utils/lsfd.c:134
-msgid "character device driver name resolved by /proc/devices"
-msgstr "numele controlorului de dispozitiv de caractere rezolvat de „/proc/devices”"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "numele controlorului de dispozitiv de caractere rezolvat de „/prod/devices”"
 
 #: misc-utils/lsfd.c:137
 msgid "command of the process opening the file"
@@ -12135,8 +12135,8 @@ msgid "length of file mapping (in page)"
 msgstr "lungimea cartografierii fișierului în memorie (în pagini)"
 
 #: misc-utils/lsfd.c:188
-msgid "misc character device name resolved by /proc/misc"
-msgstr "diverse nume de dispozitiv de caractere rezolvate de „/proc/misc”"
+msgid "misc character device name resolved by /prod/misc"
+msgstr "diverse nume de dispozitiv de caractere rezolvate de „/prod/misc”"
 
 #: misc-utils/lsfd.c:191
 msgid "mount id"
@@ -12187,8 +12187,8 @@ msgid "L3 protocol associated with the packet socket"
 msgstr "protocolul L3 asociat cu soclul de pachete"
 
 #: misc-utils/lsfd.c:227
-msgid "block device name resolved by /proc/partition"
-msgstr "numele dispozitivului de blocuri rezolvat de „/proc/partition”"
+msgid "block device name resolved by /prod/partition"
+msgstr "numele dispozitivului de blocuri rezolvat de „/prod/partition”"
 
 #: misc-utils/lsfd.c:230
 msgid "PID of the process opening the file"
@@ -12423,8 +12423,8 @@ msgid "failed to alloc procfs handler"
 msgstr "nu s-a putut aloca gestionarul procfs"
 
 #: misc-utils/lsfd.c:1517
-msgid "failed to open /proc"
-msgstr "nu s-a putut deschide „/proc”"
+msgid "failed to open /prod"
+msgstr "nu s-a putut deschide „/prod”"
 
 # R-GC, scrie:
 # acest mesaj și următoarele, pot fi
@@ -15396,7 +15396,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -15415,7 +15415,7 @@ msgstr ""
 " -m, --no-unmount            nu demontează dispozitivul chiar dacă este montat\n"
 " -M, --no-partitions-unmount nu demontează alte partiții\n"
 " -n, --noop                  nu se ejectează, arată doar dispozitivul găsit\n"
-" -p, --proc                  utilizează /proc/mounts în loc de /etc/mtab\n"
+" -p, --proc                  utilizează /prod/mounts în loc de /etc/mtab\n"
 " -q, --tape                  ejectează caseta\n"
 " -r, --cdrom                 ejectează CD-ROM-ul\n"
 " -s, --scsi                  ejectează dispozitivul SCSI\n"
@@ -21028,11 +21028,11 @@ msgstr "Dezactivează dispozitive și fișiere pentru paginare și spațiile de 
 
 #: sys-utils/swapoff.c:147
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
 " -a, --all              dezactivează toate spațiile de interschimb (swaps)\n"
-"                        din „/proc/swaps”\n"
+"                        din „/prod/swaps”\n"
 " -v, --verbose          oferă informații detaliate\n"
 
 #: sys-utils/swapoff.c:153
@@ -21618,12 +21618,12 @@ msgid "mount %s on %s failed"
 msgstr "montarea lui %s pe %s a eșuat"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "nu s-a putut deschide „/proc/self/timens_offsets”"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "nu s-a putut deschide „/prod/self/timens_offsets”"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "nu s-a putut scrie în „/proc/self/timens_offsets”"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "nu s-a putut scrie în „/prod/self/timens_offsets”"
 
 #: sys-utils/unshare.c:294
 msgid "eventfd failed"

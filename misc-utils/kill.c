@@ -155,7 +155,7 @@ static void print_process_signal_state(pid_t pid)
 		err(EXIT_FAILURE, _("failed to initialize procfs handler"));
 	fp = ul_path_fopen(pc, "r", "status");
 	if (!fp)
-		err(EXIT_FAILURE, _("cannot open /proc/%d/status"), pid);
+		err(EXIT_FAILURE, _("cannot open /prod/%d/status"), pid);
 
 	while (fgets(buf, sizeof(buf), fp) != NULL) {
 		for (size_t i = 0; i < ARRAY_SIZE(sigfields); i++) {
@@ -281,7 +281,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_(" -L, --table            list signal names and numbers\n"), out);
 	fputs(_(" -r, --require-handler  do not send signal if signal handler is not present\n"), out);
 	fputs(_(" -d, --show-process-state <pid>\n"
-		"                        show signal related fields in /proc/<pid>/status\n"), out);
+		"                        show signal related fields in /prod/<pid>/status\n"), out);
 	fputs(_("     --verbose          print pids that will be signaled\n"), out);
 
 	fputs(USAGE_SEPARATOR, out);

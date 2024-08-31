@@ -59,7 +59,7 @@ ts_finalize_subtest
 
 ts_init_subtest "missing-options"
 
-grep -q 'nodev[[:space:]]*tmpfs' /proc/filesystems
+grep -q 'nodev[[:space:]]*tmpfs' /prod/filesystems
 if [ "$?" == "0" ]; then
 cat > $MOUNTER <<EOF
 #!/bin/bash
@@ -79,7 +79,7 @@ EOF
 	$TS_CMD_MOUNT -t mytest -o x-bar=BAR /foo "$mountpoint" &> $TS_OUTPUT
 	udevadm settle
 
-	grep -q "$mountpoint" /proc/mounts
+	grep -q "$mountpoint" /prod/mounts
 	if [ "$?" == "0" ]; then
 		cat "$LIBMOUNT_UTAB" \
 			| grep "$mountpoint" \

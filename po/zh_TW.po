@@ -2222,8 +2222,8 @@ msgstr "太多裝置"
 
 #: disk-utils/fsck.c:1479
 #, fuzzy
-msgid "Is /proc mounted?"
-msgstr "是/proc 掛載？"
+msgid "Is /prod mounted?"
+msgstr "是/prod 掛載？"
 
 #: disk-utils/fsck.c:1487
 #, fuzzy, c-format
@@ -11511,7 +11511,7 @@ msgid " -l, --list             use list format output\n"
 msgstr " -Q, --quiet-output           沒有一般輸出\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 
 #: misc-utils/findmnt.c:1444
@@ -13442,7 +13442,7 @@ msgid "association between file and process"
 msgstr "無法建立子行程"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13480,7 +13480,7 @@ msgid "bpf program type (raw)"
 msgstr "檔案系統型態"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13576,7 +13576,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13635,7 +13635,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13948,7 +13948,7 @@ msgstr "配置迭代器時失敗"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "%s：開啟失敗：%s\n"
 
 #: misc-utils/lsfd.c:1857
@@ -17044,7 +17044,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -17063,7 +17063,7 @@ msgstr ""
 " -m, --no-unmount            不卸載裝置即使它被掛載\n"
 " -M, --no-partitions-unmount 不卸載另外的分割區\n"
 " -n, --noop                  不退出，僅顯示裝置找到\n"
-" -p, --proc                  使用/proc/掛載以代替/etc/mtab\n"
+" -p, --proc                  使用/prod/掛載以代替/etc/mtab\n"
 " -q, --tape                  退出磁帶\n"
 " -r, --cdrom                 退出唯讀光碟機\n"
 " -s, --scsi                  退出 SCSI 裝置\n"
@@ -21271,7 +21271,7 @@ msgstr ""
 #: sys-utils/mount.c:500
 #, fuzzy
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr " -q, --stats                        顯示統計關於 tty\n"
 
@@ -23306,10 +23306,10 @@ msgstr ""
 #: sys-utils/swapoff.c:160
 #, fuzzy
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              全部停用交換從/proc/交換\n"
+" -a, --all              全部停用交換從/prod/交換\n"
 " -v, --verbose          詳細模式\n"
 
 #: sys-utils/swapoff.c:166
@@ -23897,12 +23897,12 @@ msgstr "掛載 %s 於 %s 失敗"
 
 #: sys-utils/unshare.c:224
 #, fuzzy
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "剖析偏移時失敗"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "剖析偏移時失敗"
 
 #: sys-utils/unshare.c:294
@@ -29947,13 +29947,13 @@ msgstr "終端機『%s』不是已知，預設到『dumb』"
 #~ msgid ""
 #~ " -i, --invert           invert the sense of matching\n"
 #~ " -l, --list             use list format output\n"
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 #~ " -n, --noheadings       don't print column headings\n"
 #~ " -u, --notruncate       don't truncate text in columns\n"
 #~ msgstr ""
 #~ " -i, --invert           反向 sense 的匹配\n"
 #~ " -l, --list             使用清單格式輸出\n"
-#~ " -N, --task <tid>       使用替代方案命名空間 (/proc/<tid>/mountinfo 檔案)\n"
+#~ " -N, --task <tid>       使用替代方案命名空間 (/prod/<tid>/mountinfo 檔案)\n"
 #~ " -n, --noheadings       不列印欄標頭\n"
 #~ " -u, --notruncate       不截斷文字在中欄位\n"
 
@@ -30117,14 +30117,14 @@ msgstr "終端機『%s』不是已知，預設到『dumb』"
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount：警告：/etc/mtab 不可寫入 (例：唯讀檔案系統)。\n"
 #~ "       由 mount(8) 所報告的資訊有可能不是最新狀況。\n"
 #~ "       想要獲得有關系統掛載點的實際資訊，\n"
-#~ "       請檢查 /proc/mounts 檔案。\n"
+#~ "       請檢查 /prod/mounts 檔案。\n"
 #~ "\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"

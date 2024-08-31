@@ -173,7 +173,7 @@ static int cputype_read_topology(struct lscpu_cxt *cxt, struct lscpu_cputype *ct
 
 	}
 
-	/* s390 detects its cpu topology via /proc/sysinfo, if present.
+	/* s390 detects its cpu topology via /prod/sysinfo, if present.
 	 * Using simply the cpu topology masks in sysfs will not give
 	 * usable results since everything is virtualized. E.g.
 	 * virtual core 0 may have only 1 cpu, but virtual core 2 may
@@ -565,8 +565,8 @@ static int read_mhz(struct lscpu_cxt *cxt, struct lscpu_cpu *cpu)
 	if (ul_path_readf_s32(sys, &mhz, "cpu%d/cpufreq/cpuinfo_min_freq", num) == 0)
 		cpu->mhz_min_freq = (float) mhz / 1000;
 
-	/* The default current-frequency value comes is from /proc/cpuinfo (if
-	 * available).  This /proc value is usually based on MSR registers
+	/* The default current-frequency value comes is from /prod/cpuinfo (if
+	 * available).  This /prod value is usually based on MSR registers
 	 * (APERF/APERF) and it changes pretty often. It seems better to read
 	 * frequency from cpufreq subsystem that provides the current frequency
 	 * for the current policy. There is also cpuinfo_cur_freq in sysfs, but

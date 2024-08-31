@@ -325,7 +325,7 @@ libmount:
    - fix some gtkdoc warnings  [Karel Zak]
    - merge vfs and fs options more carefully  [Karel Zak]
    - proper tests definition in Makefile.am  [Karel Zak]
-   - read devno, ID and parent ID from /proc/self/mountinfo  [Karel Zak]
+   - read devno, ID and parent ID from /prod/self/mountinfo  [Karel Zak]
    - remove mnt_open_device()  [Karel Zak]
    - rename mnt_optls_iterate_options()  [Karel Zak]
    - update symbols table  [Karel Zak]
@@ -419,8 +419,8 @@ swaplabel:
 swapon:
    - fix swapsize calculation  [Karel Zak]
    - move DELETED_SUFFIX to include/pathnames.h  [Karel Zak]
-   - remove " (deleted)" from filenames from /proc/swaps  [Karel Zak]
-   - use unmangle() for filenames from /proc/swaps  [Karel Zak]
+   - remove " (deleted)" from filenames from /prod/swaps  [Karel Zak]
+   - use unmangle() for filenames from /prod/swaps  [Karel Zak]
 taskset:
    - add NLS support, use err.h, cleanup  [Karel Zak]
    - move NR_CPUS determination to lib/cpuset.c  [Karel Zak]

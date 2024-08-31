@@ -761,12 +761,12 @@ msgstr "*--report*"
 #: ../disk-utils/blockdev.8.adoc:41
 msgid ""
 "Print a report for the specified device. It is possible to give multiple "
-"devices. If none is given, all devices which appear in _/proc/partitions_ "
+"devices. If none is given, all devices which appear in _/prod/partitions_ "
 "are shown. Note that the partition StartSec is in 512-byte sectors."
 msgstr ""
 "Imprime um relatório para o dispositivo especificado. É possível dar vários "
 "dispositivos. Se nenhum for fornecido, todos os dispositivos que aparecem em "
-"_/proc/partitions_ são mostrados. Observe que a partição StartSec está em "
+"_/prod/partitions_ são mostrados. Observe que a partição StartSec está em "
 "setores de 512 bytes."
 
 #. type: Title ==
@@ -2158,15 +2158,15 @@ msgstr "Lista as tabelas de partição para os dispositivos especificados e sai.
 #. type: Plain text
 #: ../disk-utils/fdisk.8.adoc:60
 msgid ""
-"If no devices are given, the devices mentioned in _/proc/partitions_ (if "
+"If no devices are given, the devices mentioned in _/prod/partitions_ (if "
 "this file exists) are used. Devices are always listed in the order in which "
-"they are specified on the command-line, or by the kernel listed in _/proc/"
+"they are specified on the command-line, or by the kernel listed in _/prod/"
 "partitions_."
 msgstr ""
-"Se nenhum dispositivo for fornecido, os dispositivos mencionados em _/proc/"
+"Se nenhum dispositivo for fornecido, os dispositivos mencionados em _/prod/"
 "partitions_ (se este arquivo existir) serão usados. Os dispositivos são "
 "sempre listados na ordem em que são especificados na linha de comando ou "
-"pelo kernel listado em _/proc/partitions_."
+"pelo kernel listado em _/prod/partitions_."
 
 #. type: Labeled list
 #: ../disk-utils/fdisk.8.adoc:61
@@ -5359,10 +5359,10 @@ msgstr ""
 #: ../disk-utils/mkswap.8.adoc:110
 msgid ""
 "Presently, Linux allows 32 swap areas. The areas in use can be seen in the "
-"file _/proc/swaps_."
+"file _/prod/swaps_."
 msgstr ""
 "Atualmente, o Linux permite 32 áreas de swap. As áreas em uso podem ser "
-"vistas no arquivo _/proc/swaps_."
+"vistas no arquivo _/prod/swaps_."
 
 #. type: Plain text
 #: ../disk-utils/mkswap.8.adoc:112
@@ -13121,7 +13121,7 @@ msgid ""
 "supports the \"udev\" and \"scan\" methods. More than one method may be "
 "specified in a comma-separated list. Default is \"udev,scan\". The \"udev\" "
 "method uses udev _/dev/disk/by-*_ symlinks and the \"scan\" method scans all "
-"block devices from the _/proc/partitions_ file."
+"block devices from the _/prod/partitions_ file."
 msgstr ""
 
 #. type: Plain text
@@ -14192,7 +14192,7 @@ msgstr ""
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:25
 #, no-wrap
-msgid "*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/proc/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.\n"
+msgid "*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/prod/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.\n"
 msgstr ""
 
 #. type: Plain text
@@ -14425,7 +14425,7 @@ msgstr "*-k*, *--kernel*"
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:83
 msgid ""
-"Search in _/proc/self/mountinfo_. The output is in the tree-like format. "
+"Search in _/prod/self/mountinfo_. The output is in the tree-like format. "
 "This is the default. The output contains only mount options maintained by "
 "kernel (see also *--mtab*)."
 msgstr ""
@@ -14470,12 +14470,12 @@ msgstr ""
 msgid "*-N*, *--task* _tid_"
 msgstr ""
 " -N, --task <tid>       usa espaço de nomes alternativos\n"
-"                          (arquivo /proc/<tid>/mountinfo)\n"
+"                          (arquivo /prod/<tid>/mountinfo)\n"
 
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:95
 msgid ""
-"Use alternative namespace _/proc/<tid>/mountinfo_ rather than the default _/"
+"Use alternative namespace _/prod/<tid>/mountinfo_ rather than the default _/"
 "proc/self/mountinfo_. If the option is specified more than once, then tree-"
 "like output is disabled (see the *--list* option). See also the *unshare*(1) "
 "command."
@@ -14549,7 +14549,7 @@ msgstr "*-p*, *--poll*[_=lista_]"
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:119
 msgid ""
-"Monitor changes in the _/proc/self/mountinfo_ file. Supported actions are: "
+"Monitor changes in the _/prod/self/mountinfo_ file. Supported actions are: "
 "mount, umount, remount and move. More than one action may be specified in a "
 "comma-separated list. All actions are monitored by default."
 msgstr ""
@@ -18067,7 +18067,7 @@ msgstr "Número de cabeças"
 #. type: Plain text
 #: ../misc-utils/lsclocks.1.adoc:98
 msgid ""
-"Offset of the current namespace to the parent namespace as read from */proc/"
+"Offset of the current namespace to the parent namespace as read from */prod/"
 "self/timens_offsets*."
 msgstr ""
 
@@ -18316,7 +18316,7 @@ msgstr "*TTYPERM* (string)"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:134
-msgid "Block device driver name resolved by `/proc/devices`."
+msgid "Block device driver name resolved by `/prod/devices`."
 msgstr ""
 
 #. type: Labeled list
@@ -18406,7 +18406,7 @@ msgstr "*TTYPERM* (string)"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:158
-msgid "Character device driver name resolved by `/proc/devices`."
+msgid "Character device driver name resolved by `/prod/devices`."
 msgstr ""
 
 #. type: Labeled list
@@ -18697,7 +18697,7 @@ msgstr "*TTYPERM* (string)"
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:248
 msgid ""
-"Raw file name extracted from from ``/proc/``_pid_``/fd/``_fd_ or ``/proc/"
+"Raw file name extracted from from ``/prod/``_pid_``/fd/``_fd_ or ``/prod/"
 "``_pid_``/map_files/``_region_."
 msgstr ""
 
@@ -18742,7 +18742,7 @@ msgstr "*TTYPERM* (string)"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:260
-msgid "Misc character device name resolved by `/proc/misc`."
+msgid "Misc character device name resolved by `/prod/misc`."
 msgstr ""
 
 #. type: Labeled list
@@ -18882,7 +18882,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*lsfd* extracts _TARGET-PID_ and _TARGET-NSPIDS_ from\n"
-"``/proc/``_pid_``/fdinfo/``_fd_.\n"
+"``/prod/``_pid_``/fdinfo/``_fd_.\n"
 msgstr ""
 
 #. type: Labeled list
@@ -18926,7 +18926,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*lsfd* extracts _PTMX.TTY-INDEX_ from\n"
-"``/proc/``_pid_``/fdinfo/``_fd_.\n"
+"``/prod/``_pid_``/fdinfo/``_fd_.\n"
 msgstr ""
 
 #. type: Labeled list
@@ -19171,7 +19171,7 @@ msgstr ""
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:383
-msgid "Block device name resolved by `/proc/partition`."
+msgid "Block device name resolved by `/prod/partition`."
 msgstr ""
 
 #. type: Labeled list
@@ -19206,7 +19206,7 @@ msgstr ""
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:392
-msgid "Value of NSpid field in ``/proc/``_pid_``/fdinfo/``_fd_ of the pidfd."
+msgid "Value of NSpid field in ``/prod/``_pid_``/fdinfo/``_fd_ of the pidfd."
 msgstr ""
 
 #. type: Plain text
@@ -19226,7 +19226,7 @@ msgstr ""
 #. type: delimited block _
 #: ../misc-utils/lsfd.1.adoc:404
 msgid ""
-"Note that this differs from the Pid and NSpid fields in /proc/<pid>/status "
+"Note that this differs from the Pid and NSpid fields in /prod/<pid>/status "
 "where Pid and NSpid are always shown relative to the pid namespace of the "
 "procfs instance."
 msgstr ""
@@ -20731,7 +20731,7 @@ msgstr ""
 msgid ""
 "The *--set* operation sets pipe buffer sizes. If it is specified, it must be "
 "specified with an explicit _size_. Otherwise, it is implied and the size is "
-"read from */proc/sys/fs/pipe-max-size*. The kernel may adjust _size_ as "
+"read from */prod/sys/fs/pipe-max-size*. The kernel may adjust _size_ as "
 "described in *fcntl*(2). To determine the actual buffer sizes set, use the "
 "*--verbose* option. If neither *--file* nor *--fd* are specified, *--set* "
 "acts on standard output."
@@ -20831,7 +20831,7 @@ msgid ""
 "working directory. You may specify this option multiple times to affect "
 "different files, and you may do so in combination with *--fd*. Generally, "
 "this option is used with FIFOs, but it will also operate on anonymous pipes "
-"such as those found in */proc/PID/fd*. Changes to the buffer size of FIFOs "
+"such as those found in */prod/PID/fd*. Changes to the buffer size of FIFOs "
 "are not preserved across system restarts."
 msgstr ""
 
@@ -20950,7 +20950,7 @@ msgstr ""
 #. type: Labeled list
 #: ../misc-utils/pipesz.1.adoc:80
 #, no-wrap
-msgid "*find* /proc/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
+msgid "*find* /prod/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
 msgstr ""
 
 #. type: Plain text
@@ -20965,7 +20965,7 @@ msgstr ""
 #: ../misc-utils/pipesz.1.adoc:86
 msgid ""
 "Linux supports adjusting the size of pipe buffers since kernel 2.6.35. This "
-"release also introduced */proc/sys/fs/pipe-max-size*."
+"release also introduced */prod/sys/fs/pipe-max-size*."
 msgstr ""
 
 #. type: Plain text
@@ -25145,7 +25145,7 @@ msgstr ""
 msgid ""
 "For example, *-n 1* or *-n emerg* prevents all messages, except emergency "
 "(panic) messages, from appearing on the console. All levels of messages are "
-"still written to _/proc/kmsg_, so *syslogd*(8) can still be used to control "
+"still written to _/prod/kmsg_, so *syslogd*(8) can still be used to control "
 "exactly where kernel messages appear. When the *-n* option is used, *dmesg* "
 "will _not_ print or clear the kernel ring buffer."
 msgstr ""
@@ -25574,7 +25574,7 @@ msgstr ""
 " -m, --no-unmount            não desmonta dispositivo mesmo se montado\n"
 " -M, --no-partitions-unmount não desmonta outras partições\n"
 " -n, --noop                  não ejeta, apenas exibe o dispositivo encontrado\n"
-" -p, --proc                  usa /proc/mounts em vez do /etc/mtab\n"
+" -p, --proc                  usa /prod/mounts em vez do /etc/mtab\n"
 " -q, --tape                  ejeta fita\n"
 " -r, --cdrom                 ejeta CD-ROM\n"
 " -s, --scsi                  ejeta dispositivo SCSI\n"
@@ -25696,7 +25696,7 @@ msgstr "*-p*, *--proc*"
 #. type: Plain text
 #: ../sys-utils/eject.1.adoc:66
 msgid ""
-"This option allows you to use _/proc/mounts_ instead _/etc/mtab_. It also "
+"This option allows you to use _/prod/mounts_ instead _/etc/mtab_. It also "
 "passes the *-n* option to *umount*(8)."
 msgstr ""
 
@@ -25803,7 +25803,7 @@ msgstr ""
 " -m, --no-unmount            não desmonta dispositivo mesmo se montado\n"
 " -M, --no-partitions-unmount não desmonta outras partições\n"
 " -n, --noop                  não ejeta, apenas exibe o dispositivo encontrado\n"
-" -p, --proc                  usa /proc/mounts em vez do /etc/mtab\n"
+" -p, --proc                  usa /prod/mounts em vez do /etc/mtab\n"
 " -q, --tape                  ejeta fita\n"
 " -r, --cdrom                 ejeta CD-ROM\n"
 " -s, --scsi                  ejeta dispositivo SCSI\n"
@@ -27140,7 +27140,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/fstrim.8.adoc:50
 #, no-wrap
-msgid "*--listed-in /etc/fstab:/proc/self/mountinfo*.\n"
+msgid "*--listed-in /etc/fstab:/prod/self/mountinfo*.\n"
 msgstr ""
 
 #. type: Plain text
@@ -29256,7 +29256,7 @@ msgstr ""
 #: ../sys-utils/ipcs.1.adoc:83
 msgid ""
 "The current implementation of *ipcs* obtains information about available IPC "
-"resources by parsing the files in _/proc/sysvipc_. Before util-linux version "
+"resources by parsing the files in _/prod/sysvipc_. Before util-linux version "
 "v2.23, an alternate mechanism was used: the *IPC_STAT* command of "
 "*msgctl*(2), *semctl*(2), and *shmctl*(2). This mechanism is also used in "
 "later util-linux versions in the case where _/proc_ is unavailable. A "
@@ -30289,7 +30289,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/lscpu.1.adoc:20
 #, no-wrap
-msgid "*lscpu* gathers CPU architecture information from _sysfs_, _/proc/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.\n"
+msgid "*lscpu* gathers CPU architecture information from _sysfs_, _/prod/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.\n"
 msgstr ""
 
 #. type: Plain text
@@ -30921,7 +30921,7 @@ msgid ""
 "filesystem may be unshared and affected by a PID namespace (see *unshare --"
 "mount-proc* for more details). *lsns* is not able to see persistent "
 "namespaces without processes where the namespace instance is held by a bind "
-"mount to /proc/_pid_/ns/_type_."
+"mount to /prod/_pid_/ns/_type_."
 msgstr ""
 
 #. type: Plain text
@@ -30951,7 +30951,7 @@ msgstr " -z, --print0             delimita entradas de usuários com um caracter
 #: ../sys-utils/lsns.8.adoc:54
 msgid ""
 "Display only the namespaces without processes (aka persistent namespaces), "
-"created by bind mounting /proc/pid/ns/type files to a filesystem path."
+"created by bind mounting /prod/pid/ns/type files to a filesystem path."
 msgstr ""
 
 #. type: Labeled list
@@ -31371,7 +31371,7 @@ msgstr ""
 #. type: Title ===
 #: ../sys-utils/mount.8.adoc:131
 #, no-wrap
-msgid "The files /etc/fstab, /etc/mtab and /proc/mounts"
+msgid "The files /etc/fstab, /etc/mtab and /prod/mounts"
 msgstr ""
 
 #. type: Plain text
@@ -31419,7 +31419,7 @@ msgid ""
 "currently mounted filesystems in the file _/etc/mtab_. The support for "
 "regular classic _/etc/mtab_ is completely disabled at compile time by "
 "default, because on current Linux systems it is better to make _/etc/mtab_ a "
-"symlink to _/proc/mounts_ instead. The regular _mtab_ file maintained in "
+"symlink to _/prod/mounts_ instead. The regular _mtab_ file maintained in "
 "userspace cannot reliably work with namespaces, containers and other "
 "advanced Linux features. If the regular _mtab_ support is enabled, then it's "
 "possible to use the file as well as the symlink."
@@ -31892,7 +31892,7 @@ msgid ""
 "The correct functionality depends on _/proc_ (to detect already mounted "
 "filesystems) and on _/sys_ (to evaluate filesystem tags like UUID= or "
 "LABEL=). It's strongly recommended to mount _/proc_ and _/sys_ filesystems "
-"before *mount -a* is executed, or keep /proc and /sys at the beginning of "
+"before *mount -a* is executed, or keep /prod and /sys at the beginning of "
 "_fstab_."
 msgstr ""
 
@@ -32092,14 +32092,14 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/mount.8.adoc:356
 #, no-wrap
-msgid "*--map-users* /proc/_PID_/ns/user"
+msgid "*--map-users* /prod/_PID_/ns/user"
 msgstr ""
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:358
 msgid ""
 "Use the specified user namespace for user and group mapping in an id-mapped "
-"mount. This is an alias for \"-o X-mount.idmap=/proc/_PID_/ns/user\" and "
+"mount. This is an alias for \"-o X-mount.idmap=/prod/_PID_/ns/user\" and "
 "cannot be used twice nor together with the _inner_:_outer_:_count_ option "
 "format above. For more details see *X-mount.idmap* below."
 msgstr ""
@@ -32442,7 +32442,7 @@ msgstr "Tipos"
 msgid ""
 "The argument following the *-t* is used to indicate the filesystem type. The "
 "filesystem types which are currently supported depend on the running kernel. "
-"See _/proc/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a "
+"See _/prod/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a "
 "complete list of the filesystems. The most common are ext2, ext3, ext4, xfs, "
 "btrfs, vfat, sysfs, proc, nfs and cifs."
 msgstr ""
@@ -32464,10 +32464,10 @@ msgid ""
 "try to guess the desired type. *mount* uses the *libblkid*(3) library for "
 "guessing the filesystem type; if that does not turn up anything that looks "
 "familiar, *mount* will try to read the file _/etc/filesystems_, or, if that "
-"does not exist, _/proc/filesystems_. All of the filesystem types listed "
+"does not exist, _/prod/filesystems_. All of the filesystem types listed "
 "there will be tried, except for those that are labeled \"nodev\" (e.g. "
 "_devpts_, _proc_ and _nfs_). If _/etc/filesystems_ ends in a line with a "
-"single {asterisk}, mount will read _/proc/filesystems_ afterwards. While "
+"single {asterisk}, mount will read _/prod/filesystems_ afterwards. While "
 "trying, all filesystem types will be mounted with the mount option *silent*."
 msgstr ""
 
@@ -32572,7 +32572,7 @@ msgstr ""
 #: ../sys-utils/mount.8.adoc:474
 msgid ""
 "Some of these options could be enabled or disabled by default in the system "
-"kernel. To check the current setting see the options in _/proc/mounts_. Note "
+"kernel. To check the current setting see the options in _/prod/mounts_. Note "
 "that filesystems also have per-filesystem specific default mount options "
 "(see for example *tune2fs -l* output for ext__N__ filesystems)."
 msgstr ""
@@ -33018,7 +33018,7 @@ msgid ""
 "Allows to explicitly request full atime updates. This makes it possible for "
 "the kernel to default to *relatime* or *noatime* but still allow userspace "
 "to override it. For more details about the default system mount options see "
-"_/proc/mounts_."
+"_/prod/mounts_."
 msgstr ""
 
 #. type: Labeled list
@@ -33175,7 +33175,7 @@ msgstr ""
 msgid ""
 "The default kernel behavior for VFS mount flags (nodev,nosuid,noexec,ro) is "
 "to reset all unspecified flags on remount. That's why *mount*(8) tries to "
-"keep the current setting according to _fstab_ or _/proc/self/mountinfo_. "
+"keep the current setting according to _fstab_ or _/prod/self/mountinfo_. "
 "This default behavior is possible to change by *--options-mode*. The "
 "recursive change of the mount flags (supported since v2.39 on systems with "
 "*mount_setattr*(2)  syscall), for example, *mount -o remount,ro=recursive*, "
@@ -33216,7 +33216,7 @@ msgstr ""
 msgid ""
 "After this call, *mount* reads _fstab_ and merges these options with the "
 "options from the command line (*-o*). If no mountpoint is found in _fstab_, "
-"then it defaults to mount options from _/proc/self/mountinfo_."
+"then it defaults to mount options from _/prod/self/mountinfo_."
 msgstr ""
 
 #. type: delimited block _
@@ -33558,7 +33558,7 @@ msgstr ""
 #. type: delimited block _
 #: ../sys-utils/mount.8.adoc:758
 msgid ""
-"For example, *X-mount.idmap=/proc/PID/ns/user* will attach the user "
+"For example, *X-mount.idmap=/prod/PID/ns/user* will attach the user "
 "namespace of the process PID to the mount."
 msgstr ""
 
@@ -36786,7 +36786,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1647
 msgid ""
-"See also \"*The files /etc/fstab, /etc/mtab and /proc/mounts*\" section "
+"See also \"*The files /etc/fstab, /etc/mtab and /prod/mounts*\" section "
 "above."
 msgstr ""
 
@@ -36815,7 +36815,7 @@ msgstr " -n, --no-mtab           não escreve para no /etc/mtab\n"
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1656
-msgid "table of mounted filesystems or symlink to _/proc/mounts_"
+msgid "table of mounted filesystems or symlink to _/prod/mounts_"
 msgstr ""
 
 #. type: Labeled list
@@ -36880,14 +36880,14 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1679
 msgid ""
-"It is possible that the files _/etc/mtab_ and _/proc/mounts_ don't match on "
+"It is possible that the files _/etc/mtab_ and _/prod/mounts_ don't match on "
 "systems with a regular _mtab_ file. The first file is based only on the "
 "*mount* command options, but the content of the second file also depends on "
 "the kernel and others settings (e.g. on a remote NFS server -- in certain "
 "cases the *mount* command may report unreliable information about an NFS "
-"mount point and the _/proc/mount_ file usually contains more reliable "
+"mount point and the _/prod/mount_ file usually contains more reliable "
 "information.) This is another reason to replace the _mtab_ file with a "
-"symlink to the _/proc/mounts_ file."
+"symlink to the _/prod/mounts_ file."
 msgstr ""
 
 #. type: Plain text
@@ -36965,7 +36965,7 @@ msgstr " %s [opções] [<dispositivo>|<ponto-montagem>]\n"
 #. type: Plain text
 #: ../sys-utils/mountpoint.1.adoc:22
 #, no-wrap
-msgid "*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/proc/self/mountinfo_ file.\n"
+msgid "*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/prod/self/mountinfo_ file.\n"
 msgstr ""
 
 #. type: Labeled list
@@ -37108,7 +37108,7 @@ msgstr ""
 msgid ""
 "Mounting and unmounting filesystems will not affect the rest of the system, "
 "except for filesystems which are explicitly marked as shared (with *mount --"
-"make-shared*; see _/proc/self/mountinfo_ for the *shared* flag). For further "
+"make-shared*; see _/prod/self/mountinfo_ for the *shared* flag). For further "
 "details, see *mount_namespaces*(7) and the discussion of the *CLONE_NEWNS* "
 "flag in *clone*(2)."
 msgstr ""
@@ -37152,7 +37152,7 @@ msgstr " -n, --net[=<arquivo>]   informa o espaço de nome da rede\n"
 #: ../sys-utils/nsenter.1.adoc:34 ../sys-utils/unshare.1.adoc:40
 msgid ""
 "The process will have independent IPv4 and IPv6 stacks, IP routing tables, "
-"firewall rules, the _/proc/net_ and _/sys/class/net_ directory trees, "
+"firewall rules, the _/prod/net_ and _/sys/class/net_ directory trees, "
 "sockets, etc. For further details, see *network_namespaces*(7)."
 msgstr ""
 
@@ -37195,7 +37195,7 @@ msgstr " -C, --cgroup[=<arquivo>] informa o espaço de nome de cgroup\n"
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:43 ../sys-utils/unshare.1.adoc:46
 msgid ""
-"The process will have a virtualized view of _/proc/self/cgroup_, and new "
+"The process will have a virtualized view of _/prod/self/cgroup_, and new "
 "cgroup mounts will be rooted at the namespace cgroup root. For further "
 "details, see *cgroup_namespaces*(7)."
 msgstr ""
@@ -37210,7 +37210,7 @@ msgstr "as opções --monotonic e --boottime requer descompartilhamento de um es
 #: ../sys-utils/nsenter.1.adoc:46 ../sys-utils/unshare.1.adoc:52
 msgid ""
 "The process can have a distinct view of *CLOCK_MONOTONIC* and/or "
-"*CLOCK_BOOTTIME* which can be changed using _/proc/self/timens_offsets_. For "
+"*CLOCK_BOOTTIME* which can be changed using _/prod/self/timens_offsets_. For "
 "further details, see *time_namespaces*(7)."
 msgstr ""
 
@@ -37219,7 +37219,7 @@ msgstr ""
 #: ../sys-utils/nsenter.1.adoc:51
 msgid ""
 "Various of the options below that relate to namespaces take an optional "
-"_file_ argument. This should be one of the _/proc/[pid]/ns/{asterisk}_ files "
+"_file_ argument. This should be one of the _/prod/[pid]/ns/{asterisk}_ files "
 "described in *namespaces*(7), or the pathname of a bind mount that was "
 "created on one of those files."
 msgstr ""
@@ -37227,7 +37227,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:55
 msgid ""
-"Enter all namespaces of the target process by the default _/proc/[pid]/ns/"
+"Enter all namespaces of the target process by the default _/prod/[pid]/ns/"
 "{asterisk}_ namespace paths. The default paths to the target process "
 "namespaces may be overwritten by namespace specific options (e.g., *--all --"
 "mount*=[_path_])."
@@ -37257,7 +37257,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:61
 #, no-wrap
-msgid "_/proc/pid/ns/mnt_"
+msgid "_/prod/pid/ns/mnt_"
 msgstr ""
 
 #. type: Plain text
@@ -37273,7 +37273,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:63
 #, no-wrap
-msgid "_/proc/pid/ns/uts_"
+msgid "_/prod/pid/ns/uts_"
 msgstr ""
 
 #. type: Plain text
@@ -37287,7 +37287,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:65
 #, no-wrap
-msgid "_/proc/pid/ns/ipc_"
+msgid "_/prod/pid/ns/ipc_"
 msgstr ""
 
 #. type: Plain text
@@ -37301,7 +37301,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:67
 #, no-wrap
-msgid "_/proc/pid/ns/net_"
+msgid "_/prod/pid/ns/net_"
 msgstr ""
 
 #. type: Plain text
@@ -37313,8 +37313,8 @@ msgstr " -n, --net[=<arquivo>]   informa o espaço de nome da rede\n"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:69
 #, no-wrap
-msgid "_/proc/pid/ns/pid_"
-msgstr "_/proc/pid/ns/pid_"
+msgid "_/prod/pid/ns/pid_"
+msgstr "_/prod/pid/ns/pid_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:71
@@ -37325,8 +37325,8 @@ msgstr " -p --pid[=<arquivo>]    informa o espaço de nome do pid\n"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:71
 #, no-wrap
-msgid "_/proc/pid/ns/user_"
-msgstr "_/proc/pid/ns/user_"
+msgid "_/prod/pid/ns/user_"
+msgstr "_/prod/pid/ns/user_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:73
@@ -37337,7 +37337,7 @@ msgstr " -U, --user[=<arquivo>]  informa o espaço de nome do usuário\n"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:73
 #, no-wrap
-msgid "_/proc/pid/ns/cgroup_"
+msgid "_/prod/pid/ns/cgroup_"
 msgstr ""
 
 #. type: Plain text
@@ -37349,7 +37349,7 @@ msgstr " -C, --cgroup[=<arquivo>] informa o espaço de nome de cgroup\n"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:75
 #, no-wrap
-msgid "_/proc/pid/ns/time_"
+msgid "_/prod/pid/ns/time_"
 msgstr ""
 
 #. type: Plain text
@@ -37363,8 +37363,8 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:77
 #, no-wrap
-msgid "_/proc/pid/root_"
-msgstr "_/proc/pid/root_"
+msgid "_/prod/pid/root_"
+msgstr "_/prod/pid/root_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:79
@@ -37375,8 +37375,8 @@ msgstr " -r, --root[=<dir>]      define o diretório raiz\n"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:79
 #, no-wrap
-msgid "_/proc/pid/cwd_"
-msgstr "_/proc/pid/cwd_"
+msgid "_/prod/pid/cwd_"
+msgstr "_/prod/pid/cwd_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:81
@@ -38323,7 +38323,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:24
 msgid ""
-"The *readprofile* command uses the _/proc/profile_ information to print "
+"The *readprofile* command uses the _/prod/profile_ information to print "
 "ascii data on standard output. The output is organized in three columns: the "
 "first is the number of clock ticks, the second is the name of the C function "
 "in the kernel where those many ticks occurred, and the third is the "
@@ -38406,9 +38406,9 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:44
 msgid ""
-"Specify a different profiling buffer, which by default is _/proc/profile_. "
+"Specify a different profiling buffer, which by default is _/prod/profile_. "
 "Using a different pro-file is useful if you want to `freeze' the kernel "
-"profiling at some time and read it later. The _/proc/profile_ file can be "
+"profiling at some time and read it later. The _/prod/profile_ file can be "
 "copied using *cat*(1) or *cp*(1). There is no more support for compressed "
 "profile buffers, like in *readprofile-1.1*, because the program needs to "
 "know the size of the buffer in advance."
@@ -38424,7 +38424,7 @@ msgstr " -R, --reset-on-fork       define o sinalizador reset-on-fork\n"
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:47
 msgid ""
-"Reset the profiling buffer. This can only be invoked by root, because _/proc/"
+"Reset the profiling buffer. This can only be invoked by root, because _/prod/"
 "profile_ is readable by everybody but writable only by the superuser. "
 "However, you can make *readprofile* set-user-ID 0, in order to reset the "
 "buffer without gaining privileges."
@@ -38454,7 +38454,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/readprofile.8.adoc:58
 #, fuzzy, no-wrap
-msgid "_/proc/profile_"
+msgid "_/prod/profile_"
 msgstr "Perfil AppArmor"
 
 #. type: Plain text
@@ -38488,7 +38488,7 @@ msgstr "Nenhum programa especificado"
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:70
 #, no-wrap
-msgid "*readprofile* only works with a 1.3.x or newer kernel, because _/proc/profile_ changed in the step from 1.2 to 1.3.\n"
+msgid "*readprofile* only works with a 1.3.x or newer kernel, because _/prod/profile_ changed in the step from 1.2 to 1.3.\n"
 msgstr ""
 
 #. type: Plain text
@@ -40170,7 +40170,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/swapon.8.adoc:28
 #, no-wrap
-msgid "*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/proc/swaps_ or _/etc/fstab_).\n"
+msgid "*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/prod/swaps_ or _/etc/fstab_).\n"
 msgstr ""
 
 #. type: Plain text
@@ -40324,7 +40324,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/swapon.8.adoc:70
 msgid ""
-"Display swap usage summary by device. Equivalent to *cat /proc/swaps*. This "
+"Display swap usage summary by device. Equivalent to *cat /prod/swaps*. This "
 "output format is DEPRECATED in favour of *--show* that provides better "
 "control on output data."
 msgstr ""
@@ -40656,7 +40656,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/tunelp.8.adoc:27
 #, no-wrap
-msgid "*NOTE*: This option will have no effect with kernel 2.1.131 or later since the irq is handled by the parport driver. You can change the parport irq for example via _/proc/parport/*/irq_. Read _/usr/src/linux/Documentation/admin-guide/parport.rst_ for more details on parport.\n"
+msgid "*NOTE*: This option will have no effect with kernel 2.1.131 or later since the irq is handled by the parport driver. You can change the parport irq for example via _/prod/parport/*/irq_. Read _/usr/src/linux/Documentation/admin-guide/parport.rst_ for more details on parport.\n"
 msgstr ""
 
 #. type: Labeled list
@@ -40805,7 +40805,7 @@ msgstr ""
 
 #. type: Plain text
 #: ../sys-utils/tunelp.8.adoc:63
-msgid "_/dev/lp?_, _/proc/parport/*/*_"
+msgid "_/dev/lp?_, _/prod/parport/*/*_"
 msgstr ""
 
 #. type: Plain text
@@ -40897,7 +40897,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/umount.8.adoc:56
 msgid ""
-"All of the filesystems described in _/proc/self/mountinfo_ (or in deprecated "
+"All of the filesystems described in _/prod/self/mountinfo_ (or in deprecated "
 "_/etc/mtab_) are unmounted, except the proc, devfs, devpts, sysfs, "
 "rpc_pipefs and nfsd filesystems. This list of the filesystems may be "
 "replaced by *--types* umount option."
@@ -40917,7 +40917,7 @@ msgid ""
 "device name (or UUID, etc.). When this option is used together with *--"
 "recursive*, then all nested mounts within the filesystem are recursively "
 "unmounted. This option is only supported on systems where _/etc/mtab_ is a "
-"symlink to _/proc/mounts_."
+"symlink to _/prod/mounts_."
 msgstr ""
 
 #. type: Plain text
@@ -41077,7 +41077,7 @@ msgstr " -R, --recursive         desmonta recursivamente um alvo com todas seus 
 msgid ""
 "Recursively unmount each specified directory. Recursion for each directory "
 "will stop if any unmount operation in the chain fails for any reason. The "
-"relationship between mountpoints is determined by _/proc/self/mountinfo_ "
+"relationship between mountpoints is determined by _/prod/self/mountinfo_ "
 "entries. The filesystem must be specified by mountpoint path; a recursive "
 "unmount by device name (or UUID) is unsupported. Since version 2.37 it "
 "umounts also all over-mounted filesystems (more filesystems on the same "
@@ -41102,7 +41102,7 @@ msgid ""
 "specified _type_. More than one type may be specified in a comma-separated "
 "list. The list of filesystem types can be prefixed with *no* to indicate "
 "that no action should be taken for all of the mentioned types. Note that "
-"*umount* reads information about mounted filesystems from kernel (_/proc/"
+"*umount* reads information about mounted filesystems from kernel (_/prod/"
 "mounts_) and filesystem names may be different than filesystem names used in "
 "the _/etc/fstab_ (e.g., \"nfs4\" vs. \"nfs\")."
 msgstr ""
@@ -41226,7 +41226,7 @@ msgstr "habilita a saída de depuração do libmount."
 #: ../sys-utils/umount.8.adoc:162
 msgid ""
 "table of mounted filesystems (deprecated and usually replaced by symlink to "
-"_/proc/mounts_)"
+"_/prod/mounts_)"
 msgstr ""
 
 #. type: Plain text
@@ -41237,7 +41237,7 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/umount.8.adoc:166
 #, no-wrap
-msgid "_/proc/self/mountinfo_"
+msgid "_/prod/self/mountinfo_"
 msgstr ""
 
 #. type: Plain text
@@ -41291,7 +41291,7 @@ msgstr ""
 msgid ""
 "By default, a new namespace persists only as long as it has member "
 "processes. A new namespace can be made persistent even when it has no member "
-"processes by bind mounting /proc/_pid_/ns/_type_ files to a filesystem path. "
+"processes by bind mounting /prod/_pid_/ns/_type_ files to a filesystem path. "
 "A namespace that has been made persistent in this way can subsequently be "
 "entered with *nsenter*(1) even after the _program_ terminates (except PID "
 "namespaces where a permanently running init process is required). Once a "
@@ -41303,7 +41303,7 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/unshare.1.adoc:24
 #, no-wrap
-msgid "*unshare* since util-linux version 2.36 uses _/proc/[pid]/ns/pid_for_children_ and _/proc/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.\n"
+msgid "*unshare* since util-linux version 2.36 uses _/prod/[pid]/ns/pid_for_children_ and _/prod/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.\n"
 msgstr ""
 
 #. type: Plain text
@@ -41316,7 +41316,7 @@ msgstr ""
 msgid ""
 "Mounting and unmounting filesystems will not affect the rest of the system, "
 "except for filesystems which are explicitly marked as shared (with *mount --"
-"make-shared*; see _/proc/self/mountinfo_ or *findmnt -o+PROPAGATION* for the "
+"make-shared*; see _/prod/self/mountinfo_ or *findmnt -o+PROPAGATION* for the "
 "*shared* flags). For further details, see *mount_namespaces*(7)."
 msgstr ""
 
@@ -41535,7 +41535,7 @@ msgstr ""
 msgid ""
 "Before util-linux version 2.39, this option expected a comma-separated "
 "argument of the form _outeruid,inneruid,count_ but that format is now "
-"deprecated for consistency with the ordering used in _/proc/[pid]/uid_map_ "
+"deprecated for consistency with the ordering used in _/prod/[pid]/uid_map_ "
 "and the _X-mount.idmap_ mount option."
 msgstr ""
 
@@ -41580,7 +41580,7 @@ msgstr ""
 msgid ""
 "Before util-linux version 2.39, this option expected a comma-separated "
 "argument of the form _outergid,innergid,count_ but that format is now "
-"deprecated for consistency with the ordering used in _/proc/[pid]/gid_map_ "
+"deprecated for consistency with the ordering used in _/prod/[pid]/gid_map_ "
 "and the _X-mount.idmap_ mount option."
 msgstr ""
 
@@ -41671,7 +41671,7 @@ msgstr ""
 msgid ""
 "To be able to call *setgroups*(2), the calling process must at least have "
 "*CAP_SETGID*. But since Linux 3.19 a further restriction applies: the kernel "
-"gives permission to call *setgroups*(2) only after the GID map (**/proc/"
+"gives permission to call *setgroups*(2) only after the GID map (**/prod/"
 "**__pid__*/gid_map*) has been set. The GID map is writable by root when "
 "*setgroups*(2) is enabled (i.e., *allow*, the default), and the GID map "
 "becomes writable by unprivileged processes when *setgroups*(2) is "
@@ -41770,7 +41770,7 @@ msgstr ""
 #: ../sys-utils/unshare.1.adoc:157
 #, no-wrap
 msgid ""
-"# unshare --fork --pid --mount-proc readlink /proc/self\n"
+"# unshare --fork --pid --mount-proc readlink /prod/self\n"
 "1\n"
 msgstr ""
 
@@ -41789,7 +41789,7 @@ msgstr ""
 #| "1000\n"
 #| "1000\n"
 #| "$ unshare --user --map-root-user \\\n"
-#| "        sh -c ''whoami; cat /proc/self/uid_map /proc/self/gid_map''\n"
+#| "        sh -c ''whoami; cat /prod/self/uid_map /prod/self/gid_map''\n"
 #| "root\n"
 #| "         0       1000          1\n"
 #| "         0       1000          1\n"
@@ -41798,7 +41798,7 @@ msgid ""
 "1000\n"
 "1000\n"
 "$ unshare --user --map-root-user \\\n"
-"        sh -c 'whoami; cat /proc/self/uid_map /proc/self/gid_map'\n"
+"        sh -c 'whoami; cat /prod/self/uid_map /prod/self/gid_map'\n"
 "root\n"
 "         0       1000          1\n"
 "         0       1000          1\n"
@@ -41807,7 +41807,7 @@ msgstr ""
 "1000\n"
 "1000\n"
 "$ unshare --user --map-root-user \\\n"
-"        sh -c ''whoami; cat /proc/self/uid_map /proc/self/gid_map''\n"
+"        sh -c ''whoami; cat /prod/self/uid_map /prod/self/gid_map''\n"
 "root\n"
 "         0       1000          1\n"
 "         0       1000          1\n"
@@ -41834,7 +41834,7 @@ msgid ""
 "$ unshare --user --map-auto --map-root-user\n"
 "# id -u\n"
 "0\n"
-"# cat /proc/self/uid_map\n"
+"# cat /prod/self/uid_map\n"
 "         0       1000          1\n"
 "         1     100000      65535\n"
 "# touch file; chown 1:1 file\n"
@@ -48931,11 +48931,11 @@ msgstr ""
 
 #~ msgid ""
 #~ "If you don't know the page size that your machine uses, you may be able "
-#~ "to look it up with *cat /proc/cpuinfo* (or you may not - the contents of "
+#~ "to look it up with *cat /prod/cpuinfo* (or you may not - the contents of "
 #~ "this file depend on architecture and kernel version)."
 #~ msgstr ""
 #~ "Se você não sabe o tamanho da página que sua máquina usa, você pode "
-#~ "procurá-lo com *cat /proc/cpuinfo* (ou não -- o conteúdo deste arquivo "
+#~ "procurá-lo com *cat /prod/cpuinfo* (ou não -- o conteúdo deste arquivo "
 #~ "depende da arquitetura e da versão do kernel)."
 
 #~ msgid "Print the SIZE column in bytes rather than in human-readable format."

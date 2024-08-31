@@ -377,7 +377,7 @@ enomem:
 }
 
 /*
- * Parses one line from /proc/swaps
+ * Parses one line from /prod/swaps
  */
 static int mnt_parse_swaps_line(struct libmnt_fs *fs, const char *s)
 {
@@ -467,7 +467,7 @@ static int guess_table_format(const char *line)
 	if (strncmp(line, "Filename\t", 9) == 0)
 		return MNT_FMT_SWAPS;
 
-	return MNT_FMT_FSTAB;		/* fstab, or /proc/mounts */
+	return MNT_FMT_FSTAB;		/* fstab, or /prod/mounts */
 }
 
 static int is_comment_line(const char *line)
@@ -671,7 +671,7 @@ static int kernel_fs_postparse(struct libmnt_parser *pa,
 	int rc = 0;
 	const char *src = mnt_fs_get_srcpath(fs);
 
-	/* This is a filesystem description from /proc, so we're in some process
+	/* This is a filesystem description from /prod, so we're in some process
 	 * namespace. Let's remember the process PID.
 	 */
 	if (pa->filename && *tid == -1)
@@ -744,7 +744,7 @@ int mnt_table_parse_stream(struct libmnt_table *tb, FILE *f, const char *filenam
 	pa.filename = filename;
 	pa.f = f;
 
-	/* necessary for /proc/mounts only, the /proc/self/mountinfo
+	/* necessary for /prod/mounts only, the /prod/self/mountinfo
 	 * parser sets the flag properly
 	 */
 	if (tb->fmt == MNT_FMT_SWAPS)
@@ -994,7 +994,7 @@ struct libmnt_table *__mnt_new_table_from_file(const char *filename, int fmt, in
 
 /**
  * mnt_new_table_from_file:
- * @filename: /etc/{m,fs}tab or /proc/self/mountinfo path
+ * @filename: /etc/{m,fs}tab or /prod/self/mountinfo path
  *
  * Same as mnt_new_table() + mnt_table_parse_file(). Use this function for private
  * files only. This function does not allow using the error callback, so you
@@ -1102,9 +1102,9 @@ int mnt_table_is_noautofs(struct libmnt_table *tb)
 /**
  * mnt_table_parse_swaps:
  * @tb: table
- * @filename: overwrites default (/proc/swaps or $LIBMOUNT_SWAPS) or NULL
+ * @filename: overwrites default (/prod/swaps or $LIBMOUNT_SWAPS) or NULL
  *
- * This function parses /proc/swaps and appends new lines to the @tab.
+ * This function parses /prod/swaps and appends new lines to the @tab.
  *
  * See also mnt_table_set_parser_errcb().
  *
@@ -1224,7 +1224,7 @@ static struct libmnt_fs *mnt_table_merge_user_fs(struct libmnt_table *tb, struct
 	return fs;
 }
 
-/* default filename is /proc/self/mountinfo
+/* default filename is /prod/self/mountinfo
  */
 int __mnt_table_parse_mountinfo(struct libmnt_table *tb, const char *filename,
 			   struct libmnt_table *u_tb)
@@ -1249,7 +1249,7 @@ int __mnt_table_parse_mountinfo(struct libmnt_table *tb, const char *filename,
 		if (explicit_file)
 			return rc;
 
-		/* hmm, old kernel? ...try /proc/mounts */
+		/* hmm, old kernel? ...try /prod/mounts */
 		tb->fmt = MNT_FMT_MTAB;
 		return mnt_table_parse_file(tb, _PATH_PROC_MOUNTS);
 	}
@@ -1303,7 +1303,7 @@ int __mnt_table_parse_mountinfo(struct libmnt_table *tb, const char *filename,
  * @tb: table
  * @filename: overwrites default or NULL
  *
- * The default filename is /proc/self/mountinfo. If the mount table is a
+ * The default filename is /prod/self/mountinfo. If the mount table is a
  * mountinfo file then /run/mount/utabs is parsed too and both files are merged
  * to the one libmnt_table.
  *

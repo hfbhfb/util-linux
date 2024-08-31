@@ -55,7 +55,7 @@ blockdev(8) supports BLKGETDISKSEQ ioctl now.
 lsfd(1):
 
   * uses NAME column to show cooked file names. Refer KNAME column if you need
-    raw file names that appeared in /proc/$pid/fd.
+    raw file names that appeared in /prod/$pid/fd.
 
   * uses TYPE column to show cooked file type names. Refer STTYPE if you need
     raw type reported by stat(2).
@@ -63,11 +63,11 @@ lsfd(1):
   * adds ENDPOINTS column for printing the endpoints of IPCs. This version
     supports FIFO.
 
-  * decodes flags field of /proc/$PID/fdinfo/$fd correctly
+  * decodes flags field of /prod/$PID/fdinfo/$fd correctly
 
   * adds columns for pidfd
   
-  * adds columns for AF_INET and AF_INET6 sockets. This version uses /proc/net/*
+  * adds columns for AF_INET and AF_INET6 sockets. This version uses /prod/net/*
     files as information sources.
 
   * adds columns for AF_NETLINK sockets.
@@ -476,7 +476,7 @@ lib/pager:
 lib/path:
    - ul_path_cpuparse  fix parsing of empty sysfs files  [Petr Štetiar]
 lib/procfs:
-   - add function to parse /proc/#/stat  [Karel Zak]
+   - add function to parse /prod/#/stat  [Karel Zak]
 lib/pty:
    - Put master PTY into non-blocking mode and buffer its output to avoid deadlock  [наб]
    - minor cleanups  [Karel Zak]
@@ -957,7 +957,7 @@ lsfd:
    - adjust whitespaces in the help message  [Masatake YAMATO]
    - align --help output  [Karel Zak]
    - collect namespace files after collecting information about "nodev" fs  [Masatake YAMATO]
-   - consider 64bit addresses when scanning /proc/pid/map_files dir  [Masatake YAMATO]
+   - consider 64bit addresses when scanning /prod/pid/map_files dir  [Masatake YAMATO]
    - cosmetic change  [Masatake YAMATO]
    - cosmetic change, delete whitespaces  [Masatake YAMATO]
    - cosmetic changes  [Masatake YAMATO]
@@ -968,7 +968,7 @@ lsfd:
    - don't put a spcae between a function and its arguments  [Masatake YAMATO]
    - don't require nsfs to be mounted  [Thomas Weißschuh]
    - error if extraneous argument given  [наб]
-   - facilitate the way to attach extra info loaded from /proc/net/* to sockets  [Masatake YAMATO]
+   - facilitate the way to attach extra info loaded from /prod/net/* to sockets  [Masatake YAMATO]
    - fill ENDPOINTS column for FIFOs  [Masatake YAMATO]
    - fix compiler warning [-Werror,-Wextra-semi]  [Karel Zak]
    - fix compiler warning [-Werror=maybe-uninitialized]  [Karel Zak]
@@ -979,7 +979,7 @@ lsfd:
    - fix wrong identifier namings (L3->L4)  [Masatake YAMATO]
    - fix wrongly checked flag constants  [Masatake YAMATO]
    - implement -i/--inet option  [Masatake YAMATO]
-   - implement code scanning lines in /proc/net/$proto as a method in the L4 abstract layer  [Masatake YAMATO]
+   - implement code scanning lines in /prod/net/$proto as a method in the L4 abstract layer  [Masatake YAMATO]
    - introduce L4 abstract layer stacked on IP and IP6  [Masatake YAMATO]
    - introduce SOCK. column namespace  [Masatake YAMATO]
    - introduce a method table for supporting various anon inodes  [Masatake YAMATO]
@@ -990,12 +990,12 @@ lsfd:
    - make a test case executable  [Masatake YAMATO]
    - make items in netns_tree extensible  [Masatake YAMATO]
    - make self_netns_sb static  [Thomas Weißschuh]
-   - make the logic for verifying the initial line of /proc/net/{tcp,udp} more flexible  [Masatake YAMATO, Thomas Weißschuh, Masatake YAMATO]
+   - make the logic for verifying the initial line of /prod/net/{tcp,udp} more flexible  [Masatake YAMATO, Thomas Weißschuh, Masatake YAMATO]
    - move kernel32_to_cpu() front in the source file  [Masatake YAMATO]
    - move the field representing connection state from tcp_xinfo to the L4 abstract layer  [Masatake YAMATO]
    - move xstrappend and xstrputc to lsfd.h  [Masatake YAMATO]
    - optimize -i/--inet option  [Masatake YAMATO]
-   - prepare enough large buffer when reading /proc/net/unix  [Masatake YAMATO]
+   - prepare enough large buffer when reading /prod/net/unix  [Masatake YAMATO]
    - read the UNIX socket path including white spaces correctly  [Masatake YAMATO]
    - refactor the usage of tcp_decode_state()  [Masatake YAMATO]
    - remove an unused field from struct sock_xinfo_class  [Masatake YAMATO]
@@ -1014,27 +1014,27 @@ lsfd:
    - skip test option-inet in qemu-user  [Masatake YAMATO]
    - specify variables instead of types in sizeof operator  [Masatake YAMATO]
    - try including asm/fcntl.h first for decoding flags of fdinfo  [Masatake YAMATO]
-   - unify the code for reading /proc/net/tcp and udp  [Masatake YAMATO]
+   - unify the code for reading /prod/net/tcp and udp  [Masatake YAMATO]
    - use "struct in_addr" to represent IPv4 addresses  [Masatake YAMATO]
-   - use /proc/$PID/map_files as the fallback information source  [Masatake YAMATO]
+   - use /prod/$PID/map_files as the fallback information source  [Masatake YAMATO]
    - use NAME column to show cooked file names  [Masatake YAMATO]
    - use PRIu16 instead of SCNu16 in xasprintf  [Masatake YAMATO]
    - use SCNu16 format specifier instead of cast operations (unsigned short)  [Masatake YAMATO]
    - use TYPE column to show cooked file types  [Masatake YAMATO]
    - use constants defined in asm/fctl.h flags field of a fdinfo  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/icmp  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/icmp6  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/netlink  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/packet  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/raw  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/raw6  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/tcp  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/tcp6  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/udp  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/udp6  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/udplite  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/udplite6  [Masatake YAMATO]
-   - use extra information loaded from /proc/net/unix  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/icmp  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/icmp6  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/netlink  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/packet  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/raw  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/raw6  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/tcp  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/tcp6  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/udp  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/udp6  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/udplite  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/udplite6  [Masatake YAMATO]
+   - use extra information loaded from /prod/net/unix  [Masatake YAMATO]
    - use runtime byteorder  [Thomas Weißschuh]
    - use skip_space()  [Masatake YAMATO]
    - use xstrdup() if included xalloc.h  [Karel Zak]

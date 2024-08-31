@@ -47,7 +47,7 @@ characters in the name (e.g. type="Linux /usr x86" is the same as type="linux
 usr-x86" for sfdisk).
 
 libmount no more contains a workaround to detect inconsistent
-/proc/self/mountinfo read. This problem is fixed by the Linux kernel (since v5.8,
+/prod/self/mountinfo read. This problem is fixed by the Linux kernel (since v5.8,
 kernel commit 9f6c61f96f2d97cbb5f7fa85607bc398f843ff0f).
 
 libblkid supports "probing hints" now. The hints are the optional way how to
@@ -403,7 +403,7 @@ hwclock:
    - make tz use more robust [coverity scan]  [Karel Zak]
    - use pointer to adjtime data  [Karel Zak]
 include/pathnames:
-   - cleanup /proc/sys/kernel use  [Karel Zak]
+   - cleanup /prod/sys/kernel use  [Karel Zak]
 include/strutils:
    - make xstrncpy() compatible with over-smart gcc 9  [Karel Zak]
 ipcs:
@@ -486,7 +486,7 @@ libblkid:
    - fix memory leak in config parser  [Samanta Navarro]
    - fix some typos in function comments  [nick black]
    - fix time_t handling  [Samanta Navarro]
-   - improve debug for /proc/partitions  [Karel Zak]
+   - improve debug for /prod/partitions  [Karel Zak]
    - initialize magic strings in robust way  [Karel Zak]
    - iso9660  add new test images  [Pali Rohár]
    - iso9660  add support for VOLUME_SET_ID and DATA_PREPARER_ID  [Pali Rohár]
@@ -553,7 +553,7 @@ libmount:
    - fix memory leak [coverity scan]  [Karel Zak]
    - fix tab parser for badly terminated lines  [Karel Zak]
    - improve mnt_split_optstr() performance  [Karel Zak]
-   - mark entries from /proc/swaps by MNT_FS_SWAP  [Karel Zak]
+   - mark entries from /prod/swaps by MNT_FS_SWAP  [Karel Zak]
    - mnt_table_over_fs() make child optional  [Karel Zak]
    - optimize mnt_optstr_apply_flags()  [Karel Zak]
    - remove read-mountinfo workaround  [Karel Zak]
@@ -703,7 +703,7 @@ lscpu:
    - improve bogomips use  [Karel Zak]
    - improve debug message  [Karel Zak]
    - improve topology calculation  [Karel Zak]
-   - improve topology calculation, use /proc/sysinfo  [Karel Zak]
+   - improve topology calculation, use /prod/sysinfo  [Karel Zak]
    - improve topology debug message  [Karel Zak]
    - keep hypervisor name in allocated memory  [Karel Zak]
    - keep static/dynamic MHz in cputype struct  [Karel Zak]

@@ -1,6 +1,6 @@
 ------ fs:
-source: /proc
-target: /proc
+source: /prod
+target: /prod
 fstype: proc
 optstr: rw,relatime
 VFS-optstr: rw,relatime

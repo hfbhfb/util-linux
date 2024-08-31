@@ -167,7 +167,7 @@ tests:
    - fix 'delete extended partition' checksum  [Karel Zak]
    - fix reiserfs test  [Karel Zak]
    - fix script that creates lscpu dumps  [Karel Zak]
-   - move lscpu /proc and /sys dumps to tarballs  [Karel Zak]
+   - move lscpu /prod and /sys dumps to tarballs  [Karel Zak]
    - remove broken Xen dumps for lscpu  [Karel Zak]
 umount:
    - clean up help output  [Karel Zak]

@@ -22,7 +22,7 @@ UL_DEBUG_DEFINE_MASKNAMES(libblkid) =
 	{ "cache", BLKID_DEBUG_CACHE,	"blkid tags cache" },
 	{ "config", BLKID_DEBUG_CONFIG, "config file utils" },
 	{ "dev", BLKID_DEBUG_DEV,       "device utils" },
-	{ "devname", BLKID_DEBUG_DEVNAME, "/proc/partitions evaluation" },
+	{ "devname", BLKID_DEBUG_DEVNAME, "/prod/partitions evaluation" },
 	{ "devno", BLKID_DEBUG_DEVNO,	"conversions to device name" },
 	{ "evaluate", BLKID_DEBUG_EVALUATE, "tags resolving" },
 	{ "help", BLKID_DEBUG_HELP,	"this help" },

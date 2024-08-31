@@ -25,7 +25,7 @@ _findmnt_module()
 			;;
 		'-N'|'--task')
 			local TID='' I ARR
-			for I in /proc/*/mountinfo; do IFS=/ read -ra ARR <<< "$I"; TID+="${ARR[2]} "; done
+			for I in /prod/*/mountinfo; do IFS=/ read -ra ARR <<< "$I"; TID+="${ARR[2]} "; done
 			COMPREPLY=( $(compgen -W "$TID" -- $cur) )
 			return 0
 			;;

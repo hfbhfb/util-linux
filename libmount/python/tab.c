@@ -262,7 +262,7 @@ static PyObject *Table_find_target(TableObject *self, PyObject *args, PyObject *
 		"set (not implemented yet).\n" \
 		"\n" \
 		"Note that None is a valid source path; it will be replaced with \"none\". The\n" \
-		"\"none\" is used in /proc/{mounts,self/mountinfo} for pseudo filesystems.\n" \
+		"\"none\" is used in /prod/{mounts,self/mountinfo} for pseudo filesystems.\n" \
 		"\n" \
 		"Returns a tab entry or None."
 static PyObject *Table_find_srcpath(TableObject *self, PyObject *args, PyObject *kwds)
@@ -373,8 +373,8 @@ static PyObject *Table_parse_fstab(TableObject *self, PyObject* args, PyObject *
 }
 
 #define Table_parse_mtab_HELP "parse_mtab([mtab])\n\n" \
-		"This function parses /etc/mtab or /proc/self/mountinfo\n" \
-		"/run/mount/utabs or /proc/mounts.\n" \
+		"This function parses /etc/mtab or /prod/self/mountinfo\n" \
+		"/run/mount/utabs or /prod/mounts.\n" \
 		"\n" \
 		"See also Tab.parser_errcb().\n" \
 		"\n" \
@@ -415,7 +415,7 @@ static PyObject *Table_parse_dir(TableObject *self, PyObject* args, PyObject *kw
 }
 
 #define Table_parse_swaps_HELP "parse_swaps(swaps)\n\n" \
-		"This function parses /proc/swaps and appends new lines to the tab"
+		"This function parses /prod/swaps and appends new lines to the tab"
 static PyObject *Table_parse_swaps(TableObject *self, PyObject* args, PyObject *kwds)
 {
 	int rc;

@@ -43,7 +43,7 @@ ts_device_has "TYPE" "ext2" $DEVICE || ts_die "Cannot find ext2 on $DEVICE"
 ts_init_subtest "one-type"
 [ -d "$TS_MOUNTPOINT" ] || mkdir -p $TS_MOUNTPOINT
 $TS_CMD_MOUNT -t ext2 $DEVICE $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $TS_MOUNTPOINT
 ts_log "Success"
 ts_finalize_subtest
@@ -52,7 +52,7 @@ ts_finalize_subtest
 ts_init_subtest "more-types"
 [ -d "$TS_MOUNTPOINT" ] || mkdir -p $TS_MOUNTPOINT
 $TS_CMD_MOUNT -t foo,bar,ext2 $DEVICE $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $TS_MOUNTPOINT
 ts_log "Success"
 ts_finalize_subtest
@@ -63,7 +63,7 @@ ts_init_subtest "more-types-fstab"
 ts_fstab_add $DEVICE $TS_MOUNTPOINT "foo,bar,ext2"
 $TS_CMD_MOUNT -T "$TS_FSTAB" $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_fstab_clean
-ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $TS_MOUNTPOINT
 ts_log "Success"
 ts_finalize_subtest
@@ -72,7 +72,7 @@ ts_finalize_subtest
 ts_init_subtest "type-pattern"
 [ -d "$TS_MOUNTPOINT" ] || mkdir -p $TS_MOUNTPOINT
 $TS_CMD_MOUNT -i -t nofoo,bar $DEVICE $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_die "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $TS_MOUNTPOINT
 ts_log "Success"
 ts_finalize_subtest

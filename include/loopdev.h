@@ -87,7 +87,7 @@ struct loop_config {
 #define LOOPDEV_DEFAULT_NNODES	8	/* default number of loop devices */
 
 struct loopdev_iter {
-	FILE		*proc;		/* /proc/partitions */
+	FILE		*proc;		/* /prod/partitions */
 	DIR		*sysblock;	/* /sys/block */
 	int		ncur;		/* current position */
 	int		*minors;	/* ary of minor numbers (when scan whole /dev) */

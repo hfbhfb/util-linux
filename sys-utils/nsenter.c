@@ -157,7 +157,7 @@ static void open_target_fd(int *fd, const char *type, const char *path)
 	char pathbuf[PATH_MAX];
 
 	if (!path && namespace_target_pid) {
-		snprintf(pathbuf, sizeof(pathbuf), "/proc/%u/%s",
+		snprintf(pathbuf, sizeof(pathbuf), "/prod/%u/%s",
 			 namespace_target_pid, type);
 		path = pathbuf;
 	}
@@ -255,7 +255,7 @@ static int is_usable_namespace(pid_t target, const struct namespace_file *nsfile
 	int rc;
 
 	/* Check NS accessibility */
-	snprintf(path, sizeof(path), "/proc/%u/%s", getpid(), nsfile->name);
+	snprintf(path, sizeof(path), "/prod/%u/%s", getpid(), nsfile->name);
 	rc = get_ns_ino(path, &my_ino);
 	if (rc == -ENOENT)
 		return false; /* Unsupported NS */
@@ -266,7 +266,7 @@ static int is_usable_namespace(pid_t target, const struct namespace_file *nsfile
 	if (nsfile->nstype & CLONE_NEWUSER) {
 		ino_t target_ino = 0;
 
-		snprintf(path, sizeof(path), "/proc/%u/%s", target, nsfile->name);
+		snprintf(path, sizeof(path), "/prod/%u/%s", target, nsfile->name);
 		if (get_ns_ino(path, &target_ino) != 0)
 			err(EXIT_FAILURE, _("stat of %s failed"), path);
 

@@ -30,12 +30,12 @@ ts_cd "$TS_OUTDIR"
 
 pipe_name()
 {
-    readlink /proc/$1/fd/$2
+    readlink /prod/$1/fd/$2
 }
 
 pipe_inode()
 {
-    stat -L -c %i /proc/$1/fd/$2
+    stat -L -c %i /prod/$1/fd/$2
 }
 
 PID=

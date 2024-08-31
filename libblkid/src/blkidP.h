@@ -304,7 +304,7 @@ struct blkid_struct_cache
 	blkid_probe		probe;		/* low-level probing stuff */
 };
 
-#define BLKID_BIC_FL_PROBED	0x0002	/* We probed /proc/partition devices */
+#define BLKID_BIC_FL_PROBED	0x0002	/* We probed /prod/partition devices */
 #define BLKID_BIC_FL_CHANGED	0x0004	/* Cache has changed from disk */
 
 /* config file */

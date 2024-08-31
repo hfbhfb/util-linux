@@ -128,7 +128,7 @@ The recommended setup is to use tags (e.g. *UUID*=_uuid_) rather than _/dev/disk
 
 The _proc_ filesystem is not associated with a special device, and when mounting it, an arbitrary keyword - for example, __proc__ - can be used instead of a device specification. (The customary choice _none_ is less fortunate: the error message 'none already mounted' from *mount* can be confusing.)
 
-=== The files /etc/fstab, /etc/mtab and /proc/mounts
+=== The files /etc/fstab, /etc/mtab and /prod/mounts
 
 The file _/etc/fstab_ (see *fstab*(5)), may contain lines describing what devices are usually mounted where, using which options. The default location of the *fstab*(5) file can be overridden with the *--fstab* _path_ command-line option (see below for more details).
 
@@ -142,7 +142,7 @@ ____
 
 When mounting a filesystem mentioned in _fstab_ or _mtab_, it suffices to specify on the command line only the device, or only the mount point.
 
-The programs *mount* and *umount*(8) traditionally maintained a list of currently mounted filesystems in the file _/etc/mtab_. The support for regular classic _/etc/mtab_ is completely disabled at compile time by default, because on current Linux systems it is better to make _/etc/mtab_ a symlink to _/proc/mounts_ instead. The regular _mtab_ file maintained in userspace cannot reliably work with namespaces, containers and other advanced Linux features. If the regular _mtab_ support is enabled, then it's possible to use the file as well as the symlink.
+The programs *mount* and *umount*(8) traditionally maintained a list of currently mounted filesystems in the file _/etc/mtab_. The support for regular classic _/etc/mtab_ is completely disabled at compile time by default, because on current Linux systems it is better to make _/etc/mtab_ a symlink to _/prod/mounts_ instead. The regular _mtab_ file maintained in userspace cannot reliably work with namespaces, containers and other advanced Linux features. If the regular _mtab_ support is enabled, then it's possible to use the file as well as the symlink.
 
 If no arguments are given to *mount*, the list of mounted filesystems is printed.
 
@@ -307,7 +307,7 @@ Command-line options available for the *mount* command are:
 *-a*, *--all*::
 Mount all filesystems (of the given types) mentioned in _fstab_ (except for those whose line contains the *noauto* keyword). The filesystems are mounted following their order in _fstab_. The *mount* command compares filesystem source, target (and fs root for bind mount or btrfs) to detect already mounted filesystems. The kernel table with already mounted filesystems is cached during *mount --all*. This means that all duplicated _fstab_ entries will be mounted.
 +
-The correct functionality depends on _/proc_ (to detect already mounted filesystems) and on _/sys_ (to evaluate filesystem tags like UUID= or LABEL=). It's strongly recommended to mount _/proc_ and _/sys_ filesystems before *mount -a* is executed, or keep /proc and /sys at the beginning of _fstab_.
+The correct functionality depends on _/proc_ (to detect already mounted filesystems) and on _/sys_ (to evaluate filesystem tags like UUID= or LABEL=). It's strongly recommended to mount _/proc_ and _/sys_ filesystems before *mount -a* is executed, or keep /prod and /sys at the beginning of _fstab_.
 +
 The option *--all* is possible to use for remount operation too. In this case all filters (*-t* and *-O*) are applied to the table of already mounted filesystems.
 +
@@ -351,8 +351,8 @@ Allow to make a target directory (mountpoint) if it does not exist yet. Alias to
 *--map-groups*, *--map-users* _inner_:_outer_:_count_::
 Add the specified user/group mapping to an *X-mount.idmap* map. These options can be given multiple times to build up complete mappings for users and groups. For more details see *X-mount.idmap* below.
 
-*--map-users* /proc/_PID_/ns/user::
-Use the specified user namespace for user and group mapping in an id-mapped mount. This is an alias for "-o X-mount.idmap=/proc/_PID_/ns/user" and cannot be used twice nor together with the _inner_:_outer_:_count_ option format above. For more details see *X-mount.idmap* below.
+*--map-users* /prod/_PID_/ns/user::
+Use the specified user namespace for user and group mapping in an id-mapped mount. This is an alias for "-o X-mount.idmap=/prod/_PID_/ns/user" and cannot be used twice nor together with the _inner_:_outer_:_count_ option format above. For more details see *X-mount.idmap* below.
 
 *-n*, *--no-mtab*::
 Mount without writing in _/etc/mtab_. This is necessary for example when _/etc_ is on a read-only filesystem.
@@ -430,11 +430,11 @@ Specifies an alternative _fstab_ file. If _path_ is a directory, then the files 
 Note that *mount* does not pass the option *--fstab* to the **/sbin/mount.**__type__ helpers, meaning that the alternative _fstab_ files will be invisible for the helpers. This is no problem for normal mounts, but user (non-root) mounts always require _fstab_ to verify the user's rights.
 
 *-t*, *--types* _fstype_::
-The argument following the *-t* is used to indicate the filesystem type. The filesystem types which are currently supported depend on the running kernel. See _/proc/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a complete list of the filesystems. The most common are ext2, ext3, ext4, xfs, btrfs, vfat, sysfs, proc, nfs and cifs.
+The argument following the *-t* is used to indicate the filesystem type. The filesystem types which are currently supported depend on the running kernel. See _/prod/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a complete list of the filesystems. The most common are ext2, ext3, ext4, xfs, btrfs, vfat, sysfs, proc, nfs and cifs.
 +
 The programs *mount* and *umount*(8) support filesystem subtypes. The subtype is defined by a '.subtype' suffix. For example 'fuse.sshfs'. It's recommended to use subtype notation rather than add any prefix to the mount source (for example 'sshfs#example.com' is deprecated).
 +
-If no *-t* option is given, or if the *auto* type is specified, *mount* will try to guess the desired type. *mount* uses the *libblkid*(3) library for guessing the filesystem type; if that does not turn up anything that looks familiar, *mount* will try to read the file _/etc/filesystems_, or, if that does not exist, _/proc/filesystems_. All of the filesystem types listed there will be tried, except for those that are labeled "nodev" (e.g. _devpts_, _proc_ and _nfs_). If _/etc/filesystems_ ends in a line with a single {asterisk}, mount will read _/proc/filesystems_ afterwards. While trying, all filesystem types will be mounted with the mount option *silent*.
+If no *-t* option is given, or if the *auto* type is specified, *mount* will try to guess the desired type. *mount* uses the *libblkid*(3) library for guessing the filesystem type; if that does not turn up anything that looks familiar, *mount* will try to read the file _/etc/filesystems_, or, if that does not exist, _/prod/filesystems_. All of the filesystem types listed there will be tried, except for those that are labeled "nodev" (e.g. _devpts_, _proc_ and _nfs_). If _/etc/filesystems_ ends in a line with a single {asterisk}, mount will read _/prod/filesystems_ afterwards. While trying, all filesystem types will be mounted with the mount option *silent*.
 //TRANSLATORS: Keep {asterisk} untranslated.
 +
 The *auto* type may be useful for user-mounted floppies. Creating a file _/etc/filesystems_ can be useful to change the probe order (e.g., to try vfat before msdos or ext3 before ext2) or if you use a kernel module autoloader.
@@ -468,7 +468,7 @@ include::man-common/help-version.adoc[]
 
 Some of these options are only useful when they appear in the _/etc/fstab_ file.
 
-Some of these options could be enabled or disabled by default in the system kernel. To check the current setting see the options in _/proc/mounts_. Note that filesystems also have per-filesystem specific default mount options (see for example *tune2fs -l* output for ext__N__ filesystems).
+Some of these options could be enabled or disabled by default in the system kernel. To check the current setting see the options in _/prod/mounts_. Note that filesystems also have per-filesystem specific default mount options (see for example *tune2fs -l* output for ext__N__ filesystems).
 
 The options *nosuid*, *noexec*, *nodiratime*, *relatime*, *noatime*, *strictatime*, and *nosymfollow* are interpreted only by the abstract VFS kernel layer and applied to the mountpoint node rather than to the filesystem itself. Try:  
 ____
@@ -595,7 +595,7 @@ Since Linux 2.6.30, the kernel defaults to the behavior provided by this option 
 Do not use the *relatime* feature. See also the *strictatime* mount option.
 
 *strictatime*::
-Allows to explicitly request full atime updates. This makes it possible for the kernel to default to *relatime* or *noatime* but still allow userspace to override it. For more details about the default system mount options see _/proc/mounts_.
+Allows to explicitly request full atime updates. This makes it possible for the kernel to default to *relatime* or *noatime* but still allow userspace to override it. For more details about the default system mount options see _/prod/mounts_.
 
 *nostrictatime*::
 Use the kernel's default behavior for inode access time updates.
@@ -637,7 +637,7 @@ The remount operation together with the *bind* flag has special semantics. See a
 +
 The default kernel behavior for VFS mount flags (nodev,nosuid,noexec,ro) is to
 reset all unspecified flags on remount. That's why *mount*(8) tries to
-keep the current setting according to _fstab_ or _/proc/self/mountinfo_. This
+keep the current setting according to _fstab_ or _/prod/self/mountinfo_. This
 default behavior is possible to change by *--options-mode*. The recursive
 change of the mount flags (supported since v2.39 on systems with *mount_setattr*(2)
 syscall), for example, *mount -o remount,ro=recursive*, do not use
@@ -652,7 +652,7 @@ After this call all old mount options are replaced and arbitrary stuff from _fst
 +
 *mount -o remount,rw /dir*
 +
-After this call, *mount* reads _fstab_ and merges these options with the options from the command line (*-o*). If no mountpoint is found in _fstab_, then it defaults to mount options from _/proc/self/mountinfo_.
+After this call, *mount* reads _fstab_ and merges these options with the options from the command line (*-o*). If no mountpoint is found in _fstab_, then it defaults to mount options from _/prod/self/mountinfo_.
 +
 
 *mount* allows the use of *--all* to remount all already mounted filesystems which match a specified filter (*-O* and *-t*). For example:
@@ -752,7 +752,7 @@ The newly created user namespace will be attached to the mount.
 +
 The user namespace will then be attached to the mount and the ID-mapping of the user namespace will become the ID-mapping of the mount.
 +
-For example, *X-mount.idmap=/proc/PID/ns/user* will attach the user namespace of the process PID to the mount.
+For example, *X-mount.idmap=/prod/PID/ns/user* will attach the user namespace of the process PID to the mount.
 
 *nosymfollow*::
 Do not follow symlinks when resolving paths. Symlinks can still be created, and *readlink*(1), *readlink*(2), *realpath*(1), and *realpath*(3) all still work properly.
@@ -1646,7 +1646,7 @@ enables loop device setup debug output
 
 == FILES
 
-See also "*The files /etc/fstab, /etc/mtab and /proc/mounts*" section above.
+See also "*The files /etc/fstab, /etc/mtab and /prod/mounts*" section above.
 
 _/etc/fstab_::
 filesystem table
@@ -1655,7 +1655,7 @@ _/run/mount_::
 libmount private runtime directory
 
 _/etc/mtab_::
-table of mounted filesystems or symlink to _/proc/mounts_
+table of mounted filesystems or symlink to _/prod/mounts_
 
 _/etc/mtab~_::
 lock file (unused on systems with _mtab_ symlink)
@@ -1678,7 +1678,7 @@ Some Linux filesystems don't support *-o sync* and *-o dirsync* (the ext2, ext3,
 
 The *-o remount* may not be able to change mount parameters (all _ext2fs_-specific parameters, except *sb*, are changeable with a remount, for example, but you can't change *gid* or *umask* for the _fatfs_).
 
-It is possible that the files _/etc/mtab_ and _/proc/mounts_ don't match on systems with a regular _mtab_ file. The first file is based only on the *mount* command options, but the content of the second file also depends on the kernel and others settings (e.g. on a remote NFS server -- in certain cases the *mount* command may report unreliable information about an NFS mount point and the _/proc/mount_ file usually contains more reliable information.) This is another reason to replace the _mtab_ file with a symlink to the _/proc/mounts_ file.
+It is possible that the files _/etc/mtab_ and _/prod/mounts_ don't match on systems with a regular _mtab_ file. The first file is based only on the *mount* command options, but the content of the second file also depends on the kernel and others settings (e.g. on a remote NFS server -- in certain cases the *mount* command may report unreliable information about an NFS mount point and the _/prod/mount_ file usually contains more reliable information.) This is another reason to replace the _mtab_ file with a symlink to the _/prod/mounts_ file.
 
 Checking files on NFS filesystems referenced by file descriptors (i.e. the *fcntl* and *ioctl* families of functions) may lead to inconsistent results due to the lack of a consistency check in the kernel even if the *noac* mount option is used.
 

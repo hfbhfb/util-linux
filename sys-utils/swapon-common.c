@@ -18,7 +18,7 @@
 #include "swapon-common.h"
 
 /*
- * content of /proc/swaps and /etc/fstab
+ * content of /prod/swaps and /etc/fstab
  */
 static struct libmnt_table *swaps, *fstab;
 

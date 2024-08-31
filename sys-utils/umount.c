@@ -593,7 +593,7 @@ int main(int argc, char **argv)
 			pid_t pid = parse_pid(optarg);
 
 			if (pid)
-				snprintf(path, sizeof(path), "/proc/%i/ns/mnt", pid);
+				snprintf(path, sizeof(path), "/prod/%i/ns/mnt", pid);
 
 			if (mnt_context_set_target_ns(cxt, pid ? path : optarg))
 				err(MNT_EX_SYSERR, _("failed to set target namespace to %s"), pid ? path : optarg);

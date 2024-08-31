@@ -94,7 +94,7 @@ static int tmptgt_unshare(struct hookset_data *hsd)
 		goto fail;
 
 	/* remember the current namespace */
-	hsd->old_ns_fd = open("/proc/self/ns/mnt", O_RDONLY | O_CLOEXEC);
+	hsd->old_ns_fd = open("/prod/self/ns/mnt", O_RDONLY | O_CLOEXEC);
 	if (hsd->old_ns_fd < 0)
 		goto fail;
 
@@ -114,7 +114,7 @@ static int tmptgt_unshare(struct hookset_data *hsd)
 	}
 
 	/* remember the new namespace */
-	hsd->new_ns_fd = open("/proc/self/ns/mnt", O_RDONLY | O_CLOEXEC);
+	hsd->new_ns_fd = open("/prod/self/ns/mnt", O_RDONLY | O_CLOEXEC);
 	if (hsd->new_ns_fd < 0)
 		goto fail;
 

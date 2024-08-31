@@ -23,7 +23,7 @@
  */
 
 /* lsfd_decode_file_flags() is for decoding `flags' field of
- * /proc/$pid/fdinfo/$fd. Bits of the field have name defined
+ * /prod/$pid/fdinfo/$fd. Bits of the field have name defined
  * in fcntl.h.
  * A system on which lsfd is built may have multiple
  * fcntl.h files:

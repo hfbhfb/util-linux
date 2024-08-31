@@ -18,14 +18,14 @@ unshare - run program in new namespaces
 
 The *unshare* command creates new namespaces (as specified by the command-line options described below) and then executes the specified _program_. If _program_ is not given, then "${SHELL}" is run (default: _/bin/sh_).
 
-By default, a new namespace persists only as long as it has member processes. A new namespace can be made persistent even when it has no member processes by bind mounting /proc/_pid_/ns/_type_ files to a filesystem path. A namespace that has been made persistent in this way can subsequently be entered with *nsenter*(1) even after the _program_ terminates (except PID namespaces where a permanently running init process is required). Once a persistent namespace is no longer needed, it can be unpersisted by using *umount*(8) to remove the bind mount. See the *EXAMPLES* section for more details.
+By default, a new namespace persists only as long as it has member processes. A new namespace can be made persistent even when it has no member processes by bind mounting /prod/_pid_/ns/_type_ files to a filesystem path. A namespace that has been made persistent in this way can subsequently be entered with *nsenter*(1) even after the _program_ terminates (except PID namespaces where a permanently running init process is required). Once a persistent namespace is no longer needed, it can be unpersisted by using *umount*(8) to remove the bind mount. See the *EXAMPLES* section for more details.
 
-*unshare* since util-linux version 2.36 uses _/proc/[pid]/ns/pid_for_children_ and _/proc/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.
+*unshare* since util-linux version 2.36 uses _/prod/[pid]/ns/pid_for_children_ and _/prod/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.
 
 The following types of namespaces can be created with *unshare*:
 
 *mount namespace*::
-Mounting and unmounting filesystems will not affect the rest of the system, except for filesystems which are explicitly marked as shared (with *mount --make-shared*; see _/proc/self/mountinfo_ or *findmnt -o+PROPAGATION* for the *shared* flags). For further details, see *mount_namespaces*(7).
+Mounting and unmounting filesystems will not affect the rest of the system, except for filesystems which are explicitly marked as shared (with *mount --make-shared*; see _/prod/self/mountinfo_ or *findmnt -o+PROPAGATION* for the *shared* flags). For further details, see *mount_namespaces*(7).
 +
 *unshare* since util-linux version 2.27 automatically sets propagation to *private* in a new mount namespace to make sure that the new namespace is really unshared. It's possible to disable this feature with option *--propagation unchanged*. Note that *private* is the kernel default.
 
@@ -36,19 +36,19 @@ Setting hostname or domainname will not affect the rest of the system. For furth
 The process will have an independent namespace for POSIX message queues as well as System V message queues, semaphore sets and shared memory segments. For further details, see *ipc_namespaces*(7).
 
 *network namespace*::
-The process will have independent IPv4 and IPv6 stacks, IP routing tables, firewall rules, the _/proc/net_ and _/sys/class/net_ directory trees, sockets, etc. For further details, see *network_namespaces*(7).
+The process will have independent IPv4 and IPv6 stacks, IP routing tables, firewall rules, the _/prod/net_ and _/sys/class/net_ directory trees, sockets, etc. For further details, see *network_namespaces*(7).
 
 *PID namespace*::
 Children will have a distinct set of PID-to-process mappings from their parent. For further details, see *pid_namespaces*(7).
 
 *cgroup namespace*::
-The process will have a virtualized view of _/proc/self/cgroup_, and new cgroup mounts will be rooted at the namespace cgroup root. For further details, see *cgroup_namespaces*(7).
+The process will have a virtualized view of _/prod/self/cgroup_, and new cgroup mounts will be rooted at the namespace cgroup root. For further details, see *cgroup_namespaces*(7).
 
 *user namespace*::
 The process will have a distinct set of UIDs, GIDs and capabilities. For further details, see *user_namespaces*(7).
 
 *time namespace*::
-The process can have a distinct view of *CLOCK_MONOTONIC* and/or *CLOCK_BOOTTIME* which can be changed using _/proc/self/timens_offsets_. For further details, see *time_namespaces*(7).
+The process can have a distinct view of *CLOCK_MONOTONIC* and/or *CLOCK_BOOTTIME* which can be changed using _/prod/self/timens_offsets_. For further details, see *time_namespaces*(7).
 
 == OPTIONS
 
@@ -91,7 +91,7 @@ When *unshare* terminates, have _signame_ be sent to the forked child process. C
 Just before running the program, mount the proc filesystem at _mountpoint_ (default is _/proc_). This is useful when creating a new PID namespace. It also implies creating a new mount namespace since the _/proc_ mount would otherwise mess up existing programs on the system. The new proc filesystem is explicitly mounted as private (with *MS_PRIVATE*|*MS_REC*).
 
 *--mount-binfmt*[**=**__mountpoint__]::
-Just before running the program, mount the binfmt_misc filesystem at _mountpoint_ (default is /proc/sys/fs/binfmt_misc).  It also implies creating a new mount namespace since the binfmt_misc mount would otherwise mess up existing programs on the system.  The new binfmt_misc filesystem is explicitly mounted as private (with *MS_PRIVATE*|*MS_REC*).
+Just before running the program, mount the binfmt_misc filesystem at _mountpoint_ (default is /prod/sys/fs/binfmt_misc).  It also implies creating a new mount namespace since the binfmt_misc mount would otherwise mess up existing programs on the system.  The new binfmt_misc filesystem is explicitly mounted as private (with *MS_PRIVATE*|*MS_REC*).
 
 **--map-user=**__uid|name__::
 Run the program only after the current effective user ID has been mapped to _uid_. If this option is specified multiple times, the last occurrence takes precedence. This option implies *--user*.
@@ -99,7 +99,7 @@ Run the program only after the current effective user ID has been mapped to _uid
 **--map-users=**__inneruid:outeruid:count__|**auto**|**all**::
 Run the program only after the block of user IDs of size _count_ beginning at _outeruid_ has been mapped to the block of user IDs beginning at _inneruid_. This mapping is created with **newuidmap**(1) if *unshare* was run unprivileged. If the range of user IDs overlaps with the mapping specified by *--map-user*, then a "hole" will be removed from the mapping. This may result in the highest user ID of the mapping not being mapped. Use *--map-users* multiple times to map more than one block of user IDs. The special value *auto* will map the first block of user IDs owned by the effective user from _/etc/subuid_ to a block starting at user ID 0. The special value *subids* will identity map the same block. The special value *all* will create a pass-through map for every user ID available in the parent namespace. This option implies *--user*.
 +
-Before util-linux version 2.39, this option expected a comma-separated argument of the form _outeruid,inneruid,count_ but that format is now deprecated for consistency with the ordering used in _/proc/[pid]/uid_map_ and the _X-mount.idmap_ mount option.
+Before util-linux version 2.39, this option expected a comma-separated argument of the form _outeruid,inneruid,count_ but that format is now deprecated for consistency with the ordering used in _/prod/[pid]/uid_map_ and the _X-mount.idmap_ mount option.
 
 **--map-group=**__gid|name__::
 Run the program only after the current effective group ID has been mapped to _gid_. If this option is specified multiple times, the last occurrence takes precedence. This option implies *--setgroups=deny* and *--user*.
@@ -107,7 +107,7 @@ Run the program only after the current effective group ID has been mapped to _gi
 **--map-groups=**__innergid:outergid:count__|**auto**|**all**::
 Run the program only after the block of group IDs of size _count_ beginning at _outergid_ has been mapped to the block of group IDs beginning at _innergid_. This mapping is created with **newgidmap**(1) if *unshare* was run unprivileged. If the range of group IDs overlaps with the mapping specified by *--map-group*, then a "hole" will be removed from the mapping. This may result in the highest group ID of the mapping not being mapped. Use *--map-groups* multiple times to map more than one block of group IDs. The special value *auto* will map the first block of user IDs owned by the effective user from _/etc/subgid_ to a block starting at group ID 0. The special value *subids* will identity map the same block. The special value *all* will create a pass-through map for every group ID available in the parent namespace. This option implies *--user*.
 +
-Before util-linux version 2.39, this option expected a comma-separated argument of the form _outergid,innergid,count_ but that format is now deprecated for consistency with the ordering used in _/proc/[pid]/gid_map_ and the _X-mount.idmap_ mount option.
+Before util-linux version 2.39, this option expected a comma-separated argument of the form _outergid,innergid,count_ but that format is now deprecated for consistency with the ordering used in _/prod/[pid]/gid_map_ and the _X-mount.idmap_ mount option.
 
 **--map-auto**::
 Map the first block of user IDs owned by the effective user from _/etc/subuid_ to a block starting at user ID 0. In the same manner, also map the first block of group IDs owned by the effective group from _/etc/subgid_ to a block starting at group ID 0. This option is intended to handle the common case where the first block of subordinate user and group IDs can map the whole user and group ID space. This option is equivalent to specifying *--map-users=auto* and *--map-groups=auto*.
@@ -127,7 +127,7 @@ Recursively set the mount propagation flag in the new mount namespace. The defau
 **--setgroups allow**|*deny*::
 Allow or deny the *setgroups*(2) system call in a user namespace.
 +
-To be able to call *setgroups*(2), the calling process must at least have *CAP_SETGID*. But since Linux 3.19 a further restriction applies: the kernel gives permission to call *setgroups*(2) only after the GID map (**/proc/**__pid__*/gid_map*) has been set. The GID map is writable by root when *setgroups*(2) is enabled (i.e., *allow*, the default), and the GID map becomes writable by unprivileged processes when *setgroups*(2) is permanently disabled (with *deny*).
+To be able to call *setgroups*(2), the calling process must at least have *CAP_SETGID*. But since Linux 3.19 a further restriction applies: the kernel gives permission to call *setgroups*(2) only after the GID map (**/prod/**__pid__*/gid_map*) has been set. The GID map is writable by root when *setgroups*(2) is enabled (i.e., *allow*, the default), and the GID map becomes writable by unprivileged processes when *setgroups*(2) is permanently disabled (with *deny*).
 
 *-R*, **--root=**__dir__::
 run the command with root directory set to _dir_.
@@ -162,7 +162,7 @@ The proc and sysfs filesystems mounting as root in a user namespace have to be r
 The following command creates a PID namespace, using *--fork* to ensure that the executed command is performed in a child process that (being the first process in the namespace) has PID 1. The *--mount-proc* option ensures that a new mount namespace is also simultaneously created and that a new *proc*(5) filesystem is mounted that contains information corresponding to the new PID namespace. When the *readlink*(1) command terminates, the new namespaces are automatically torn down.
 
 ....
-# unshare --fork --pid --mount-proc readlink /proc/self
+# unshare --fork --pid --mount-proc readlink /prod/self
 1
 ....
 
@@ -173,7 +173,7 @@ $ id -u; id -g
 1000
 1000
 $ unshare --user --map-root-user \
-        sh -c 'whoami; cat /proc/self/uid_map /proc/self/gid_map'
+        sh -c 'whoami; cat /prod/self/uid_map /prod/self/gid_map'
 root
          0       1000          1
          0       1000          1
@@ -189,7 +189,7 @@ $ cat /etc/subuid
 $ unshare --user --map-auto --map-root-user
 # id -u
 0
-# cat /proc/self/uid_map
+# cat /prod/self/uid_map
          0       1000          1
          1     100000      65535
 # touch file; chown 1:1 file
@@ -270,7 +270,7 @@ $  unshare --map-root-user --fork --pid --load-interp=":qemu-ppc:M::\\x7fELF\x01
 ....
 
 The ``load-interp`` parameter can be read as following::
-``qemu-ppc``::: is the name of the new file created below ``/proc/sys/fs/binfmt_misc`` to register the interpreter
+``qemu-ppc``::: is the name of the new file created below ``/prod/sys/fs/binfmt_misc`` to register the interpreter
 ``M``::: defines the interpreter for a given type of magic number
 ``\\x7fELF\x01\\x02\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x02\\x00\\x1``::: is the magic number to recognize the file to interpret (in this case, the ELF header for PPC32)
 ``\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\x00\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xfe\\xff\\xff``::: the mask to apply to the magic number

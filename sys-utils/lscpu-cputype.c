@@ -164,11 +164,11 @@ enum {
 	CPUINFO_LINE_CACHE	/* line found in cache_pattern[] */
 };
 
-/* Describes /proc/cpuinfo fields */
+/* Describes /prod/cpuinfo fields */
 struct cpuinfo_pattern {
 	int id;			/* field ID */
 	int domain;		/* CPUINFO_LINE_* */
-	const char *pattern;	/* field name as used in /proc/cpuinfo */
+	const char *pattern;	/* field name as used in /prod/cpuinfo */
 	size_t	offset;		/* offset in lscpu_cputype or lscpu_cpu struct */
 };
 
@@ -200,7 +200,7 @@ enum {
 };
 
 /*
- * /proc/cpuinfo to lscpu_cputype conversion
+ * /prod/cpuinfo to lscpu_cputype conversion
  */
 #define DEF_PAT_CPUTYPE(_str, _id, _member) \
 	{ \
@@ -248,7 +248,7 @@ static const struct cpuinfo_pattern type_patterns[] =
 };
 
 /*
- * /proc/cpuinfo to lscpu_cpu conversion
+ * /prod/cpuinfo to lscpu_cpu conversion
  */
 #define DEF_PAT_CPU(_str, _id, _member) \
 	{ \
@@ -272,7 +272,7 @@ static const struct cpuinfo_pattern cpu_patterns[] =
 };
 
 /*
- * /proc/cpuinfo to lscpu_cache conversion
+ * /prod/cpuinfo to lscpu_cache conversion
  */
 #define DEF_PAT_CACHE(_str, _id) \
 	{ \
@@ -499,12 +499,12 @@ found:
 	return pat;
 }
 
-/* Parse extra cache lines contained within /proc/cpuinfo but which are not
+/* Parse extra cache lines contained within /prod/cpuinfo but which are not
  * part of the cache topology information within the sysfs filesystem.  This is
  * true for all shared caches on e.g. s390. When there are layers of
  * hypervisors in between it is not knows which CPUs share which caches.
  * Therefore information about shared caches is only available in
- * /proc/cpuinfo. Format is:
+ * /prod/cpuinfo. Format is:
  *
  *  cache<nr> : level=<lvl> type=<type> scope=<scope> size=<size> line_size=<lsz> associativity=<as>
  *
@@ -592,7 +592,7 @@ int lscpu_read_cpuinfo(struct lscpu_cxt *cxt)
 
 	fp = ul_path_fopen(cxt->procfs, "r", "cpuinfo");
 	if (!fp)
-		err(EXIT_FAILURE, _("cannot open %s"), "/proc/cpuinfo");
+		err(EXIT_FAILURE, _("cannot open %s"), "/prod/cpuinfo");
 
 	do {
 		int keynum = -1;
@@ -735,7 +735,7 @@ struct lscpu_arch *lscpu_read_architecture(struct lscpu_cxt *cxt)
 #if defined(__alpha__) || defined(__ia64__)
 		ar->bit64 = 1;	/* 64bit platforms only */
 #endif
-		/* platforms with 64bit flag in /proc/cpuinfo, define
+		/* platforms with 64bit flag in /prod/cpuinfo, define
 		 * 32bit default here */
 #if defined(__i386__) || defined(__x86_64__) || \
     defined(__s390x__) || defined(__s390__) || defined(__sparc_v9__)

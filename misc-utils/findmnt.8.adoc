@@ -21,7 +21,7 @@ findmnt - find a filesystem
 
 == DESCRIPTION
 
-*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/proc/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.
+*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/prod/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.
 
 The device may be specified by device name, major:minor numbers, filesystem label or UUID, or partition label or UUID. Note that *findmnt* follows *mount*(8) behavior where a device name may be interpreted as a mountpoint (and vice versa) if the *--target*, *--mountpoint* or *--source* options are not specified.
 
@@ -76,7 +76,7 @@ Invert the sense of matching.
 Use JSON output format.
 
 *-k*, *--kernel*::
-Search in _/proc/self/mountinfo_. The output is in the tree-like format. This is the default. The output contains only mount options maintained by kernel (see also *--mtab*).
+Search in _/prod/self/mountinfo_. The output is in the tree-like format. This is the default. The output contains only mount options maintained by kernel (see also *--mtab*).
 
 *-l*, *--list*::
 Use the list output format. This output format is automatically enabled if the output is restricted by the *-t*, *-O*, *-S* or *-T* option and the option *--submounts* is not used or if more that one source file (the option *-F*) is specified.
@@ -88,7 +88,7 @@ Explicitly define the mountpoint file or directory. See also *--target*.
 Search in _/etc/mtab_. The output is in the list format by default (see *--tree*). The output may include user space mount options.
 
 *-N*, *--task* _tid_::
-Use alternative namespace _/proc/<tid>/mountinfo_ rather than the default _/proc/self/mountinfo_. If the option is specified more than once, then tree-like output is disabled (see the *--list* option). See also the *unshare*(1) command.
+Use alternative namespace _/prod/<tid>/mountinfo_ rather than the default _/prod/self/mountinfo_. If the option is specified more than once, then tree-like output is disabled (see the *--list* option). See also the *unshare*(1) command.
 
 *-n*, *--noheadings*::
 Do not print a header line.
@@ -112,7 +112,7 @@ Produce output in the form of key="value" pairs. All potentially unsafe value ch
 Note that SOURCES column, use multi-line cells. In these cases, the column use an array-like formatting in the output, for example *name=("aaa" "bbb" "ccc")*.
 
 *-p*, *--poll*[_=list_]::
-Monitor changes in the _/proc/self/mountinfo_ file. Supported actions are: mount, umount, remount and move. More than one action may be specified in a comma-separated list. All actions are monitored by default.
+Monitor changes in the _/prod/self/mountinfo_ file. Supported actions are: mount, umount, remount and move. More than one action may be specified in a comma-separated list. All actions are monitored by default.
 +
 The time for which *--poll* will block can be restricted with the *--timeout* or *--first-only* options.
 +

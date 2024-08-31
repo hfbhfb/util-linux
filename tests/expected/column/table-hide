@@ -1,5 +1,5 @@
 /sys                             rw,nosuid,nodev,noexec,relatime  sysfs            sysfs                 rw
-/proc                            rw,nosuid,nodev,noexec,relatime  proc             proc                  rw
+/prod                            rw,nosuid,nodev,noexec,relatime  proc             proc                  rw
 /dev                             rw,nosuid                        devtmpfs         devtmpfs              rw,size=8175740k,nr_inodes=2043935,mode=755
 /sys/kernel/security             rw,nosuid,nodev,noexec,relatime  securityfs       securityfs            rw
 /dev/shm                         rw,nosuid,nodev                  tmpfs            tmpfs                 rw
@@ -21,12 +21,12 @@
 /sys/fs/cgroup/freezer           rw,nosuid,nodev,noexec,relatime  cgroup           cgroup                rw,freezer
 /sys/kernel/config               rw,relatime                      configfs         configfs              rw
 /                                rw,relatime                      ext4             /dev/sda4             rw,data=ordered
-/proc/sys/fs/binfmt_misc         rw,relatime                      autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12781
+/prod/sys/fs/binfmt_misc         rw,relatime                      autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12781
 /sys/kernel/debug                rw,relatime                      debugfs          debugfs               rw
 /dev/hugepages                   rw,relatime                      hugetlbfs        hugetlbfs             rw
 /dev/mqueue                      rw,relatime                      mqueue           mqueue                rw
-/proc/sys/fs/binfmt_misc         rw,relatime                      binfmt_misc      binfmt_misc           rw
-/proc/fs/nfsd                    rw,relatime                      nfsd             nfsd                  rw
+/prod/sys/fs/binfmt_misc         rw,relatime                      binfmt_misc      binfmt_misc           rw
+/prod/fs/nfsd                    rw,relatime                      nfsd             nfsd                  rw
 /tmp                             rw,nosuid,nodev                  tmpfs            tmpfs                 rw
 /home                            rw,relatime                      ext4             /dev/sda3             rw,data=ordered
 /boot                            rw,relatime                      ext4             /dev/sda2             rw,data=ordered

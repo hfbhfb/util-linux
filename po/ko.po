@@ -2044,8 +2044,8 @@ msgid "too many devices"
 msgstr "장치가 너무 많습니다"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc 파일 시스템을 마운트했습니까?"
+msgid "Is /prod mounted?"
+msgstr "/prod 파일 시스템을 마운트했습니까?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -10659,8 +10659,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             목록 형식 출력\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <TID>       대안 이름 영역 활용  (/proc/<TID>/mountinfo 파일)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <TID>       대안 이름 영역 활용  (/prod/<TID>/mountinfo 파일)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12487,8 +12487,8 @@ msgid "association between file and process"
 msgstr "파일 및 프로세스간 관계"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
-msgstr "/proc/devices로 식별한 블록 장치 드라이버 이름"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "/prod/devices로 식별한 블록 장치 드라이버 이름"
 
 #: misc-utils/lsfd.c:156
 msgid "bpf map id associated with the fd"
@@ -12529,8 +12529,8 @@ msgid "bpf program type (raw)"
 msgstr "파일 형식 (raw)"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
-msgstr "/proc/devices로 식별한 문자 장치 드라이버 이름"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "/prod/devices로 식별한 문자 장치 드라이버 이름"
 
 #: misc-utils/lsfd.c:180
 msgid "command of the process opening the file"
@@ -12621,8 +12621,8 @@ msgid "length of file mapping (in page)"
 msgstr "파일 매핑 길이 (페이지 단위)"
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
-msgstr "/proc/misc에서 식별한 기타 문자 장치 이름"
+msgid "misc character device name resolved by /prod/misc"
+msgstr "/prod/misc에서 식별한 기타 문자 장치 이름"
 
 #: misc-utils/lsfd.c:246
 msgid "mount id"
@@ -12673,8 +12673,8 @@ msgid "L3 protocol associated with the packet socket"
 msgstr "패킷 소켓과 관련 있는 L3 프로토콜"
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
-msgstr "/proc/partition에서 식별한 블록 장치 이름"
+msgid "block device name resolved by /prod/partition"
+msgstr "/prod/partition에서 식별한 블록 장치 이름"
 
 #: misc-utils/lsfd.c:285
 msgid "PID of the process opening the file"
@@ -12955,8 +12955,8 @@ msgid "failed to alloc procfs handler"
 msgstr "procfs 핸들러 할당 실패"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
-msgid "failed to open /proc"
-msgstr "/proc 열기 실패"
+msgid "failed to open /prod"
+msgstr "/prod 열기 실패"
 
 #: misc-utils/lsfd.c:1857
 #, fuzzy
@@ -15831,7 +15831,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -15850,7 +15850,7 @@ msgstr ""
 " -m, --no-unmount            장치를 마운트 했다 하더라도 마운트 해제하지 않습니다\n"
 " -M, --no-partitions-unmount 다른 분할 영역을 마운트 해제하지 않습니다\n"
 " -n, --noop                  추출하지 않음. 장치 찾음 여부만 표시합니다\n"
-" -p, --proc                  /etc/mtab 대신 /proc/mounts를 활용합니다\n"
+" -p, --proc                  /etc/mtab 대신 /prod/mounts를 활용합니다\n"
 " -q, --tape                  테이프 미디어를 추출합니다\n"
 " -r, --cdrom                 CD-ROM 미디어를 추출합니다\n"
 " -s, --scsi                  SCSI 장치를 추출합니다\n"
@@ -19726,7 +19726,7 @@ msgstr ""
 #| "     --target-prefix <path>\n"
 #| "                         specifies path used for all mountpoints\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "     --target-prefix <경로>\n"
@@ -20084,9 +20084,9 @@ msgstr "옵션 패턴 지정 실패"
 
 #: sys-utils/nsenter.c:223
 #, fuzzy
-#| msgid "failed to open /proc"
+#| msgid "failed to open /prod"
 msgid "failed to open cgroup.procs"
-msgstr "/proc 열기 실패"
+msgstr "/prod 열기 실패"
 
 #: sys-utils/nsenter.c:235
 #, fuzzy, c-format
@@ -21603,10 +21603,10 @@ msgstr "장치와 파일의 페이징, 스와핑을 끕니다.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              /proc/swaps의 모든 스왑 분할 영역을 끕니다\n"
+" -a, --all              /prod/swaps의 모든 스왑 분할 영역을 끕니다\n"
 " -v, --verbose          대량 출력 모드\n"
 
 #: sys-utils/swapoff.c:166
@@ -22158,12 +22158,12 @@ msgid "mount %s on %s failed"
 msgstr "%2$s의 %1$s 마운트 실패"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "/proc/self/timens_offsets 열기 실패"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "/prod/self/timens_offsets 열기 실패"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "/proc/self/timens_offsets 쓰기 실패"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "/prod/self/timens_offsets 쓰기 실패"
 
 #: sys-utils/unshare.c:294
 msgid "eventfd failed"

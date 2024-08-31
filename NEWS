@@ -747,8 +747,8 @@ util-linux 2.11s
 * [u]mount: fstab.c fix (ejb@ql.org)
 * pg: new (Gunnar Ritter)
 * sfdisk: small BSD partition fix
-* swapoff -a: also do swapoff on all files found in /proc/swaps
-* swapon -a: skip files already found in /proc/swaps
+* swapoff -a: also do swapoff on all files found in /prod/swaps
+* swapon -a: skip files already found in /prod/swaps
 
 util-linux 2.11r
 
@@ -811,7 +811,7 @@ util-linux 2.11o
 * README.bootutils-0.1: removed - only of historical interest
 * script: security fix
 * sfdisk: improved geometry detection; wider columns; default disks from
-  /proc/partitions
+  /prod/partitions
 * umount: permission test owner umount
 * wall.1: added suid restriction
 
@@ -1019,7 +1019,7 @@ util-linux 2.11a:
 * tsort: deleted - it is part of GNU textutils 2.0
 * mount: fix rootdev() (Richard Kettlewell)
 * mount: fix gid of mtab file
-* mount: try /proc/filesystems after /etc/filesystems if the latter ends in "*"
+* mount: try /prod/filesystems after /etc/filesystems if the latter ends in "*"
 * fdisk: added a few system types
 
 util-linux 2.11:
@@ -1188,7 +1188,7 @@ util-linux 2.10e:
 
 * New: rename
 * Added option to mkswap so that user can override pagesize
-* fdisk -l now reads /proc/partitions when no device was given
+* fdisk -l now reads /prod/partitions when no device was given
 * Fixed fdisk.8 (James Manning)
 * Added devpts info to mount.8 (Elrond)
 * Newline fix for logger output to stdout (Henri Spencer)
@@ -1820,7 +1820,7 @@ mount:
     Sander van Malssen (svm@kozmix.hacktic.nl) added support for remounting
     readonly file systems readonly.  Mike Grupenhoff
     <kashmir@umiacs.UMD.EDU> added a probe of the superblock for the type
-    before /proc/filesystems is checked.  Andries.Brouwer@cwi.nl fixed up
+    before /prod/filesystems is checked.  Andries.Brouwer@cwi.nl fixed up
     error reporting.
 
     Updated with patches from Andries.Brouwer@cwi.nl and Dan Quinlan

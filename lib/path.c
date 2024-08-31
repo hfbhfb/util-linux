@@ -6,7 +6,7 @@
  *
  *
  * Simple functions to access files. Paths can be globally prefixed to read
- * data from an alternative source (e.g. a /proc dump for regression tests).
+ * data from an alternative source (e.g. a /prod dump for regression tests).
  *
  * The paths is possible to format by printf-like way for functions with "f"
  * postfix in the name (e.g. readf, openf, ... ul_path_readf_u64()).

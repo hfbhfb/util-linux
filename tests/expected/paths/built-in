@@ -13,8 +13,8 @@
          _PATH_WORDS /usr/share/dict/words
      _PATH_WORDS_ALT /usr/share/dict/web2
    _PATH_FILESYSTEMS /etc/filesystems
-    _PATH_PROC_SWAPS /proc/swaps
-_PATH_PROC_FILESYSTEMS /proc/filesystems
+    _PATH_PROC_SWAPS /prod/swaps
+_PATH_PROC_FILESYSTEMS /prod/filesystems
        _PATH_MOUNTED /etc/mtab
         _PATH_MNTTAB /etc/fstab
    _PATH_DEV_BYLABEL /dev/disk/by-label

@@ -376,7 +376,7 @@ libmount:
    - fix Python get_propagation  [Giuseppe Scrivano]
    - fix warning "set but not used"  [Ruediger Meier]
    - ignore "bind" from fstab on command line "remount"  [Karel Zak]
-   - make mnt_context_is_fs_mounted work for /proc  [Ivan Delalande]
+   - make mnt_context_is_fs_mounted work for /prod  [Ivan Delalande]
    - make sure we call stat() propely [coverity scan]  [Karel Zak]
    - use _exit() in <type> handlers  [Karel Zak]
    - use mount table filter on --no-canonicalize  [Karel Zak]

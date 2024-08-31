@@ -2095,8 +2095,8 @@ msgid "too many devices"
 msgstr "çok fazla aygıt"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc bağlı mı?"
+msgid "Is /prod mounted?"
+msgstr "/prod bağlı mı?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11361,8 +11361,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             liste çıktı formatını kullan\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>       alternatif isim uzayını kullan (/proc/<tid>/mountinfo dosyası)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>       alternatif isim uzayını kullan (/prod/<tid>/mountinfo dosyası)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -13334,7 +13334,7 @@ msgid "association between file and process"
 msgstr "alt süreç oluşturulamadı"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13374,7 +13374,7 @@ msgid "bpf program type (raw)"
 msgstr "dosya sistemi tipi"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13478,7 +13478,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13542,7 +13542,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13883,7 +13883,7 @@ msgstr "betik işleyici tahsis edilemedi"
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
 #| msgid "failed to parse %s"
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "%s ayrıştırılamadı "
 
 #: misc-utils/lsfd.c:1857
@@ -17099,7 +17099,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -17118,7 +17118,7 @@ msgstr ""
 " -m, --no-unmount            aygıt bağlanmışsa bile bağlantısını koparma\n"
 " -M, --no-partitions-unmount diğer disk bölümlerinin bağlantılarını koparma\n"
 " -n, --noop                  sadece bulunan aygıtı göster, çıkarma\n"
-" -p, --proc                  /etc/mtab yerine /proc/mounts kullan\n"
+" -p, --proc                  /etc/mtab yerine /prod/mounts kullan\n"
 " -q, --tape                  teybi çıkar\n"
 " -r, --cdrom                 CD-ROM'u çıkar\n"
 " -s, --scsi                  SCSI aygıtını çıkar\n"
@@ -21283,7 +21283,7 @@ msgstr " -r, --map-root-user       kullanıcıyı root kullanıcısına eşle (-
 #, fuzzy
 #| msgid " --default                         use default terminal settings\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr " --default                         varsayılan uç birim seçeneklerini kullan\n"
 
@@ -23372,10 +23372,10 @@ msgstr "Aygıtlar ve dosyalarda sayfalama ve takaslamayı kapat.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              /proc/swaps'tan tüm takasları kapat\n"
+" -a, --all              /prod/swaps'tan tüm takasları kapat\n"
 " -v, --verbose          ayrıntı kipi\n"
 
 #: sys-utils/swapoff.c:166
@@ -23936,13 +23936,13 @@ msgstr "%s, %s üzerinde bağlanamadı"
 #: sys-utils/unshare.c:224
 #, fuzzy
 #| msgid "failed to parse offset"
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "ofset ayrıştırılamadı"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
 #| msgid "failed to parse offset"
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "ofset ayrıştırılamadı"
 
 #: sys-utils/unshare.c:294

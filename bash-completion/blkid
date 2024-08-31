@@ -45,7 +45,7 @@ _blkid_module()
 			;;
 		'-n'|'--match-types')
 			OUTPUT_ALL="
-				$(awk '{print $NF}' /proc/filesystems)
+				$(awk '{print $NF}' /prod/filesystems)
 				$(\ls /lib/modules/$(uname -r)/kernel/fs)
 			"
 			;;

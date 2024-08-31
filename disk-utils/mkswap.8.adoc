@@ -106,7 +106,7 @@ The maximum useful size of a swap area depends on the architecture and the kerne
 
 The maximum number of the pages that is possible to address by swap area header is 4294967295 (32-bit unsigned int). The remaining space on the swap device is ignored.
 
-Presently, Linux allows 32 swap areas. The areas in use can be seen in the file _/proc/swaps_.
+Presently, Linux allows 32 swap areas. The areas in use can be seen in the file _/prod/swaps_.
 
 *mkswap* refuses areas smaller than 10 pages.
 

@@ -652,7 +652,7 @@ static int read_processes(struct lsns *ls)
 	int rc = 0;
 	struct path_cxt *pc;
 
-	DBG(PROC, ul_debug("opening /proc"));
+	DBG(PROC, ul_debug("opening /prod"));
 
 	dir = opendir(_PATH_PROC);
 	if (!dir)
@@ -671,7 +671,7 @@ static int read_processes(struct lsns *ls)
 		DBG(PROC, ul_debug("reading %d", (int) pid));
 		rc = procfs_process_init_path(pc, pid);
 		if (rc < 0) {
-			DBG(PROC, ul_debug("failed in initializing path_cxt for /proc/%d (rc: %d)", (int) pid, rc));
+			DBG(PROC, ul_debug("failed in initializing path_cxt for /prod/%d (rc: %d)", (int) pid, rc));
 			/* This failure is acceptable. If a process ($pid) owning
 			 * a namespace is gone while running this lsns process,
 			 * procfs_process_init_path(pc, $pid) may fail.
@@ -695,7 +695,7 @@ static int read_processes(struct lsns *ls)
 
 	ul_unref_path(pc);
 
-	DBG(PROC, ul_debug("closing /proc"));
+	DBG(PROC, ul_debug("closing /prod"));
 	closedir(dir);
 	return rc;
 }
@@ -868,7 +868,7 @@ static void read_ghost_namespaces(struct lsns *ls, struct lsns_namespace *orphan
 	if (orphan->related_ns[rela])
 		return;
 
-	snprintf(buf, sizeof(buf), "/proc/%d/ns/%s", orphan->proc->pid, ns_names[orphan->type]);
+	snprintf(buf, sizeof(buf), "/prod/%d/ns/%s", orphan->proc->pid, ns_names[orphan->type]);
 	fd_orphan = open(buf, O_RDONLY);
 	if (fd_orphan < 0)
 		return;
@@ -915,7 +915,7 @@ static void connect_namespaces(struct lsns *ls)
 			}
 		}
 
-		/* lsns scans /proc/[0-9]+ for finding namespaces.
+		/* lsns scans /prod/[0-9]+ for finding namespaces.
 		 * So if a namespace has no process, lsns cannot
 		 * find it. Here we call it a missing namespace.
 		 *
@@ -1140,7 +1140,7 @@ static void fill_column(struct lsns *ls,
 	case COL_PATH:
 		if (!proc)
 			break;
-		xasprintf(&str, "/proc/%d/ns/%s", (int) proc->pid, ns_names[ns->type]);
+		xasprintf(&str, "/prod/%d/ns/%s", (int) proc->pid, ns_names[ns->type]);
 		break;
 	case COL_UID:
 		xasprintf(&str, "%d", proc? (int) proc->uid: (int) ns->uid_fallback);
@@ -1525,8 +1525,8 @@ static dev_t read_nsfs_dev(void)
 {
 	struct stat st;
 
-	if (stat("/proc/self/ns/user", &st) < 0)
-		err(EXIT_FAILURE, _("failed to do stat /proc/self/ns/user"));
+	if (stat("/prod/self/ns/user", &st) < 0)
+		err(EXIT_FAILURE, _("failed to do stat /prod/self/ns/user"));
 
 	return st.st_dev;
 }

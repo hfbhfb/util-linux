@@ -318,7 +318,7 @@ static int read_proc_filesystems(struct verify_context *vfy)
 	FILE *f;
 	char buf[80], *cp, *t;
 
-	f = fopen("/proc/filesystems", "r");
+	f = fopen("/prod/filesystems", "r");
 	if (!f)
 		return -errno;
 

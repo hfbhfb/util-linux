@@ -56,7 +56,7 @@ Colorize the output. The optional argument _when_ can be *auto*, *never* or *alw
 *-l*, *--list*::
 List the partition tables for the specified devices and then exit.
 +
-If no devices are given, the devices mentioned in _/proc/partitions_ (if this file exists) are used. Devices are always listed in the order in which they are specified on the command-line, or by the kernel listed in _/proc/partitions_.
+If no devices are given, the devices mentioned in _/prod/partitions_ (if this file exists) are used. Devices are always listed in the order in which they are specified on the command-line, or by the kernel listed in _/prod/partitions_.
 
 *-x*, *--list-details*::
 Like *--list*, but provides more details.

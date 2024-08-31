@@ -37,7 +37,7 @@ Be quiet.
 Be verbose.
 
 *--report*::
-Print a report for the specified device. It is possible to give multiple devices. If none is given, all devices which appear in _/proc/partitions_ are shown. Note that the partition StartSec is in 512-byte sectors.
+Print a report for the specified device. It is possible to give multiple devices. If none is given, all devices which appear in _/prod/partitions_ are shown. Note that the partition StartSec is in 512-byte sectors.
 
 include::man-common/help-version.adoc[]
 

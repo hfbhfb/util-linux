@@ -67,7 +67,7 @@ ping_group_range_check()
     local g
     local group_min group_max
 
-    if ! read group_min group_max < /proc/sys/net/ipv4/ping_group_range; then
+    if ! read group_min group_max < /prod/sys/net/ipv4/ping_group_range; then
        # We can say nothing. Just allow to go ahead.
        return 0
     fi
@@ -98,7 +98,7 @@ for i in 0 1; do
 	    *socket*)
 		if ! ping_group_range_check; then
 		    MSG="the group(s) ($(id -G)) of the process is not in the expected range"
-		    MSG+=" [$(cat /proc/sys/net/ipv4/ping_group_range)])"
+		    MSG+=" [$(cat /prod/sys/net/ipv4/ping_group_range)])"
 		else
 		    MSG="$ERRMSG"
 		fi

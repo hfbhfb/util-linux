@@ -1,6 +1,6 @@
 ------ fs:
-source: /proc
-target: /proc
+source: /prod
+target: /prod
 fstype: proc
 optstr: rw,relatime
 VFS-optstr: rw,relatime
@@ -220,7 +220,7 @@ parent: 16
 devno:  0:30
 ------ fs:
 source: systemd-1
-target: /proc/sys/fs/binfmt_misc
+target: /prod/sys/fs/binfmt_misc
 fstype: autofs
 optstr: rw,relatime,fd=25,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
 VFS-optstr: rw,relatime
@@ -241,8 +241,8 @@ id:     36
 parent: 17
 devno:  0:32
 ------ fs:
-source: /proc/bus/usb
-target: /proc/bus/usb
+source: /prod/bus/usb
+target: /prod/bus/usb
 fstype: usbfs
 optstr: rw,relatime
 VFS-optstr: rw,relatime
@@ -297,7 +297,7 @@ parent: 20
 devno:  253:0
 ------ fs:
 source: none
-target: /proc/sys/fs/binfmt_misc
+target: /prod/sys/fs/binfmt_misc
 fstype: binfmt_misc
 optstr: rw,relatime
 VFS-optstr: rw,relatime
@@ -352,7 +352,8 @@ parent: 20
 devno:  0:38
 ------ fs:
 source: tmpfs
-target: /mnt/test/foobar
+target: /mnt/test/foo
+bar
 fstype: tmpfs
 optstr: rw,relatime
 VFS-optstr: rw,relatime

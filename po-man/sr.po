@@ -753,11 +753,11 @@ msgstr "*--report*"
 #: ../disk-utils/blockdev.8.adoc:41
 msgid ""
 "Print a report for the specified device. It is possible to give multiple "
-"devices. If none is given, all devices which appear in _/proc/partitions_ "
+"devices. If none is given, all devices which appear in _/prod/partitions_ "
 "are shown. Note that the partition StartSec is in 512-byte sectors."
 msgstr ""
 "Исписује извештај за наведени уређај. Могуће је дати више уређаја. Ако "
-"ниједан није дат, сви уређаји који се појављују у _/proc/partitions_ бивају "
+"ниједан није дат, сви уређаји који се појављују у _/prod/partitions_ бивају "
 "приказани. Знајте да је почетни сектор партиције у 512-бајтним секторима."
 
 #. type: Title ==
@@ -2122,14 +2122,14 @@ msgstr "Исписује партиционе табеле за наведене
 #. type: Plain text
 #: ../disk-utils/fdisk.8.adoc:60
 msgid ""
-"If no devices are given, the devices mentioned in _/proc/partitions_ (if "
+"If no devices are given, the devices mentioned in _/prod/partitions_ (if "
 "this file exists) are used. Devices are always listed in the order in which "
-"they are specified on the command-line, or by the kernel listed in _/proc/"
+"they are specified on the command-line, or by the kernel listed in _/prod/"
 "partitions_."
 msgstr ""
-"Ако није дат уређај, уређаји поменути у _/proc/partitions_ (ако ова датотека "
+"Ако није дат уређај, уређаји поменути у _/prod/partitions_ (ако ова датотека "
 "постоји) се користе. Уређаји се увек исписују по реду по ком су наведени на "
-"линији наредби, или то ради кернел према списку у _/proc/partitions_."
+"линији наредби, или то ради кернел према списку у _/prod/partitions_."
 
 #. type: Labeled list
 #: ../disk-utils/fdisk.8.adoc:61
@@ -5199,10 +5199,10 @@ msgstr ""
 #: ../disk-utils/mkswap.8.adoc:110
 msgid ""
 "Presently, Linux allows 32 swap areas. The areas in use can be seen in the "
-"file _/proc/swaps_."
+"file _/prod/swaps_."
 msgstr ""
 "Тренутно, Линукс омогућава 32 разменске области. Области у употреби се могу "
-"видети у датотеци _/proc/swaps_."
+"видети у датотеци _/prod/swaps_."
 
 #. type: Plain text
 #: ../disk-utils/mkswap.8.adoc:112
@@ -12939,7 +12939,7 @@ msgid ""
 msgstr ""
 "Када је наведен _уређај_, скупине само са овог уређаја се приказују. Могуће "
 "је навести више аргумената _уређаја_ на линији наредби. Ако ништа није дато, "
-"све партиције или непартиционисани уређаји који се појаве у _/proc/"
+"све партиције или непартиционисани уређаји који се појаве у _/prod/"
 "partitions_ се приказују, ако су препознати."
 
 #. type: Plain text
@@ -13589,13 +13589,13 @@ msgid ""
 "supports the \"udev\" and \"scan\" methods. More than one method may be "
 "specified in a comma-separated list. Default is \"udev,scan\". The \"udev\" "
 "method uses udev _/dev/disk/by-*_ symlinks and the \"scan\" method scans all "
-"block devices from the _/proc/partitions_ file."
+"block devices from the _/prod/partitions_ file."
 msgstr ""
 "Дефинише метод(е) процене НАТПИСА и УУИД-а. Тренутно, библиотека „libblkid“ "
 "подржава методе „udev“ и „scan“. Више од једне методе се може навести на "
 "зарезом раздвојеном списку. Основно је „udev,scan“. Метода „udev“ користи _/"
 "dev/disk/by-*_ симболичке везе „udev“-а а метода „scan“ скенира све блок "
-"уређаје из датотеке _/proc/partitions_."
+"уређаје из датотеке _/prod/partitions_."
 
 #. type: Plain text
 #: ../misc-utils/blkid.8.adoc:174
@@ -14772,8 +14772,8 @@ msgstr "*findmnt* [опције] [*--source*] _уређај_ [*--target* _пут
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:25
 #, no-wrap
-msgid "*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/proc/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.\n"
-msgstr "*findmnt* ће исписати све прикачене системе датотека или ће потражити систем датотека. Наредба *findmnt* је у могућности да тражи у _/etc/fstab_, _/etc/mtab_ или у _/proc/self/mountinfo_. Ако _уређај_ или _тачка-качења_ није дато, приказују се сви системи датотека.\n"
+msgid "*findmnt* will list all mounted filesystems or search for a filesystem. The *findmnt* command is able to search in _/etc/fstab_, _/etc/mtab_ or _/prod/self/mountinfo_. If _device_ or _mountpoint_ is not given, all filesystems are shown.\n"
+msgstr "*findmnt* ће исписати све прикачене системе датотека или ће потражити систем датотека. Наредба *findmnt* је у могућности да тражи у _/etc/fstab_, _/etc/mtab_ или у _/prod/self/mountinfo_. Ако _уређај_ или _тачка-качења_ није дато, приказују се сви системи датотека.\n"
 
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:27
@@ -15034,11 +15034,11 @@ msgstr "*-k*, *--kernel*"
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:83
 msgid ""
-"Search in _/proc/self/mountinfo_. The output is in the tree-like format. "
+"Search in _/prod/self/mountinfo_. The output is in the tree-like format. "
 "This is the default. The output contains only mount options maintained by "
 "kernel (see also *--mtab*)."
 msgstr ""
-"Тражи у _/proc/self/mountinfo_. Излаз је у формату налик стаблу. Ово је "
+"Тражи у _/prod/self/mountinfo_. Излаз је у формату налик стаблу. Ово је "
 "основно. Излаз садржи само опције качења које одржава кернел (видите такође "
 "*--mtab*)."
 
@@ -15093,12 +15093,12 @@ msgstr "*-N*, *--task* _тид_"
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:95
 msgid ""
-"Use alternative namespace _/proc/<tid>/mountinfo_ rather than the default _/"
+"Use alternative namespace _/prod/<tid>/mountinfo_ rather than the default _/"
 "proc/self/mountinfo_. If the option is specified more than once, then tree-"
 "like output is disabled (see the *--list* option). See also the *unshare*(1) "
 "command."
 msgstr ""
-"Користи заменски називни простор _/proc/<tid>/mountinfo_ уместо основног _/"
+"Користи заменски називни простор _/prod/<tid>/mountinfo_ уместо основног _/"
 "proc/self/mountinfo_. Ако је опција наведена више пута, тада је излаз налик "
 "стаблу искључен (видите опцију *--list*). Видите такође наредбу *unshare*(1)."
 
@@ -15183,11 +15183,11 @@ msgstr "*-p*, *--poll*[_=списак_]"
 #. type: Plain text
 #: ../misc-utils/findmnt.8.adoc:119
 msgid ""
-"Monitor changes in the _/proc/self/mountinfo_ file. Supported actions are: "
+"Monitor changes in the _/prod/self/mountinfo_ file. Supported actions are: "
 "mount, umount, remount and move. More than one action may be specified in a "
 "comma-separated list. All actions are monitored by default."
 msgstr ""
-"Прати измене у датотеци _/proc/self/mountinfo_. Подржане радње су: mount, "
+"Прати измене у датотеци _/prod/self/mountinfo_. Подржане радње су: mount, "
 "umount, remount и move. Више од једне радњ еможе бити наведено на зарезом "
 "раздвојеном списку. Све радње се прате по основи."
 
@@ -19296,7 +19296,7 @@ msgstr "И-ЧВОР <„број“>"
 #. type: Plain text
 #: ../misc-utils/lsclocks.1.adoc:98
 msgid ""
-"Offset of the current namespace to the parent namespace as read from */proc/"
+"Offset of the current namespace to the parent namespace as read from */prod/"
 "self/timens_offsets*."
 msgstr ""
 
@@ -19590,9 +19590,9 @@ msgstr "БЛКДРВ <„ниска“>"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:134
-msgid "Block device driver name resolved by `/proc/devices`."
+msgid "Block device driver name resolved by `/prod/devices`."
 msgstr ""
-"Назив уграђеног програма блок уређаја решеног од стране „/proc/devices“."
+"Назив уграђеног програма блок уређаја решеног од стране „/prod/devices“."
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:135
@@ -19686,9 +19686,9 @@ msgstr "ЗНКДРВ <„ниска“>"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:158
-msgid "Character device driver name resolved by `/proc/devices`."
+msgid "Character device driver name resolved by `/prod/devices`."
 msgstr ""
-"Назив уграђеног програма знаковног уређаја решеног од стране „/proc/devices“."
+"Назив уграђеног програма знаковног уређаја решеног од стране „/prod/devices“."
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:159
@@ -19994,10 +19994,10 @@ msgstr "НАЗИВ <„ниска“>"
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:248
 msgid ""
-"Raw file name extracted from from ``/proc/``_pid_``/fd/``_fd_ or ``/proc/"
+"Raw file name extracted from from ``/prod/``_pid_``/fd/``_fd_ or ``/prod/"
 "``_pid_``/map_files/``_region_."
 msgstr ""
-"Сирови назив датотеке извучен из „/proc/“_пид_„/fd/“_од_ или „/proc/“_пид_„/"
+"Сирови назив датотеке извучен из „/prod/“_пид_„/fd/“_од_ или „/prod/“_пид_„/"
 "map_files/“_регион_."
 
 #. type: Labeled list
@@ -20041,8 +20041,8 @@ msgstr "РАЗНУРЕЂ <„ниска“>"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:260
-msgid "Misc character device name resolved by `/proc/misc`."
-msgstr "Назив разног знаковног уређаја ког решава „/proc/misc“."
+msgid "Misc character device name resolved by `/prod/misc`."
+msgstr "Назив разног знаковног уређаја ког решава „/prod/misc“."
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:261
@@ -20184,10 +20184,10 @@ msgstr "pid=_TARGET-PID_ comm=_TARGET-COMMAND_ nspid=_TARGET-NSPIDS_"
 #, no-wrap
 msgid ""
 "*lsfd* extracts _TARGET-PID_ and _TARGET-NSPIDS_ from\n"
-"``/proc/``_pid_``/fdinfo/``_fd_.\n"
+"``/prod/``_pid_``/fdinfo/``_fd_.\n"
 msgstr ""
 "*lsfd* ИЗВЛАЧИ _TARGET-PID_ И _TARGET-NSPIDS_ из\n"
-"„/proc/“_пид_„/fdinfo/“_од_.\n"
+"„/prod/“_пид_„/fdinfo/“_од_.\n"
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:302
@@ -20233,13 +20233,13 @@ msgstr ""
 #, fuzzy, no-wrap
 #| msgid ""
 #| "*lsfd* extracts _TARGET-PID_ and _TARGET-NSPIDS_ from\n"
-#| "``/proc/``_pid_``/fdinfo/``_fd_.\n"
+#| "``/prod/``_pid_``/fdinfo/``_fd_.\n"
 msgid ""
 "*lsfd* extracts _PTMX.TTY-INDEX_ from\n"
-"``/proc/``_pid_``/fdinfo/``_fd_.\n"
+"``/prod/``_pid_``/fdinfo/``_fd_.\n"
 msgstr ""
 "*lsfd* ИЗВЛАЧИ _TARGET-PID_ И _TARGET-NSPIDS_ из\n"
-"„/proc/“_пид_„/fdinfo/“_од_.\n"
+"„/prod/“_пид_„/fdinfo/“_од_.\n"
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:314
@@ -20492,8 +20492,8 @@ msgstr "ПАРТИЦИЈА <„ниска“>"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:383
-msgid "Block device name resolved by `/proc/partition`."
-msgstr "Назив блок уређаја како га решава „/proc/partition“."
+msgid "Block device name resolved by `/prod/partition`."
+msgstr "Назив блок уређаја како га решава „/prod/partition“."
 
 #. type: Labeled list
 #: ../misc-utils/lsfd.1.adoc:384
@@ -20525,8 +20525,8 @@ msgstr "ОДПИД.НСПИД <„ниска“>"
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:392
-msgid "Value of NSpid field in ``/proc/``_pid_``/fdinfo/``_fd_ of the pidfd."
-msgstr "Закон NSpid поља у „/proc/“_pid_„/fdinfo/“_fd_ „pidfd“-а."
+msgid "Value of NSpid field in ``/prod/``_pid_``/fdinfo/``_fd_ of the pidfd."
+msgstr "Закон NSpid поља у „/prod/“_pid_„/fdinfo/“_fd_ „pidfd“-а."
 
 #. type: Plain text
 #: ../misc-utils/lsfd.1.adoc:394
@@ -20549,11 +20549,11 @@ msgstr ""
 #. type: delimited block _
 #: ../misc-utils/lsfd.1.adoc:404
 msgid ""
-"Note that this differs from the Pid and NSpid fields in /proc/<pid>/status "
+"Note that this differs from the Pid and NSpid fields in /prod/<pid>/status "
 "where Pid and NSpid are always shown relative to the pid namespace of the "
 "procfs instance."
 msgstr ""
-"Имајте на уму да се ово разликује од поља „Pid“ и „NSpid“ у „/proc/<пид>/"
+"Имајте на уму да се ово разликује од поља „Pid“ и „NSpid“ у „/prod/<пид>/"
 "статус“ где су Пид и НСпид увек приказани у односу на пид називни простор "
 "„procfs“ примерка."
 
@@ -22100,14 +22100,14 @@ msgstr ""
 msgid ""
 "The *--set* operation sets pipe buffer sizes. If it is specified, it must be "
 "specified with an explicit _size_. Otherwise, it is implied and the size is "
-"read from */proc/sys/fs/pipe-max-size*. The kernel may adjust _size_ as "
+"read from */prod/sys/fs/pipe-max-size*. The kernel may adjust _size_ as "
 "described in *fcntl*(2). To determine the actual buffer sizes set, use the "
 "*--verbose* option. If neither *--file* nor *--fd* are specified, *--set* "
 "acts on standard output."
 msgstr ""
 "Операција *--set* поставља величину међумеморије спојке. Ако је наведено, "
 "мора бити наведено са изричитом _величином_. У супротном, подразумева се и "
-"величина се чита из */proc/sys/fs/pipe-max-size*. Кернел може подесити "
+"величина се чита из */prod/sys/fs/pipe-max-size*. Кернел може подесити "
 "_величину_ као што је описано у *fcntl*(2). Да одредите стварну постављену "
 "величину међумеморије, користите опцију *--verbose*. Ако ни *--file* ни *--"
 "fd* нису наведени, *--set* делује на стандардни излаз."
@@ -22234,14 +22234,14 @@ msgid ""
 "working directory. You may specify this option multiple times to affect "
 "different files, and you may do so in combination with *--fd*. Generally, "
 "this option is used with FIFOs, but it will also operate on anonymous pipes "
-"such as those found in */proc/PID/fd*. Changes to the buffer size of FIFOs "
+"such as those found in */prod/PID/fd*. Changes to the buffer size of FIFOs "
 "are not preserved across system restarts."
 msgstr ""
 "Поставља величину међумеморије ПУПИ-ја или спојке на _путања_, у односу на "
 "тренутни радни директоријум. Ову опцију можете навести више пута да бисте "
 "утицали на различите датотеке, а то можете учинити у комбинацији са *--fd*. "
 "Уопштено, ова опција се користи са ПУПИ-јима, али ће такође радити на "
-"анонимним спојкама као што су оне које се налазе у */proc/PID/fd*. Промене "
+"анонимним спојкама као што су оне које се налазе у */prod/PID/fd*. Промене "
 "величине међумеморије ПУПИ-ја се не чувају током поновног покретања система."
 
 #. type: Labeled list
@@ -22380,8 +22380,8 @@ msgstr ""
 #. type: Labeled list
 #: ../misc-utils/pipesz.1.adoc:80
 #, no-wrap
-msgid "*find* /proc/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
-msgstr "*find* /proc/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
+msgid "*find* /prod/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
+msgstr "*find* /prod/_PID_/fd -exec *pipesz* -gqf '{}' ';'"
 
 #. type: Plain text
 #: ../misc-utils/pipesz.1.adoc:82
@@ -22398,10 +22398,10 @@ msgstr ""
 #: ../misc-utils/pipesz.1.adoc:86
 msgid ""
 "Linux supports adjusting the size of pipe buffers since kernel 2.6.35. This "
-"release also introduced */proc/sys/fs/pipe-max-size*."
+"release also introduced */prod/sys/fs/pipe-max-size*."
 msgstr ""
 "Линукс подржава подешавање величине међумеморије спојке од кернела 2.6.35. "
-"Ово издање такође уводи */proc/sys/fs/pipe-max-size*."
+"Ово издање такође уводи */prod/sys/fs/pipe-max-size*."
 
 #. type: Plain text
 #: ../misc-utils/pipesz.1.adoc:88
@@ -27091,7 +27091,7 @@ msgstr ""
 msgid ""
 "For example, *-n 1* or *-n emerg* prevents all messages, except emergency "
 "(panic) messages, from appearing on the console. All levels of messages are "
-"still written to _/proc/kmsg_, so *syslogd*(8) can still be used to control "
+"still written to _/prod/kmsg_, so *syslogd*(8) can still be used to control "
 "exactly where kernel messages appear. When the *-n* option is used, *dmesg* "
 "will _not_ print or clear the kernel ring buffer."
 msgstr ""
@@ -27708,10 +27708,10 @@ msgstr "*-p*, *--proc*"
 #. type: Plain text
 #: ../sys-utils/eject.1.adoc:66
 msgid ""
-"This option allows you to use _/proc/mounts_ instead _/etc/mtab_. It also "
+"This option allows you to use _/prod/mounts_ instead _/etc/mtab_. It also "
 "passes the *-n* option to *umount*(8)."
 msgstr ""
-"Ова опција вам омогућава да користите _/proc/mounts_ уместо _/etc/mtab_. "
+"Ова опција вам омогућава да користите _/prod/mounts_ уместо _/etc/mtab_. "
 "Такође прослеђује опцију *-n* *umount*-у(8)."
 
 #. type: Labeled list
@@ -29408,8 +29408,8 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/fstrim.8.adoc:50
 #, no-wrap
-msgid "*--listed-in /etc/fstab:/proc/self/mountinfo*.\n"
-msgstr "*--listed-in /etc/fstab:/proc/self/mountinfo*.\n"
+msgid "*--listed-in /etc/fstab:/prod/self/mountinfo*.\n"
+msgstr "*--listed-in /etc/fstab:/prod/self/mountinfo*.\n"
 
 #. type: Plain text
 #: ../sys-utils/fstrim.8.adoc:52
@@ -32052,7 +32052,7 @@ msgstr ""
 #: ../sys-utils/ipcs.1.adoc:83
 msgid ""
 "The current implementation of *ipcs* obtains information about available IPC "
-"resources by parsing the files in _/proc/sysvipc_. Before util-linux version "
+"resources by parsing the files in _/prod/sysvipc_. Before util-linux version "
 "v2.23, an alternate mechanism was used: the *IPC_STAT* command of "
 "*msgctl*(2), *semctl*(2), and *shmctl*(2). This mechanism is also used in "
 "later util-linux versions in the case where _/proc_ is unavailable. A "
@@ -32061,7 +32061,7 @@ msgid ""
 "permission."
 msgstr ""
 "Тренутна примена *ipcs*-а добија информације о доступним IPC ресурсима "
-"обрађивањем датотека у _/proc/sysvipc_. Пре „util-linux“-а издање и2.23, "
+"обрађивањем датотека у _/prod/sysvipc_. Пре „util-linux“-а издање и2.23, "
 "коришћен је алтернативни механизам: наредба *IPC_STAT* *msgctl*-а(2), "
 "*semctl*-а(2) и *shmctl*-a(2). Овај механизам jе такође коришћен у каснијим "
 "издањима „util-linux“-а у случају када _/proc_ није доступан. Ограничење "
@@ -33184,8 +33184,8 @@ msgstr "*lscpu* [опције]\n"
 #. type: Plain text
 #: ../sys-utils/lscpu.1.adoc:20
 #, no-wrap
-msgid "*lscpu* gathers CPU architecture information from _sysfs_, _/proc/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.\n"
-msgstr "*lscpu* прикупља информације о архитектури процесора из _sysfs_, _/proc/cpuinfo_ и било које примењиве архитектури специфичне библиотеке (нпр. *librtas* на Powerpc-ју). Излаз наредбе се може оптимизовати за обраду или за лаку читљивост од стране људи. У информације спадају, на пример, број процесора, нити, језгра, прикључнице, и чвор не-једноликог приступа меморији (NUMA). Ту су такође и информације о оставама процесора и о дељњу оставе, фамилији, моделу, „bogoMIPS“-у, поретку бајтова и кораку.\n"
+msgid "*lscpu* gathers CPU architecture information from _sysfs_, _/prod/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.\n"
+msgstr "*lscpu* прикупља информације о архитектури процесора из _sysfs_, _/prod/cpuinfo_ и било које примењиве архитектури специфичне библиотеке (нпр. *librtas* на Powerpc-ју). Излаз наредбе се може оптимизовати за обраду или за лаку читљивост од стране људи. У информације спадају, на пример, број процесора, нити, језгра, прикључнице, и чвор не-једноликог приступа меморији (NUMA). Ту су такође и информације о оставама процесора и о дељњу оставе, фамилији, моделу, „bogoMIPS“-у, поретку бајтова и кораку.\n"
 
 #. type: Plain text
 #: ../sys-utils/lscpu.1.adoc:22
@@ -33938,14 +33938,14 @@ msgid ""
 "filesystem may be unshared and affected by a PID namespace (see *unshare --"
 "mount-proc* for more details). *lsns* is not able to see persistent "
 "namespaces without processes where the namespace instance is held by a bind "
-"mount to /proc/_pid_/ns/_type_."
+"mount to /prod/_pid_/ns/_type_."
 msgstr ""
 "Зајте да *lsns* чита информације непосредно из _/proc_ система датотека и за "
 "кориснике који нису администратор може вратити непотпуне информације. "
 "Тренутни систем датотека _/proc_ може бити недељен и под утицајем ПИД "
 "називног простора (видите *unshare --mount-proc* за више о томе). *lsns* "
 "није у могућности да види трајне називне просторе без процеса у којима се "
-"примерак називног простора држи качењем свезе на /proc/_pid_/ns/_type_."
+"примерак називног простора држи качењем свезе на /prod/_pid_/ns/_type_."
 
 #. type: Plain text
 #: ../sys-utils/lsns.8.adoc:39
@@ -33971,10 +33971,10 @@ msgstr "*-P*, *--persistent*"
 #: ../sys-utils/lsns.8.adoc:54
 msgid ""
 "Display only the namespaces without processes (aka persistent namespaces), "
-"created by bind mounting /proc/pid/ns/type files to a filesystem path."
+"created by bind mounting /prod/pid/ns/type files to a filesystem path."
 msgstr ""
 "Приказује само називне просторе без процеса (ака трајни називни простори), "
-"створене качењем „/proc/pid/ns/type“ датотека свезе на путању система "
+"створене качењем „/prod/pid/ns/type“ датотека свезе на путању система "
 "датотека."
 
 #. type: Labeled list
@@ -34462,8 +34462,8 @@ msgstr ""
 #. type: Title ===
 #: ../sys-utils/mount.8.adoc:131
 #, no-wrap
-msgid "The files /etc/fstab, /etc/mtab and /proc/mounts"
-msgstr "Датотеке „/etc/fstab“, „/etc/mtab“ и „/proc/mounts“"
+msgid "The files /etc/fstab, /etc/mtab and /prod/mounts"
+msgstr "Датотеке „/etc/fstab“, „/etc/mtab“ и „/prod/mounts“"
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:134
@@ -34520,7 +34520,7 @@ msgid ""
 "currently mounted filesystems in the file _/etc/mtab_. The support for "
 "regular classic _/etc/mtab_ is completely disabled at compile time by "
 "default, because on current Linux systems it is better to make _/etc/mtab_ a "
-"symlink to _/proc/mounts_ instead. The regular _mtab_ file maintained in "
+"symlink to _/prod/mounts_ instead. The regular _mtab_ file maintained in "
 "userspace cannot reliably work with namespaces, containers and other "
 "advanced Linux features. If the regular _mtab_ support is enabled, then it's "
 "possible to use the file as well as the symlink."
@@ -34529,7 +34529,7 @@ msgstr ""
 "прикачених система датотека у датотеци _/etc/mtab_. Подршка за регуларну "
 "класичну _/etc/mtab_ је потпуно искључена у време превођења по основи, јер "
 "је на тренутним Линукс системима стога боље направити _/etc/mtab_-у "
-"симболичку везу до _/proc/mounts_. Регуларна _mtab_ датотека која се одржава "
+"симболичку везу до _/prod/mounts_. Регуларна _mtab_ датотека која се одржава "
 "у корисничком простору не може поуздано да ради са називним просторима, "
 "контејнерима и другим напредним Линукс функцијама. Ако регуларна _mtab_ "
 "подршка је укључена, тада је могуће користити датотеку као и симболичку везу."
@@ -35131,13 +35131,13 @@ msgid ""
 "The correct functionality depends on _/proc_ (to detect already mounted "
 "filesystems) and on _/sys_ (to evaluate filesystem tags like UUID= or "
 "LABEL=). It's strongly recommended to mount _/proc_ and _/sys_ filesystems "
-"before *mount -a* is executed, or keep /proc and /sys at the beginning of "
+"before *mount -a* is executed, or keep /prod and /sys at the beginning of "
 "_fstab_."
 msgstr ""
 "Исправна функционалност зависи од _/proc_ (за откривање већ прикачених "
 "система датотека) и од _/sys_ (за процену ознака система датотека као што је "
 "„УУИД=“ или „НАТПИС=“). Строго се препоручује да се прикаче _/proc_ и _/sys_ "
-"системи датотека пре него што се *mount -a* изврши, или да се држе „/proc“ и "
+"системи датотека пре него што се *mount -a* изврши, или да се држе „/prod“ и "
 "„/sys“ на почетку _fstab_."
 
 #. type: Plain text
@@ -35372,14 +35372,14 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/mount.8.adoc:356
 #, no-wrap
-msgid "*--map-users* /proc/_PID_/ns/user"
+msgid "*--map-users* /prod/_PID_/ns/user"
 msgstr ""
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:358
 msgid ""
 "Use the specified user namespace for user and group mapping in an id-mapped "
-"mount. This is an alias for \"-o X-mount.idmap=/proc/_PID_/ns/user\" and "
+"mount. This is an alias for \"-o X-mount.idmap=/prod/_PID_/ns/user\" and "
 "cannot be used twice nor together with the _inner_:_outer_:_count_ option "
 "format above. For more details see *X-mount.idmap* below."
 msgstr ""
@@ -35774,13 +35774,13 @@ msgstr "*-t*, *--types* _врста-сд_"
 msgid ""
 "The argument following the *-t* is used to indicate the filesystem type. The "
 "filesystem types which are currently supported depend on the running kernel. "
-"See _/proc/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a "
+"See _/prod/filesystems_ and _/lib/modules/$(uname -r)/kernel/fs_ for a "
 "complete list of the filesystems. The most common are ext2, ext3, ext4, xfs, "
 "btrfs, vfat, sysfs, proc, nfs and cifs."
 msgstr ""
 "Аргумент који прати *-t* се користи да назначи врсту система датотека. Врсте "
 "система датотека које су тренутно подржане зависе од радног кернела. Видите "
-"_/proc/filesystems_ и _/lib/modules/$(uname -r)/kernel/fs_ за потпун списак "
+"_/prod/filesystems_ и _/lib/modules/$(uname -r)/kernel/fs_ за потпун списак "
 "система датотека. Најуобичајенији су ext2, ext3, ext4, xfs, btrfs, vfat, "
 "sysfs, proc, nfs и cifs."
 
@@ -35805,20 +35805,20 @@ msgid ""
 "try to guess the desired type. *mount* uses the *libblkid*(3) library for "
 "guessing the filesystem type; if that does not turn up anything that looks "
 "familiar, *mount* will try to read the file _/etc/filesystems_, or, if that "
-"does not exist, _/proc/filesystems_. All of the filesystem types listed "
+"does not exist, _/prod/filesystems_. All of the filesystem types listed "
 "there will be tried, except for those that are labeled \"nodev\" (e.g. "
 "_devpts_, _proc_ and _nfs_). If _/etc/filesystems_ ends in a line with a "
-"single {asterisk}, mount will read _/proc/filesystems_ afterwards. While "
+"single {asterisk}, mount will read _/prod/filesystems_ afterwards. While "
 "trying, all filesystem types will be mounted with the mount option *silent*."
 msgstr ""
 "Ако није дата опција *-t*, или ако је наведена врста *auto*, *mount* ће "
 "покушати да погоди жељену врсту. *mount* користи *libblkid*(3) библиотеку за "
 "погађање врсте система датотека; ако ово не да ништа што изгледа познато, "
 "*mount* ће покушати да прочита датотеку _/etc/filesystems_, или, ако не "
-"постоји, _/proc/filesystems_. Све врсте система датотека наведене тамо биће "
+"постоји, _/prod/filesystems_. Све врсте система датотека наведене тамо биће "
 "покушане, изузев заоне које су означене „nodev“ (нпр. _devpts_, _proc_ и "
 "_nfs_). Ако се _/etc/filesystems_ завршава у реду са једним {asterisk}, "
-"„mount“ ће након тога прочитати _/proc/filesystems_. Приликом покушавања, "
+"„mount“ ће након тога прочитати _/prod/filesystems_. Приликом покушавања, "
 "све врсте система датотека биће прикачене са опцијом качења *silent*."
 
 #. type: Plain text
@@ -35949,12 +35949,12 @@ msgstr ""
 #: ../sys-utils/mount.8.adoc:474
 msgid ""
 "Some of these options could be enabled or disabled by default in the system "
-"kernel. To check the current setting see the options in _/proc/mounts_. Note "
+"kernel. To check the current setting see the options in _/prod/mounts_. Note "
 "that filesystems also have per-filesystem specific default mount options "
 "(see for example *tune2fs -l* output for ext__N__ filesystems)."
 msgstr ""
 "Неке од ових опција могу се укључити или искључити по основи у кернелу "
-"система. Да бисте проверили тренутну поставку, погледајте опције у _/proc/"
+"система. Да бисте проверили тренутну поставку, погледајте опције у _/prod/"
 "mounts_. Знајте да системи датотека такође имају основне опције качења "
 "специфичне за сваки систем датотека (видите на пример *tune2fs -l* излаз за "
 "„ext__N__“ системе датотека)."
@@ -36491,12 +36491,12 @@ msgid ""
 "Allows to explicitly request full atime updates. This makes it possible for "
 "the kernel to default to *relatime* or *noatime* but still allow userspace "
 "to override it. For more details about the default system mount options see "
-"_/proc/mounts_."
+"_/prod/mounts_."
 msgstr ""
 "Омогућава да се експлицитно захтева освежавање пуног „atime“-а. Ово "
 "омогућава да кернел пређе по основности на *relatime* или *noatime*, али и "
 "даље дозвољава корисничком простору да га замени. За више детаља о основним "
-"опцијама качења система погледајте _/proc/mounts_."
+"опцијама качења система погледајте _/prod/mounts_."
 
 #. type: Labeled list
 #: ../sys-utils/mount.8.adoc:602
@@ -36671,7 +36671,7 @@ msgstr ""
 msgid ""
 "The default kernel behavior for VFS mount flags (nodev,nosuid,noexec,ro) is "
 "to reset all unspecified flags on remount. That's why *mount*(8) tries to "
-"keep the current setting according to _fstab_ or _/proc/self/mountinfo_. "
+"keep the current setting according to _fstab_ or _/prod/self/mountinfo_. "
 "This default behavior is possible to change by *--options-mode*. The "
 "recursive change of the mount flags (supported since v2.39 on systems with "
 "*mount_setattr*(2)  syscall), for example, *mount -o remount,ro=recursive*, "
@@ -36726,11 +36726,11 @@ msgstr "*mount -o remount,rw /dir*\n"
 msgid ""
 "After this call, *mount* reads _fstab_ and merges these options with the "
 "options from the command line (*-o*). If no mountpoint is found in _fstab_, "
-"then it defaults to mount options from _/proc/self/mountinfo_."
+"then it defaults to mount options from _/prod/self/mountinfo_."
 msgstr ""
 "Након овог позива, *mount* чита _fstab_ и стапа ове опције са опцијама са "
 "линије наредби (*-o*). Ако се не нађе тачка качења у _fstab_-у, тада "
-"подразумева опције качења из _/proc/self/mountinfo_."
+"подразумева опције качења из _/prod/self/mountinfo_."
 
 #. type: delimited block _
 #: ../sys-utils/mount.8.adoc:661
@@ -37163,10 +37163,10 @@ msgstr ""
 #. type: delimited block _
 #: ../sys-utils/mount.8.adoc:758
 msgid ""
-"For example, *X-mount.idmap=/proc/PID/ns/user* will attach the user "
+"For example, *X-mount.idmap=/prod/PID/ns/user* will attach the user "
 "namespace of the process PID to the mount."
 msgstr ""
-"На пример, *X-mount.idmap=/proc/PID/ns/user* ће кориснички називни простор "
+"На пример, *X-mount.idmap=/prod/PID/ns/user* ће кориснички називни простор "
 "ПИД-а процеса придодати качењу."
 
 #. type: Labeled list
@@ -40936,10 +40936,10 @@ msgstr "укључује постављање излаза прочишћава�
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1647
 msgid ""
-"See also \"*The files /etc/fstab, /etc/mtab and /proc/mounts*\" section "
+"See also \"*The files /etc/fstab, /etc/mtab and /prod/mounts*\" section "
 "above."
 msgstr ""
-"Видите изнад такође одељак „*Датотеке /etc/fstab, /etc/mtab и /proc/mounts*“."
+"Видите изнад такође одељак „*Датотеке /etc/fstab, /etc/mtab и /prod/mounts*“."
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1650
@@ -40965,9 +40965,9 @@ msgstr "_/etc/mtab_"
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1656
-msgid "table of mounted filesystems or symlink to _/proc/mounts_"
+msgid "table of mounted filesystems or symlink to _/prod/mounts_"
 msgstr ""
-"табела прикачених система датотека или симболичких веза ка _/proc/mounts_"
+"табела прикачених система датотека или симболичких веза ка _/prod/mounts_"
 
 #. type: Labeled list
 #: ../sys-utils/mount.8.adoc:1657
@@ -41039,23 +41039,23 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1679
 msgid ""
-"It is possible that the files _/etc/mtab_ and _/proc/mounts_ don't match on "
+"It is possible that the files _/etc/mtab_ and _/prod/mounts_ don't match on "
 "systems with a regular _mtab_ file. The first file is based only on the "
 "*mount* command options, but the content of the second file also depends on "
 "the kernel and others settings (e.g. on a remote NFS server -- in certain "
 "cases the *mount* command may report unreliable information about an NFS "
-"mount point and the _/proc/mount_ file usually contains more reliable "
+"mount point and the _/prod/mount_ file usually contains more reliable "
 "information.) This is another reason to replace the _mtab_ file with a "
-"symlink to the _/proc/mounts_ file."
+"symlink to the _/prod/mounts_ file."
 msgstr ""
-"Могуће је да се датотеке _/etc/mtab_ и _/proc/mounts_ не подударају на "
+"Могуће је да се датотеке _/etc/mtab_ и _/prod/mounts_ не подударају на "
 "системима са обичном _mtab_ датотеком. Прва датотека је заснована само на "
 "опцијама наредбе *mount*, али садржај друге датотеке такође зависи од "
 "кернела и других подешавања (нпр. на удаљеном NFS серверу – у одређеним "
 "случајевима наредба *mount* може известити непоуздане информације о NFS "
-"тачки качења а датотека _/proc/mount_ обично садржи поузданије информације). "
+"тачки качења а датотека _/prod/mount_ обично садржи поузданије информације). "
 "Ово је још један разлог да замените датотеку _mtab_ симболичком везом до "
-"датотеке _/proc/mounts_."
+"датотеке _/prod/mounts_."
 
 #. type: Plain text
 #: ../sys-utils/mount.8.adoc:1681
@@ -41155,8 +41155,8 @@ msgstr "*mountpoint* *-x* _уређај_\n"
 #. type: Plain text
 #: ../sys-utils/mountpoint.1.adoc:22
 #, no-wrap
-msgid "*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/proc/self/mountinfo_ file.\n"
-msgstr "*mountpoint* проверава да ли је дати _директоријум_ или _датотека_ поменут у _/proc/self/mountinfo_ датотеци.\n"
+msgid "*mountpoint* checks whether the given _directory_ or _file_ is mentioned in the _/prod/self/mountinfo_ file.\n"
+msgstr "*mountpoint* проверава да ли је дати _директоријум_ или _датотека_ поменут у _/prod/self/mountinfo_ датотеци.\n"
 
 #. type: Labeled list
 #: ../sys-utils/mountpoint.1.adoc:25
@@ -41284,13 +41284,13 @@ msgstr "*mount namespace*"
 msgid ""
 "Mounting and unmounting filesystems will not affect the rest of the system, "
 "except for filesystems which are explicitly marked as shared (with *mount --"
-"make-shared*; see _/proc/self/mountinfo_ for the *shared* flag). For further "
+"make-shared*; see _/prod/self/mountinfo_ for the *shared* flag). For further "
 "details, see *mount_namespaces*(7) and the discussion of the *CLONE_NEWNS* "
 "flag in *clone*(2)."
 msgstr ""
 "Качење и откачињање система датотека неће деловати на остатак система, "
 "изузев за системе датотека који су изричито означени као дељени (са *mount --"
-"make-shared*; видите _/proc/self/mountinfo_ за опције *shared*). За више о "
+"make-shared*; видите _/prod/self/mountinfo_ за опције *shared*). За више о "
 "томе, видите *mount_namespaces*(7) и расправу о опцији *CLONE_NEWNS* у "
 "*clone*(2)."
 
@@ -41336,11 +41336,11 @@ msgstr "*network namespace*"
 #: ../sys-utils/nsenter.1.adoc:34 ../sys-utils/unshare.1.adoc:40
 msgid ""
 "The process will have independent IPv4 and IPv6 stacks, IP routing tables, "
-"firewall rules, the _/proc/net_ and _/sys/class/net_ directory trees, "
+"firewall rules, the _/prod/net_ and _/sys/class/net_ directory trees, "
 "sockets, etc. For further details, see *network_namespaces*(7)."
 msgstr ""
 "Процес ће имати независне IPv4 и IPv6 спремнике, табеле IP рутине, правила "
-"мрежне баријере, сзабла _/proc/net_ и _/sys/class/net_ директоријума, "
+"мрежне баријере, сзабла _/prod/net_ и _/sys/class/net_ директоријума, "
 "прикључница, итд. За више о томе, видите *network_namespaces*(7)."
 
 #. type: Labeled list
@@ -41396,11 +41396,11 @@ msgstr "*cgroup namespace*"
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:43 ../sys-utils/unshare.1.adoc:46
 msgid ""
-"The process will have a virtualized view of _/proc/self/cgroup_, and new "
+"The process will have a virtualized view of _/prod/self/cgroup_, and new "
 "cgroup mounts will be rooted at the namespace cgroup root. For further "
 "details, see *cgroup_namespaces*(7)."
 msgstr ""
-"Процес ће имати виртуелизовани преглед _/proc/self/cgroup_-е, а нова "
+"Процес ће имати виртуелизовани преглед _/prod/self/cgroup_-е, а нова "
 "„cgroup“ качења биће укорењена у „cgroup“ корен називног простора. За више о "
 "томе, видите *cgroup_namespaces*(7)."
 
@@ -41414,11 +41414,11 @@ msgstr "*time namespace*"
 #: ../sys-utils/nsenter.1.adoc:46 ../sys-utils/unshare.1.adoc:52
 msgid ""
 "The process can have a distinct view of *CLOCK_MONOTONIC* and/or "
-"*CLOCK_BOOTTIME* which can be changed using _/proc/self/timens_offsets_. For "
+"*CLOCK_BOOTTIME* which can be changed using _/prod/self/timens_offsets_. For "
 "further details, see *time_namespaces*(7)."
 msgstr ""
 "Процес може имати другачији преглед *CLOCK_MONOTONIC*-а и/или "
-"*CLOCK_BOOTTIME*-а који се могу изменити коришћењем _/proc/self/"
+"*CLOCK_BOOTTIME*-а који се могу изменити коришћењем _/prod/self/"
 "timens_offsets_. За више о томе, видите *time_namespaces*(7)."
 
 #. TRANSLATORS: Keep {asterisk} untranslated.
@@ -41426,24 +41426,24 @@ msgstr ""
 #: ../sys-utils/nsenter.1.adoc:51
 msgid ""
 "Various of the options below that relate to namespaces take an optional "
-"_file_ argument. This should be one of the _/proc/[pid]/ns/{asterisk}_ files "
+"_file_ argument. This should be one of the _/prod/[pid]/ns/{asterisk}_ files "
 "described in *namespaces*(7), or the pathname of a bind mount that was "
 "created on one of those files."
 msgstr ""
 "Различите опције испод које се односе на називне просторе узимају опционални "
-"аргумент _датотека_. Ово би требало да буде једна од _/proc/[pid]/ns/"
+"аргумент _датотека_. Ово би требало да буде једна од _/prod/[pid]/ns/"
 "{asterisk}_ датотека описаних у *namespaces*(7), или назив путање качења "
 "свезивања које је направљено на једној од тих датотека."
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:55
 msgid ""
-"Enter all namespaces of the target process by the default _/proc/[pid]/ns/"
+"Enter all namespaces of the target process by the default _/prod/[pid]/ns/"
 "{asterisk}_ namespace paths. The default paths to the target process "
 "namespaces may be overwritten by namespace specific options (e.g., *--all --"
 "mount*=[_path_])."
 msgstr ""
-"Уноси све називне просторе циљног процеса по основним _/proc/[pid]/ns/"
+"Уноси све називне просторе циљног процеса по основним _/prod/[pid]/ns/"
 "{asterisk}_ путањама називног простора. Основне путање ка називним "
 "просторима циљног процеса може се преписати називном простору специфичним "
 "опцијама (нпр., *--all --mount*=[_path_])."
@@ -41478,8 +41478,8 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:61
 #, no-wrap
-msgid "_/proc/pid/ns/mnt_"
-msgstr "_/proc/pid/ns/mnt_"
+msgid "_/prod/pid/ns/mnt_"
+msgstr "_/prod/pid/ns/mnt_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:63
@@ -41489,8 +41489,8 @@ msgstr "називни простор качења"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:63
 #, no-wrap
-msgid "_/proc/pid/ns/uts_"
-msgstr "_/proc/pid/ns/uts_"
+msgid "_/prod/pid/ns/uts_"
+msgstr "_/prod/pid/ns/uts_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:65
@@ -41500,8 +41500,8 @@ msgstr "UTS називни простор"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:65
 #, no-wrap
-msgid "_/proc/pid/ns/ipc_"
-msgstr "_/proc/pid/ns/ipc_"
+msgid "_/prod/pid/ns/ipc_"
+msgstr "_/prod/pid/ns/ipc_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:67
@@ -41511,8 +41511,8 @@ msgstr "IPC називни простор"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:67
 #, no-wrap
-msgid "_/proc/pid/ns/net_"
-msgstr "_/proc/pid/ns/net_"
+msgid "_/prod/pid/ns/net_"
+msgstr "_/prod/pid/ns/net_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:69
@@ -41522,8 +41522,8 @@ msgstr "називни простор мреже"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:69
 #, no-wrap
-msgid "_/proc/pid/ns/pid_"
-msgstr "_/proc/pid/ns/pid_"
+msgid "_/prod/pid/ns/pid_"
+msgstr "_/prod/pid/ns/pid_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:71
@@ -41533,8 +41533,8 @@ msgstr "PID називни простор"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:71
 #, no-wrap
-msgid "_/proc/pid/ns/user_"
-msgstr "_/proc/pid/ns/user_"
+msgid "_/prod/pid/ns/user_"
+msgstr "_/prod/pid/ns/user_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:73
@@ -41544,8 +41544,8 @@ msgstr "називни простор корисника"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:73
 #, no-wrap
-msgid "_/proc/pid/ns/cgroup_"
-msgstr "_/proc/pid/ns/cgroup_"
+msgid "_/prod/pid/ns/cgroup_"
+msgstr "_/prod/pid/ns/cgroup_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:75
@@ -41555,8 +41555,8 @@ msgstr "називни простор ц-групе"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:75
 #, no-wrap
-msgid "_/proc/pid/ns/time_"
-msgstr "_/proc/pid/ns/time_"
+msgid "_/prod/pid/ns/time_"
+msgstr "_/prod/pid/ns/time_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:77
@@ -41566,8 +41566,8 @@ msgstr "називни простор времена"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:77
 #, no-wrap
-msgid "_/proc/pid/root_"
-msgstr "_/proc/pid/root_"
+msgid "_/prod/pid/root_"
+msgstr "_/prod/pid/root_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:79
@@ -41577,8 +41577,8 @@ msgstr "корени директоријум"
 #. type: Labeled list
 #: ../sys-utils/nsenter.1.adoc:79
 #, no-wrap
-msgid "_/proc/pid/cwd_"
-msgstr "_/proc/pid/cwd_"
+msgid "_/prod/pid/cwd_"
+msgstr "_/prod/pid/cwd_"
 
 #. type: Plain text
 #: ../sys-utils/nsenter.1.adoc:81
@@ -42532,7 +42532,7 @@ msgstr "Ова страница упутства документује изда
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:24
 msgid ""
-"The *readprofile* command uses the _/proc/profile_ information to print "
+"The *readprofile* command uses the _/prod/profile_ information to print "
 "ascii data on standard output. The output is organized in three columns: the "
 "first is the number of clock ticks, the second is the name of the C function "
 "in the kernel where those many ticks occurred, and the third is the "
@@ -42540,7 +42540,7 @@ msgid ""
 "of ticks and the length of the procedure. The output is filled with blanks "
 "to ease readability."
 msgstr ""
-"Наредба *readprofile* користи _/proc/profile_ информације за исписивање "
+"Наредба *readprofile* користи _/prod/profile_ информације за исписивање "
 "аскри података на стандардном излазу. Излаз је организован у три колоне: "
 "прва је број откуцаја сата, друга је назив „C“ функције у кернелу где се "
 "догодило толико откуцаја, а трећа је нормализовано „оптерећење“ поступка, "
@@ -42632,17 +42632,17 @@ msgstr "*-p*, *--profile* _про-датотека_"
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:44
 msgid ""
-"Specify a different profiling buffer, which by default is _/proc/profile_. "
+"Specify a different profiling buffer, which by default is _/prod/profile_. "
 "Using a different pro-file is useful if you want to `freeze' the kernel "
-"profiling at some time and read it later. The _/proc/profile_ file can be "
+"profiling at some time and read it later. The _/prod/profile_ file can be "
 "copied using *cat*(1) or *cp*(1). There is no more support for compressed "
 "profile buffers, like in *readprofile-1.1*, because the program needs to "
 "know the size of the buffer in advance."
 msgstr ""
-"Наводи другачију међумеморију профилисања, која је по основи _/proc/"
+"Наводи другачију међумеморију профилисања, која је по основи _/prod/"
 "profile_. Коришћење другачије датотеке профилисања је корисно ако желите да "
 "у неком тренутку „замрзнете“ профилисање кернела и прочитате га касније. "
-"Датотека _/proc/profile_ може се умножити наредбом *cat*(1) или *cp*(1). "
+"Датотека _/prod/profile_ може се умножити наредбом *cat*(1) или *cp*(1). "
 "Нема више подршке за запаковане међумеморије профила, као у "
 "*readprofile-1.1*, јер програм мора унапред да зна величину међумеморије."
 
@@ -42656,13 +42656,13 @@ msgstr "*-r*, *--reset*"
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:47
 msgid ""
-"Reset the profiling buffer. This can only be invoked by root, because _/proc/"
+"Reset the profiling buffer. This can only be invoked by root, because _/prod/"
 "profile_ is readable by everybody but writable only by the superuser. "
 "However, you can make *readprofile* set-user-ID 0, in order to reset the "
 "buffer without gaining privileges."
 msgstr ""
 "Поново поставља међумеморију профилисања. Ово може да призове само "
-"администратор, јер _/proc/profile_ може да чита свако, али може да уписује "
+"администратор, јер _/prod/profile_ може да чита свако, али може да уписује "
 "само суперкорисник. Међутим, можете да подесите *readprofile* постави-ИД-"
 "корисника 0, како бисте поново поставили међумеморију без стицања "
 "привилегија."
@@ -42693,8 +42693,8 @@ msgstr ""
 #. type: Labeled list
 #: ../sys-utils/readprofile.8.adoc:58
 #, no-wrap
-msgid "_/proc/profile_"
-msgstr "_/proc/profile_"
+msgid "_/prod/profile_"
+msgstr "_/prod/profile_"
 
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:60
@@ -42726,8 +42726,8 @@ msgstr "Програм који се профилише"
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:70
 #, no-wrap
-msgid "*readprofile* only works with a 1.3.x or newer kernel, because _/proc/profile_ changed in the step from 1.2 to 1.3.\n"
-msgstr "*readprofile* ради само са 1.3.x или новијим кернелом, јер је _/proc/profile_ измењено у кораку са 1.2 на 1.3.\n"
+msgid "*readprofile* only works with a 1.3.x or newer kernel, because _/prod/profile_ changed in the step from 1.2 to 1.3.\n"
+msgstr "*readprofile* ради само са 1.3.x или новијим кернелом, јер је _/prod/profile_ измењено у кораку са 1.2 на 1.3.\n"
 
 #. type: Plain text
 #: ../sys-utils/readprofile.8.adoc:72
@@ -44682,8 +44682,8 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/swapon.8.adoc:28
 #, no-wrap
-msgid "*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/proc/swaps_ or _/etc/fstab_).\n"
-msgstr "*swapoff* искључује размену на наведеним уређајима и датотекама. Када је опција *-a* дата, размена је искључена на свим разменским уређајима и датотекама (као што је нађено у _/proc/swaps_ или _/etc/fstab_).\n"
+msgid "*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/prod/swaps_ or _/etc/fstab_).\n"
+msgstr "*swapoff* искључује размену на наведеним уређајима и датотекама. Када је опција *-a* дата, размена је искључена на свим разменским уређајима и датотекама (као што је нађено у _/prod/swaps_ или _/etc/fstab_).\n"
 
 #. type: Plain text
 #: ../sys-utils/swapon.8.adoc:33
@@ -44817,7 +44817,7 @@ msgid ""
 "Use the partition that has the specified _label_. (For this, access to _/"
 "proc/partitions_ is needed.)"
 msgstr ""
-"Користи партицију која има наведени _натпис_. За ово, приступ у _/proc/"
+"Користи партицију која има наведени _натпис_. За ово, приступ у _/prod/"
 "partitions_ је потребан.)"
 
 #. type: Plain text
@@ -44874,11 +44874,11 @@ msgstr "*-s*, *--summary*"
 #. type: Plain text
 #: ../sys-utils/swapon.8.adoc:70
 msgid ""
-"Display swap usage summary by device. Equivalent to *cat /proc/swaps*. This "
+"Display swap usage summary by device. Equivalent to *cat /prod/swaps*. This "
 "output format is DEPRECATED in favour of *--show* that provides better "
 "control on output data."
 msgstr ""
-"Приказује сажетак коришћења размене по уређају. Еквивалент са *cat /proc/"
+"Приказује сажетак коришћења размене по уређају. Еквивалент са *cat /prod/"
 "swaps*. Овај излазни формат је ЗАСТАРЕО у корист *--show* која обезбеђује "
 "бољу контролу над излазним подацима."
 
@@ -45248,8 +45248,8 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/tunelp.8.adoc:27
 #, no-wrap
-msgid "*NOTE*: This option will have no effect with kernel 2.1.131 or later since the irq is handled by the parport driver. You can change the parport irq for example via _/proc/parport/*/irq_. Read _/usr/src/linux/Documentation/admin-guide/parport.rst_ for more details on parport.\n"
-msgstr "*НАПОМЕНА*: Ова опција неће имати дејства са кернелом 2.1.131 или новијим јер „irq“-ом управља управљачки програм паралелног прикључника. Можете да промените паралелни прикључник „irq“-а на пример преко _/proc/parport/*/irq_. Прочитајте _/usr/src/linux/Documentation/admin-guide/parport.rst_ за више појединости о паралалном прикључнику.\n"
+msgid "*NOTE*: This option will have no effect with kernel 2.1.131 or later since the irq is handled by the parport driver. You can change the parport irq for example via _/prod/parport/*/irq_. Read _/usr/src/linux/Documentation/admin-guide/parport.rst_ for more details on parport.\n"
+msgstr "*НАПОМЕНА*: Ова опција неће имати дејства са кернелом 2.1.131 или новијим јер „irq“-ом управља управљачки програм паралелног прикључника. Можете да промените паралелни прикључник „irq“-а на пример преко _/prod/parport/*/irq_. Прочитајте _/usr/src/linux/Documentation/admin-guide/parport.rst_ за више појединости о паралалном прикључнику.\n"
 
 #. type: Labeled list
 #: ../sys-utils/tunelp.8.adoc:28
@@ -45440,8 +45440,8 @@ msgstr "Ова опција поставља штампање приказа т�
 
 #. type: Plain text
 #: ../sys-utils/tunelp.8.adoc:63
-msgid "_/dev/lp?_, _/proc/parport/*/*_"
-msgstr "_/dev/lp?_, _/proc/parport/*/*_"
+msgid "_/dev/lp?_, _/prod/parport/*/*_"
+msgstr "_/dev/lp?_, _/prod/parport/*/*_"
 
 #. type: Plain text
 #: ../sys-utils/tunelp.8.adoc:67
@@ -45539,12 +45539,12 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/umount.8.adoc:56
 msgid ""
-"All of the filesystems described in _/proc/self/mountinfo_ (or in deprecated "
+"All of the filesystems described in _/prod/self/mountinfo_ (or in deprecated "
 "_/etc/mtab_) are unmounted, except the proc, devfs, devpts, sysfs, "
 "rpc_pipefs and nfsd filesystems. This list of the filesystems may be "
 "replaced by *--types* umount option."
 msgstr ""
-"Сви системи датотека описани у _/proc/self/mountinfo_ (или у застарелом _/"
+"Сви системи датотека описани у _/prod/self/mountinfo_ (или у застарелом _/"
 "etc/mtab_) су откачени, осим „proc“, „devfs“, „devpts“, „sysfs“, "
 "„rpc_pipefs“ и „nfsd“ система датотека. Овај списак система датотека може "
 "бити замењен „umount“ опцијом *--types*."
@@ -45563,14 +45563,14 @@ msgid ""
 "device name (or UUID, etc.). When this option is used together with *--"
 "recursive*, then all nested mounts within the filesystem are recursively "
 "unmounted. This option is only supported on systems where _/etc/mtab_ is a "
-"symlink to _/proc/mounts_."
+"symlink to _/prod/mounts_."
 msgstr ""
 "Откачиње све тачке качења у тренутном називном простору качења за наведени "
 "систем датотека. Систем датотека се може одредити помоћу једне од тачака "
 "качења или назива уређаја (или УУИД-а, итд.). Када се ова опција користи "
 "заједно са *--recursive*, тада се сва угнеждена качења унутар система "
 "датотека дубински уклањају. Ова опција је подржана само на системима где је "
-"_/etc/mtab_ симболична веза ка _/proc/mounts_."
+"_/etc/mtab_ симболична веза ка _/prod/mounts_."
 
 #. type: Plain text
 #: ../sys-utils/umount.8.adoc:62
@@ -45760,7 +45760,7 @@ msgstr "*-R*, *--recursive*"
 msgid ""
 "Recursively unmount each specified directory. Recursion for each directory "
 "will stop if any unmount operation in the chain fails for any reason. The "
-"relationship between mountpoints is determined by _/proc/self/mountinfo_ "
+"relationship between mountpoints is determined by _/prod/self/mountinfo_ "
 "entries. The filesystem must be specified by mountpoint path; a recursive "
 "unmount by device name (or UUID) is unsupported. Since version 2.37 it "
 "umounts also all over-mounted filesystems (more filesystems on the same "
@@ -45768,7 +45768,7 @@ msgid ""
 msgstr ""
 "Дубински искључује сваки наведени директоријум. Дубачење за сваки "
 "директоријум ће се зауставити ако било која радња откачињања у ланцу не успе "
-"из било ког разлога. Однос између тачака качења је одређен _/proc/self/"
+"из било ког разлога. Однос између тачака качења је одређен _/prod/self/"
 "mountinfo_ уносима. Систем датотека мора бити наведен путањом тачке качења; "
 "дубинско откачињање према називу уређаја (или УУИД-у) није подржано. Од "
 "издања 2.37 такође откачиње све прекомерно прикачене системе датотека (више "
@@ -45794,7 +45794,7 @@ msgid ""
 "specified _type_. More than one type may be specified in a comma-separated "
 "list. The list of filesystem types can be prefixed with *no* to indicate "
 "that no action should be taken for all of the mentioned types. Note that "
-"*umount* reads information about mounted filesystems from kernel (_/proc/"
+"*umount* reads information about mounted filesystems from kernel (_/prod/"
 "mounts_) and filesystem names may be different than filesystem names used in "
 "the _/etc/fstab_ (e.g., \"nfs4\" vs. \"nfs\")."
 msgstr ""
@@ -45803,7 +45803,7 @@ msgstr ""
 "списку. Списак врста система датотека може имати префикс *no* да би се "
 "назначило да не треба предузимати никакве радње за све поменуте врсте. "
 "Знајте да *umount* чита информације о прикаченим системима датотека из "
-"кернела (_/proc/mounts_) и да се називи система датотека могу разликовати од "
+"кернела (_/prod/mounts_) и да се називи система датотека могу разликовати од "
 "назива система датотека који се користе у _/etc/fstab_ (нпр., „nfs4“ vs. "
 "„nfs“)."
 
@@ -45953,10 +45953,10 @@ msgstr "укључује излаз *libmount* прочишћавања"
 #: ../sys-utils/umount.8.adoc:162
 msgid ""
 "table of mounted filesystems (deprecated and usually replaced by symlink to "
-"_/proc/mounts_)"
+"_/prod/mounts_)"
 msgstr ""
 "табела прикачених система датотека (превазиђено и обично се замењује "
-"симболичком везом ка _/proc/mounts_)"
+"симболичком везом ка _/prod/mounts_)"
 
 #. type: Plain text
 #: ../sys-utils/umount.8.adoc:165
@@ -45966,8 +45966,8 @@ msgstr "табела познатих система датотека"
 #. type: Labeled list
 #: ../sys-utils/umount.8.adoc:166
 #, no-wrap
-msgid "_/proc/self/mountinfo_"
-msgstr "_/proc/self/mountinfo_"
+msgid "_/prod/self/mountinfo_"
+msgstr "_/prod/self/mountinfo_"
 
 #. type: Plain text
 #: ../sys-utils/umount.8.adoc:168
@@ -46026,7 +46026,7 @@ msgstr ""
 msgid ""
 "By default, a new namespace persists only as long as it has member "
 "processes. A new namespace can be made persistent even when it has no member "
-"processes by bind mounting /proc/_pid_/ns/_type_ files to a filesystem path. "
+"processes by bind mounting /prod/_pid_/ns/_type_ files to a filesystem path. "
 "A namespace that has been made persistent in this way can subsequently be "
 "entered with *nsenter*(1) even after the _program_ terminates (except PID "
 "namespaces where a permanently running init process is required). Once a "
@@ -46036,7 +46036,7 @@ msgid ""
 msgstr ""
 "По основи, нови називни простор постоји само све док има процесе чланове. "
 "Нови називни простор се може учинити постојаним чак и када нема процеса "
-"чланова тако што ћете повезати качење „/proc/_pid_/ns/_врста_ датотеке“ на "
+"чланова тако што ћете повезати качење „/prod/_pid_/ns/_врста_ датотеке“ на "
 "путању система датотека. Називни простор који је на овај начин постао "
 "постојан може се накнадно унети са *nsenter*(1) чак и након окончања "
 "_програма_ (осим ПИД називних простора где је потребан трајно покренут "
@@ -46047,8 +46047,8 @@ msgstr ""
 #. type: Plain text
 #: ../sys-utils/unshare.1.adoc:24
 #, no-wrap
-msgid "*unshare* since util-linux version 2.36 uses _/proc/[pid]/ns/pid_for_children_ and _/proc/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.\n"
-msgstr "*unshare* од „util-linux“ издања 2.36 користи _/proc/[pid]/ns/пид_за_децу_ и _/proc/[pid]/ns/време_за_децу_ датотеке за трајни називни простор ПИД и ВРЕМЕ. Ова измена захтева Линукс кернел 4.17 или новији.\n"
+msgid "*unshare* since util-linux version 2.36 uses _/prod/[pid]/ns/pid_for_children_ and _/prod/[pid]/ns/time_for_children_ files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer.\n"
+msgstr "*unshare* од „util-linux“ издања 2.36 користи _/prod/[pid]/ns/пид_за_децу_ и _/prod/[pid]/ns/време_за_децу_ датотеке за трајни називни простор ПИД и ВРЕМЕ. Ова измена захтева Линукс кернел 4.17 или новији.\n"
 
 #. type: Plain text
 #: ../sys-utils/unshare.1.adoc:26
@@ -46060,12 +46060,12 @@ msgstr "Следеће врсте називних простора се мог�
 msgid ""
 "Mounting and unmounting filesystems will not affect the rest of the system, "
 "except for filesystems which are explicitly marked as shared (with *mount --"
-"make-shared*; see _/proc/self/mountinfo_ or *findmnt -o+PROPAGATION* for the "
+"make-shared*; see _/prod/self/mountinfo_ or *findmnt -o+PROPAGATION* for the "
 "*shared* flags). For further details, see *mount_namespaces*(7)."
 msgstr ""
 "Качење и откачињање система датотека неће деловати на остатак система, "
 "изузев за системе датотека који су изричито означени као дељени (са *mount --"
-"make-shared*; видите _/proc/self/mountinfo_ или *findmnt -o+ПРОСТИРАЊЕ* за "
+"make-shared*; видите _/prod/self/mountinfo_ или *findmnt -o+ПРОСТИРАЊЕ* за "
 "опције *shared*). За више о томе, видите *mount_namespaces*(7)."
 
 #. type: Plain text
@@ -46345,12 +46345,12 @@ msgstr ""
 msgid ""
 "Before util-linux version 2.39, this option expected a comma-separated "
 "argument of the form _outeruid,inneruid,count_ but that format is now "
-"deprecated for consistency with the ordering used in _/proc/[pid]/uid_map_ "
+"deprecated for consistency with the ordering used in _/prod/[pid]/uid_map_ "
 "and the _X-mount.idmap_ mount option."
 msgstr ""
 "Пре „util-linux“ издања 2.39, ова опција је очекивала аргумент раздвојен "
 "зарезима у облику _outeruid,inneruid,count_, али је тај формат сада застарео "
-"због доследности са редоследом који се користи у _/proc/[пид]/уид_мап_ и _X-"
+"због доследности са редоследом који се користи у _/prod/[пид]/уид_мап_ и _X-"
 "mount.idmap_ опција качења."
 
 #. type: Labeled list
@@ -46419,12 +46419,12 @@ msgstr ""
 msgid ""
 "Before util-linux version 2.39, this option expected a comma-separated "
 "argument of the form _outergid,innergid,count_ but that format is now "
-"deprecated for consistency with the ordering used in _/proc/[pid]/gid_map_ "
+"deprecated for consistency with the ordering used in _/prod/[pid]/gid_map_ "
 "and the _X-mount.idmap_ mount option."
 msgstr ""
 "Пре „util-linux“ издања 2.39, ова опција је очекивала аргумент раздвојен "
 "зарезима у облику _outergid,innergid,count_, али је тај формат сада застарео "
-"због доследности са редоследом који се користи у _/proc/[пид]/гид_мап_ и _X-"
+"због доследности са редоследом који се користи у _/prod/[пид]/гид_мап_ и _X-"
 "mount.idmap_ опцији качења."
 
 #. type: Labeled list
@@ -46538,7 +46538,7 @@ msgstr ""
 msgid ""
 "To be able to call *setgroups*(2), the calling process must at least have "
 "*CAP_SETGID*. But since Linux 3.19 a further restriction applies: the kernel "
-"gives permission to call *setgroups*(2) only after the GID map (**/proc/"
+"gives permission to call *setgroups*(2) only after the GID map (**/prod/"
 "**__pid__*/gid_map*) has been set. The GID map is writable by root when "
 "*setgroups*(2) is enabled (i.e., *allow*, the default), and the GID map "
 "becomes writable by unprivileged processes when *setgroups*(2) is "
@@ -46547,7 +46547,7 @@ msgstr ""
 "Да би био у могућности да позове *setgroups*(2), процес позивања мора да има "
 "барем *CAP_SETGID*. Али од Линукса 3.19 примењује се још једно ограничење: "
 "кернел даје дозволу за позивање *setgroups*(2) само након што је ГИД мапа "
-"(**/proc/**__пид__*/гид_мапа*) постављена. У ГИД мапу може да пише "
+"(**/prod/**__пид__*/гид_мапа*) постављена. У ГИД мапу може да пише "
 "администратор када је *setgroups*(2) омогућено (тј. *allow*, подразумевано), "
 "а ГИД мапа постаје уписива непривилегованим процесима када је *setgroups*(2) "
 "трајно онемогућено (са *deny*)."
@@ -46658,10 +46658,10 @@ msgstr ""
 #: ../sys-utils/unshare.1.adoc:157
 #, no-wrap
 msgid ""
-"# unshare --fork --pid --mount-proc readlink /proc/self\n"
+"# unshare --fork --pid --mount-proc readlink /prod/self\n"
 "1\n"
 msgstr ""
-"# unshare --fork --pid --mount-proc readlink /proc/self\n"
+"# unshare --fork --pid --mount-proc readlink /prod/self\n"
 "1\n"
 
 #. type: Plain text
@@ -46681,7 +46681,7 @@ msgid ""
 "1000\n"
 "1000\n"
 "$ unshare --user --map-root-user \\\n"
-"        sh -c 'whoami; cat /proc/self/uid_map /proc/self/gid_map'\n"
+"        sh -c 'whoami; cat /prod/self/uid_map /prod/self/gid_map'\n"
 "root\n"
 "         0       1000          1\n"
 "         0       1000          1\n"
@@ -46690,7 +46690,7 @@ msgstr ""
 "1000\n"
 "1000\n"
 "$ unshare --user --map-root-user \\\n"
-"        sh -c 'whoami; cat /proc/self/uid_map /proc/self/gid_map'\n"
+"        sh -c 'whoami; cat /prod/self/uid_map /prod/self/gid_map'\n"
 "root\n"
 "         0       1000          1\n"
 "         0       1000          1\n"
@@ -46723,7 +46723,7 @@ msgid ""
 "$ unshare --user --map-auto --map-root-user\n"
 "# id -u\n"
 "0\n"
-"# cat /proc/self/uid_map\n"
+"# cat /prod/self/uid_map\n"
 "         0       1000          1\n"
 "         1     100000      65535\n"
 "# touch file; chown 1:1 file\n"
@@ -46740,7 +46740,7 @@ msgstr ""
 "$ unshare --user --map-auto --map-root-user\n"
 "# id -u\n"
 "0\n"
-"# cat /proc/self/uid_map\n"
+"# cat /prod/self/uid_map\n"
 "         0       1000          1\n"
 "         1     100000      65535\n"
 "# touch file; chown 1:1 file\n"
@@ -54812,11 +54812,11 @@ msgstr ""
 
 #~ msgid ""
 #~ "If you don't know the page size that your machine uses, you may be able "
-#~ "to look it up with *cat /proc/cpuinfo* (or you may not - the contents of "
+#~ "to look it up with *cat /prod/cpuinfo* (or you may not - the contents of "
 #~ "this file depend on architecture and kernel version)."
 #~ msgstr ""
 #~ "Ако не знате величину странице коју користи ваш рачунар, можете бити у "
-#~ "могућности да је нађете наредбом *cat /proc/cpuinfo* (или можда не – "
+#~ "могућности да је нађете наредбом *cat /prod/cpuinfo* (или можда не – "
 #~ "садржај ове датотеке зависи од архитектуре и издања кернела)."
 
 #~ msgid "Print the SIZE column in bytes rather than in human-readable format."
@@ -56710,8 +56710,8 @@ msgstr ""
 #~ msgid "too many devices"
 #~ msgstr "превише уређаја"
 
-#~ msgid "Is /proc mounted?"
-#~ msgstr "Да ли је „/proc“ прикачен?"
+#~ msgid "Is /prod mounted?"
+#~ msgstr "Да ли је „/prod“ прикачен?"
 
 #~ msgid "must be root to scan for matching filesystems: %s"
 #~ msgstr ""
@@ -62059,7 +62059,7 @@ msgstr ""
 #~ msgstr " -l, --list               користи формат списка излаза\n"
 
 #~ msgid ""
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo "
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo "
 #~ "file)\n"
 #~ msgstr ""
 #~ " -N, --task <тиб>         користи заменски називни простор (датотека „/"
@@ -64417,7 +64417,7 @@ msgstr ""
 #~ " -m, --no-unmount            do not unmount device even if it is mounted\n"
 #~ " -M, --no-partitions-unmount do not unmount another partitions\n"
 #~ " -n, --noop                  don't eject, just show device found\n"
-#~ " -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+#~ " -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 #~ " -q, --tape                  eject tape\n"
 #~ " -r, --cdrom                 eject CD-ROM\n"
 #~ " -s, --scsi                  eject SCSI device\n"
@@ -64438,7 +64438,7 @@ msgstr ""
 #~ " -m, --no-unmount            не откачиње уређај чак и ако је прикачен\n"
 #~ " -M, --no-partitions-unmount не откачиње друге партиције\n"
 #~ " -n, --noop                  не избацује, само приказује нађени уређај\n"
-#~ " -p, --proc                  користи „/proc/mounts“ уместо „/etc/mtab“\n"
+#~ " -p, --proc                  користи „/prod/mounts“ уместо „/etc/mtab“\n"
 #~ " -q, --tape                  избацује касету\n"
 #~ " -r, --cdrom                 избацује ЦД-РОМ\n"
 #~ " -s, --scsi                  избацује СЦСИ уређај\n"
@@ -68177,10 +68177,10 @@ msgstr ""
 #~ msgstr " %s [опције] [<спец>]\n"
 
 #~ msgid ""
-#~ " -a, --all              disable all swaps from /proc/swaps\n"
+#~ " -a, --all              disable all swaps from /prod/swaps\n"
 #~ " -v, --verbose          verbose mode\n"
 #~ msgstr ""
-#~ " -a, --all              искључује све разменске из „/proc/swaps“\n"
+#~ " -a, --all              искључује све разменске из „/prod/swaps“\n"
 #~ " -v, --verbose          опширан режим\n"
 
 #~ msgid ""
@@ -68599,11 +68599,11 @@ msgstr ""
 #~ msgid "cannot stat %s"
 #~ msgstr "не могу да добавим податке за „%s“"
 
-#~ msgid "failed to open /proc/self/timens_offsets"
-#~ msgstr "нисам успео да отворим „/proc/self/timens_offsets“"
+#~ msgid "failed to open /prod/self/timens_offsets"
+#~ msgstr "нисам успео да отворим „/prod/self/timens_offsets“"
 
-#~ msgid "failed to write to /proc/self/timens_offsets"
-#~ msgstr "нисам успео да пишем у „/proc/self/timens_offsets“"
+#~ msgid "failed to write to /prod/self/timens_offsets"
+#~ msgstr "нисам успео да пишем у „/prod/self/timens_offsets“"
 
 #~ msgid "pipe failed"
 #~ msgstr "спојка није успела"

@@ -6,7 +6,7 @@ optstr: rw,noatime
 VFS-optstr: rw,noatime
 ------ fs:
 source: proc
-target: /proc
+target: /prod
 fstype: proc
 optstr: rw
 VFS-optstr: rw
@@ -43,7 +43,7 @@ optstr: rw,noatime
 VFS-optstr: rw,noatime
 ------ fs:
 source: none
-target: /proc/sys/fs/binfmt_misc
+target: /prod/sys/fs/binfmt_misc
 fstype: binfmt_misc
 optstr: rw
 VFS-optstr: rw

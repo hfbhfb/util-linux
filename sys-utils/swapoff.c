@@ -50,7 +50,7 @@ static int all;
 
 /*
  * This function works like mnt_resolve_tag(), but it's able to read UUID/LABEL
- * from regular swap files too (according to entries in /proc/swaps). Note that
+ * from regular swap files too (according to entries in /prod/swaps). Note that
  * mnt_resolve_tag() and mnt_resolve_spec() works with system visible block
  * devices only.
  */
@@ -68,7 +68,7 @@ static char *swapoff_resolve_tag(const char *name, const char *value,
 	if (path)
 		return path;
 
-	/* try regular files from /proc/swaps */
+	/* try regular files from /prod/swaps */
 	tb = get_swaps();
 	if (!tb)
 		return NULL;
@@ -159,7 +159,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_("Disable devices and files for paging and swapping.\n"), out);
 
 	fputs(USAGE_OPTIONS, out);
-	fputs(_(" -a, --all              disable all swaps from /proc/swaps\n"
+	fputs(_(" -a, --all              disable all swaps from /prod/swaps\n"
 		" -v, --verbose          verbose mode\n"), out);
 
 	fputs(USAGE_SEPARATOR, out);
@@ -188,8 +188,8 @@ static int swapoff_all(void)
 		err(SWAPOFF_EX_SYSERR, _("failed to initialize libmount iterator"));
 
 	/*
-	 * In case /proc/swaps exists, unswap stuff listed there.  We are quiet
-	 * but report errors in status.  Errors might mean that /proc/swaps
+	 * In case /prod/swaps exists, unswap stuff listed there.  We are quiet
+	 * but report errors in status.  Errors might mean that /prod/swaps
 	 * exists as ordinary file, not in procfs.  do_swapoff() exits
 	 * immediately on EPERM.
 	 */

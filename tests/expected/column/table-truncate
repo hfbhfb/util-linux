@@ -1,6 +1,6 @@
 MAJMIN  TARGET                           VFS-OPTS  PROP        TYPE             SOURCE                FS-OPTS
 0:17    /sys                             rw,nosui  shared:6    sysfs            sysfs                 rw
-0:4     /proc                            rw,nosui  shared:5    proc             proc                  rw
+0:4     /prod                            rw,nosui  shared:5    proc             proc                  rw
 0:6     /dev                             rw,nosui  shared:2    devtmpfs         devtmpfs              rw,size
 0:18    /sys/kernel/security             rw,nosui  shared:7    securityfs       securityfs            rw
 0:19    /dev/shm                         rw,nosui  shared:3    tmpfs            tmpfs                 rw
@@ -22,12 +22,12 @@ MAJMIN  TARGET                           VFS-OPTS  PROP        TYPE             
 0:35    /sys/fs/cgroup/freezer           rw,nosui  shared:19   cgroup           cgroup                rw,free
 0:36    /sys/kernel/config               rw,relat  shared:22   configfs         configfs              rw
 8:4     /                                rw,relat  shared:1    ext4             /dev/sda4             rw,data
-0:37    /proc/sys/fs/binfmt_misc         rw,relat  shared:24   autofs           systemd-1             rw,fd=3
+0:37    /prod/sys/fs/binfmt_misc         rw,relat  shared:24   autofs           systemd-1             rw,fd=3
 0:7     /sys/kernel/debug                rw,relat  shared:25   debugfs          debugfs               rw
 0:38    /dev/hugepages                   rw,relat  shared:26   hugetlbfs        hugetlbfs             rw
 0:16    /dev/mqueue                      rw,relat  shared:27   mqueue           mqueue                rw
-0:39    /proc/sys/fs/binfmt_misc         rw,relat  shared:28   binfmt_misc      binfmt_misc           rw
-0:40    /proc/fs/nfsd                    rw,relat  shared:29   nfsd             nfsd                  rw
+0:39    /prod/sys/fs/binfmt_misc         rw,relat  shared:28   binfmt_misc      binfmt_misc           rw
+0:40    /prod/fs/nfsd                    rw,relat  shared:29   nfsd             nfsd                  rw
 0:41    /tmp                             rw,nosui  shared:30   tmpfs            tmpfs                 rw
 8:3     /home                            rw,relat  shared:31   ext4             /dev/sda3             rw,data
 8:2     /boot                            rw,relat  shared:32   ext4             /dev/sda2             rw,data

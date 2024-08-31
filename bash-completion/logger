@@ -28,7 +28,7 @@ _logger_module()
 			return 0
 			;;
 		'-u'|'--socket')
-			COMPREPLY=( $(compgen -W "$(awk '$NF ~ /^\// {print $NF}' /proc/net/unix)" -- $cur) )
+			COMPREPLY=( $(compgen -W "$(awk '$NF ~ /^\// {print $NF}' /prod/net/unix)" -- $cur) )
 			return 0
 			;;
 		'--socket-errors')

@@ -574,7 +574,7 @@ inclide/env:
    - innclude c.h, remove _() macro from xsetenv()  [Karel Zak]
 include:
    - [c.h] protect container_of  [maximilian attems]
-   - add /proc/locks path to pathnames  [Davidlohr Bueso]
+   - add /prod/locks path to pathnames  [Davidlohr Bueso]
    - add asprintf wrapper  [Sami Kerola]
    - add stream error checking facility  [Sami Kerola]
    - define format to be constant in xasprintf()  [Sami Kerola]
@@ -691,7 +691,7 @@ libmount:
    - add noreturn function attribute  [Sami Kerola]
    - add special MNT_ERR_ codes  [Karel Zak]
    - add support for PARTUUID= and PARTLABEL=  [Karel Zak]
-   - add support to parse /proc/swaps  [Karel Zak]
+   - add support to parse /prod/swaps  [Karel Zak]
    - allow empty source for mount(2) syscall  [Karel Zak]
    - allow to disable swap between source and target  [Karel Zak]
    - avoid infinite loop in child fs iteration  [Dave Reisner]
@@ -807,7 +807,7 @@ lscpu:
    - limit options --all, --online, --offline to parsable and extended output  [Heiko Carstens]
    - use err_exclusive_options()  [Karel Zak]
    - use exclusive_option()  [Sami Kerola]
-   - values in /proc/bus/pci/devices are always unsigned  [Sami Kerola]
+   - values in /prod/bus/pci/devices are always unsigned  [Sami Kerola]
 lslock:
    - remove duplicate variable  [Karel Zak]
 lslocks:
@@ -1024,7 +1024,7 @@ swapon:
    - move generic code to swapon-common.c  [Karel Zak]
    - remove unused variables  [Sami Kerola]
    - use directly blkid rather than fsprobe wrapper  [Karel Zak]
-   - use libmount for /proc/swaps parsing  [Karel Zak]
+   - use libmount for /prod/swaps parsing  [Karel Zak]
    - use libmount for fstab parsing (for swapon --all)  [Karel Zak]
    - use only libmount for paths/tags evealuation  [Karel Zak]
 sys-utils:
@@ -1069,7 +1069,7 @@ tests:
    - remove lt- prefixes  [Karel Zak]
    - rename doslabel test  [Karel Zak]
    - search for "none" by findmnt  [Karel Zak]
-   - search mount point in canonicalized form in /proc/mounts  [Bernhard Voelker]
+   - search mount point in canonicalized form in /prod/mounts  [Bernhard Voelker]
    - standardize fdisk headers in MBR tests  [Karel Zak]
    - test non-canonical paths in fstab  [Karel Zak]
    - tiny change in output header  [Karel Zak]

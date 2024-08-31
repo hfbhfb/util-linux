@@ -2063,8 +2063,8 @@ msgid "too many devices"
 msgstr "demasiados dispositivos"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "¿Está montado /proc?"
+msgid "Is /prod mounted?"
+msgstr "¿Está montado /prod?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -10719,8 +10719,8 @@ msgid " -l, --list             use list format output\n"
 msgstr "  -l, --list            utiliza la salida con formato de lista\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>       utiliza el espacio de nombres alternativo (fichero /proc/<tid>/mountinfo)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>       utiliza el espacio de nombres alternativo (fichero /prod/<tid>/mountinfo)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12552,8 +12552,8 @@ msgid "association between file and process"
 msgstr "asociación entre fichero y proceso"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
-msgstr "nombre del controlador del dispositivo de bloques resuelto mediante /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "nombre del controlador del dispositivo de bloques resuelto mediante /prod/devices"
 
 #: misc-utils/lsfd.c:156
 msgid "bpf map id associated with the fd"
@@ -12594,8 +12594,8 @@ msgid "bpf program type (raw)"
 msgstr "tipo de fichero (bruto)"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
-msgstr "nombre del controlador del dispositivo de caracteres resuelto mediante /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "nombre del controlador del dispositivo de caracteres resuelto mediante /prod/devices"
 
 #: misc-utils/lsfd.c:180
 msgid "command of the process opening the file"
@@ -12686,8 +12686,8 @@ msgid "length of file mapping (in page)"
 msgstr "longitud de la asignación de ficheros (in página)"
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
-msgstr "nombre del dispositivo de caracteres misceláneo resuelto mediante /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
+msgstr "nombre del dispositivo de caracteres misceláneo resuelto mediante /prod/misc"
 
 #: misc-utils/lsfd.c:246
 msgid "mount id"
@@ -12738,8 +12738,8 @@ msgid "L3 protocol associated with the packet socket"
 msgstr "protocolo L3 asociado con el «socket» de paquetes"
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
-msgstr "nombre del dispositivo de bloques resuelto mediante /proc/partition"
+msgid "block device name resolved by /prod/partition"
+msgstr "nombre del dispositivo de bloques resuelto mediante /prod/partition"
 
 #: misc-utils/lsfd.c:285
 msgid "PID of the process opening the file"
@@ -13020,8 +13020,8 @@ msgid "failed to alloc procfs handler"
 msgstr "fallo al asignar el manejador de procfs"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
-msgid "failed to open /proc"
-msgstr "no se ha podido abrir /proc"
+msgid "failed to open /prod"
+msgstr "no se ha podido abrir /prod"
 
 #: misc-utils/lsfd.c:1857
 #, fuzzy
@@ -15906,7 +15906,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -15925,7 +15925,7 @@ msgstr ""
 " -m, --no-unmount            no desmonta el dispositivo aunque esté montado\n"
 " -M, --no-partitions-unmount no desmonta otras particiones\n"
 " -n, --noop                  no expulsa; solo muestra el dispositivo encontrado\n"
-" -p, --proc                  utiliza /proc/mounts en lugar de /etc/mtab\n"
+" -p, --proc                  utiliza /prod/mounts en lugar de /etc/mtab\n"
 " -q, --tape                  expulsa el casete\n"
 " -r, --cdrom                 expulsa el CD-ROM\n"
 " -s, --scsi                  expulsa el dispositivo SCSI\n"
@@ -19804,7 +19804,7 @@ msgstr ""
 #| "     --target-prefix <path>\n"
 #| "                         specifies path used for all mountpoints\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "     --target-prefix <ruta>\n"
@@ -20162,9 +20162,9 @@ msgstr "%s: fallo al obtener la ruta del dispositivo"
 
 #: sys-utils/nsenter.c:223
 #, fuzzy
-#| msgid "failed to open /proc"
+#| msgid "failed to open /prod"
 msgid "failed to open cgroup.procs"
-msgstr "no se ha podido abrir /proc"
+msgstr "no se ha podido abrir /prod"
 
 #: sys-utils/nsenter.c:235
 #, fuzzy, c-format
@@ -21681,10 +21681,10 @@ msgstr "Desactiva dispositivos y ficheros para paginación e intercambio.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              desactiva todos los intercambios en /proc/swaps\n"
+" -a, --all              desactiva todos los intercambios en /prod/swaps\n"
 " -v, --verbose          modo expresivo\n"
 
 #: sys-utils/swapoff.c:166
@@ -22237,12 +22237,12 @@ msgid "mount %s on %s failed"
 msgstr "el montaje de %s en %s falló"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "fallo al abrir /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "fallo al abrir /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "fallo al escribir en /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "fallo al escribir en /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:294
 msgid "eventfd failed"

@@ -29,8 +29,8 @@ ts_cd "$TS_OUTDIR"
 
 PID=
 FD=3
-dir=/proc
-file=/proc/cmdline
+dir=/prod
+file=/prod/cmdline
 PROC="$(stat -c %i $dir)"@"$($TS_CMD_FINDMNT --raw --noheadings -oMAJ:MIN --target $dir)"
 CMDLINE="$(stat -c %i $file)"@"$($TS_CMD_FINDMNT --raw --noheadings -oMAJ:MIN --target $file)"
 {

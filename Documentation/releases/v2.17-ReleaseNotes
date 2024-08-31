@@ -465,7 +465,7 @@ simpleinit:
    - simpleinit.8 formatting  [Peter Breitenlohner]
 swapon:
    - fix typo on swapon.8 manpage  [Florentin Duneau]
-   - handle <=linux-2.6.19 bug in /proc/swaps  [Mike Frysinger]
+   - handle <=linux-2.6.19 bug in /prod/swaps  [Mike Frysinger]
    - more robust progname probing  [Karel Zak]
    - swapon.8 formatting  [Peter Breitenlohner]
 switch_root:

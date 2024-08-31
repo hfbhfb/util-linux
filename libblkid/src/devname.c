@@ -258,8 +258,8 @@ set_pri:
 	}
 }
 
-#define PROC_PARTITIONS "/proc/partitions"
-#define VG_DIR		"/proc/lvm/VGs"
+#define PROC_PARTITIONS "/prod/partitions"
+#define VG_DIR		"/prod/lvm/VGs"
 
 /*
  * This function initializes the UUID cache with devices from the LVM
@@ -405,7 +405,7 @@ ubi_probe_all(blkid_cache cache, int only_if_new)
 
 /*
  * This function uses /sys to read all block devices in way compatible with
- * /proc/partitions (like the original libblkid implementation)
+ * /prod/partitions (like the original libblkid implementation)
  */
 static int
 sysfs_probe_all(blkid_cache cache, int only_if_new, int only_removable)
@@ -452,7 +452,7 @@ sysfs_probe_all(blkid_cache cache, int only_if_new, int only_removable)
 			if (!removable)
 				goto next;
 
-		/* emulate /proc/partitions
+		/* emulate /prod/partitions
 		 * -- ignore empty devices and non-partitionable removable devices */
 		} else {
 			if (ul_path_read_u32(pc, &maxparts, "ext_range") != 0)
@@ -475,7 +475,7 @@ sysfs_probe_all(blkid_cache cache, int only_if_new, int only_removable)
 				continue;
 
 			/* ignore extended partitions
-			 * -- recount size to blocks like /proc/partitions */
+			 * -- recount size to blocks like /prod/partitions */
 			if (ul_path_readf_u64(pc, &size, "%s/size", part->d_name) == 0
 			    && (size >> 1) == 1)
 				continue;
@@ -594,7 +594,7 @@ int blkid_probe_all_new(blkid_cache cache)
  * blkid_probe_all_removable:
  * @cache: cache handler
  *
- * The libblkid probing is based on devices from /proc/partitions by default.
+ * The libblkid probing is based on devices from /prod/partitions by default.
  * This file usually does not contain removable devices (e.g. CDROMs) and this kind
  * of devices are invisible for libblkid.
  *

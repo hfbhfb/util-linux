@@ -152,7 +152,7 @@ static void __attribute__((__noreturn__)) usage(void)
 		" -m, --no-unmount            do not unmount device even if it is mounted\n"
 		" -M, --no-partitions-unmount do not unmount another partitions\n"
 		" -n, --noop                  don't eject, just show device found\n"
-		" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+		" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 		" -q, --tape                  eject tape\n"
 		" -r, --cdrom                 eject CD-ROM\n"
 		" -s, --scsi                  eject SCSI device\n"

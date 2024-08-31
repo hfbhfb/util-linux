@@ -79,7 +79,7 @@ The Linux *ipcs* utility is not fully compatible to the POSIX *ipcs* utility. Th
 
 == NOTES
 
-The current implementation of *ipcs* obtains information about available IPC resources by parsing the files in _/proc/sysvipc_. Before util-linux version v2.23, an alternate mechanism was used: the *IPC_STAT* command of *msgctl*(2), *semctl*(2), and *shmctl*(2). This mechanism is also used in later util-linux versions in the case where _/proc_ is unavailable. A limitation of the *IPC_STAT* mechanism is that it can only be used to retrieve information about IPC resources for which the user has read permission.
+The current implementation of *ipcs* obtains information about available IPC resources by parsing the files in _/prod/sysvipc_. Before util-linux version v2.23, an alternate mechanism was used: the *IPC_STAT* command of *msgctl*(2), *semctl*(2), and *shmctl*(2). This mechanism is also used in later util-linux versions in the case where _/proc_ is unavailable. A limitation of the *IPC_STAT* mechanism is that it can only be used to retrieve information about IPC resources for which the user has read permission.
 
 == AUTHORS
 

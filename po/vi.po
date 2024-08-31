@@ -2109,8 +2109,8 @@ msgid "too many devices"
 msgstr "quá nhiều thiết bị"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc đã được gắn chưa?"
+msgid "Is /prod mounted?"
+msgstr "/prod đã được gắn chưa?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11109,8 +11109,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             dùng định dạng kết xuất liệt kê\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>       dùng không gian tên thay thế (tập tin /proc/<tid>/mountinfo)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>       dùng không gian tên thay thế (tập tin /prod/<tid>/mountinfo)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -13019,7 +13019,7 @@ msgid "association between file and process"
 msgstr "không thể tạo tiến trình con"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13061,7 +13061,7 @@ msgid "bpf program type (raw)"
 msgstr "kiểu hệ thống tập tin"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13163,7 +13163,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13224,7 +13224,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13554,7 +13554,7 @@ msgstr "gặp lỗi khi cấp phát cán của văn lệnh"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "lỗi mở %s"
 
 #: misc-utils/lsfd.c:1857
@@ -16621,7 +16621,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -16640,7 +16640,7 @@ msgstr ""
 " -m, --no-unmount            không bỏ gắn thậm chí cả khi nó đã được gắn\n"
 " -M, --no-partitions-unmount không bỏ gắn các phân vùng khác\n"
 " -n, --noop                  không đẩy ra, chỉ hiển thị các thiết bị tìm thấy\n"
-" -p, --proc                  sử dụng /proc/mounts thay vì /etc/mtab\n"
+" -p, --proc                  sử dụng /prod/mounts thay vì /etc/mtab\n"
 " -q, --tape                  đẩy băng từ\n"
 " -r, --cdrom                 đẩy đĩa CD-ROM\n"
 " -s, --scsi                  đẩy thiết bị SCSI\n"
@@ -20716,7 +20716,7 @@ msgstr " -r, --map-root-user       ánh xạ người dùng hiện nay thành ro
 #: sys-utils/mount.c:500
 #, fuzzy
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr " --default                         dùng các cài đặt thiết bị cuối mặc định\n"
 
@@ -22706,10 +22706,10 @@ msgstr "Tắt các thiết bị và tập tin dành cho đánh trang và tráo �
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              tắt toàn bộ swaps từ /proc/swaps\n"
+" -a, --all              tắt toàn bộ swaps từ /prod/swaps\n"
 " -v, --verbose          chế độ hiển thị đầy đủ thông tin\n"
 
 #: sys-utils/swapoff.c:166
@@ -23270,12 +23270,12 @@ msgstr "gắn %s trên %s gặp lỗi"
 
 #: sys-utils/unshare.c:224
 #, fuzzy
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "không phân tích được offset"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "không phân tích được offset"
 
 #: sys-utils/unshare.c:294
@@ -29098,13 +29098,13 @@ msgstr "thiết bị cuối “%s” không hiểu, mặc định là “dumb”
 #~ msgid ""
 #~ " -i, --invert           invert the sense of matching\n"
 #~ " -l, --list             use list format output\n"
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 #~ " -n, --noheadings       don't print column headings\n"
 #~ " -u, --notruncate       don't truncate text in columns\n"
 #~ msgstr ""
 #~ " -i, --invert           đảo ngược ý so khớp\n"
 #~ " -l, --list             dùng không gian tên thay thế\n"
-#~ "                        (tập tin /proc/<tid>/mountinfo)\n"
+#~ "                        (tập tin /prod/<tid>/mountinfo)\n"
 #~ " -n, --noheadings       không hiển thị đầu cột\n"
 #~ " -u, --notruncate       không cắt ngắn chữ trong các cột\n"
 
@@ -29182,13 +29182,13 @@ msgstr "thiết bị cuối “%s” không hiểu, mặc định là “dumb”
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount: cảnh báo: “/etc/mtab” không cho ghi (tức là hệ thống tập tin\n"
 #~ "       chỉ-đọc). Có thể là mount(8) đã cung cấp thông tin quá cũ. Để tìm\n"
-#~ "       thông tin thật về các điểm lắp hệ thống, xem tập tin “/proc/ mounts”.\n"
+#~ "       thông tin thật về các điểm lắp hệ thống, xem tập tin “/prod/ mounts”.\n"
 #~ "\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"

@@ -574,7 +574,7 @@ lsmem:
    - new tool  [Heiko Carstens]
    - rename control struct  [Karel Zak]
 lsns:
-   - Fix parser for /proc/<pid>/stat which is including space in comm  [OGAWA Hirofumi]
+   - Fix parser for /prod/<pid>/stat which is including space in comm  [OGAWA Hirofumi]
 man:
    - add a page for fincore command  [Masatake YAMATO]
    - chfn(1)  add chsh and login.defs to SEE ALSO  [Andreas Henriksson]
@@ -711,7 +711,7 @@ tests:
    - grep's short option -A is more portable  [Ruediger Meier]
    - handle dd errors in fincore/count  [Ruediger Meier]
    - handle non glibc error message for fallocate  [Ruediger Meier]
-   - make /proc optional  [Karel Zak]
+   - make /prod optional  [Karel Zak]
    - make sfdisk wipe partition optional  [Karel Zak]
    - redirect unwanted dd(1) advices to /dev/null  [Karel Zak]
    - refresh fincore test  [Karel Zak]

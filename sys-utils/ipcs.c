@@ -59,7 +59,7 @@ static inline char *ctime64(int64_t *t)
 {
 	static char buf[CTIME_BUFSIZ];
 
-	/* we read time as int64_t from /proc, so cast... */
+	/* we read time as int64_t from /prod, so cast... */
 	ctime_r((time_t *)t, buf);
 	return buf;
 }

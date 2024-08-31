@@ -42,14 +42,14 @@ ts_udevadm_settle "$DEVICE" "LABEL"
 ts_init_subtest "L-option"
 [ -d "$TS_MOUNTPOINT" ] || mkdir -p $TS_MOUNTPOINT
 $TS_CMD_MOUNT -L $LABEL $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $DEVICE >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_finalize_subtest
 
 ts_init_subtest "LABEL-option"
 [ -d "$TS_MOUNTPOINT" ] || mkdir -p $TS_MOUNTPOINT
 $TS_CMD_MOUNT LABEL=$LABEL $TS_MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
-ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /proc/mounts"
+ts_is_mounted $DEVICE || ts_log "Cannot find $DEVICE in /prod/mounts"
 $TS_CMD_UMOUNT $DEVICE >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_finalize_subtest
 

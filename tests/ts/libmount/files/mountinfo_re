@@ -1,4 +1,4 @@
-15 20 0:3 / /proc rw,relatime - proc /proc rw
+15 20 0:3 / /prod rw,relatime - proc /prod rw
 16 20 0:15 / /sys rw,relatime - sysfs /sys rw
 17 20 0:5 / /dev rw,relatime - devtmpfs udev rw,size=1983516k,nr_inodes=495879,mode=755
 18 17 0:10 / /dev/pts rw,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=000
@@ -18,14 +18,14 @@
 32 16 0:28 / /sys/kernel/security rw,relatime - autofs systemd-1 rw,fd=22,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
 33 17 0:29 / /dev/hugepages rw,relatime - autofs systemd-1 rw,fd=23,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
 34 16 0:30 / /sys/kernel/debug rw,relatime - autofs systemd-1 rw,fd=24,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
-35 15 0:31 / /proc/sys/fs/binfmt_misc rw,relatime - autofs systemd-1 rw,fd=25,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
+35 15 0:31 / /prod/sys/fs/binfmt_misc rw,relatime - autofs systemd-1 rw,fd=25,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
 36 17 0:32 / /dev/mqueue rw,relatime - autofs systemd-1 rw,fd=26,pgrp=1,timeout=300,minproto=5,maxproto=5,direct
-37 15 0:14 / /proc/bus/usb rw,relatime - usbfs /proc/bus/usb rw
+37 15 0:14 / /prod/bus/usb rw,relatime - usbfs /prod/bus/usb rw
 38 33 0:33 / /dev/hugepages rw,relatime - hugetlbfs hugetlbfs rw
 39 36 0:12 / /dev/mqueue rw,relatime - mqueue mqueue rw
 40 20 8:6 / /boot rw,noatime - ext3 /dev/sda6 rw,errors=continue,barrier=0,data=ordered
 41 20 253:0 / /home/kzak ro,noatime - ext4 /dev/mapper/kzak-home rw,barrier=1,data=ordered
-42 35 0:34 / /proc/sys/fs/binfmt_misc rw,relatime - binfmt_misc none rw
+42 35 0:34 / /prod/sys/fs/binfmt_misc rw,relatime - binfmt_misc none rw
 43 16 0:35 / /sys/fs/fuse/connections rw,relatime - fusectl fusectl rw
 44 41 0:36 / /home/kzak/.gvfs rw,nosuid,nodev,relatime - fuse.gvfs-fuse-daemon gvfs-fuse-daemon rw,user_id=500,group_id=500
 45 20 0:37 / /var/lib/nfs/rpc_pipefs rw,relatime - rpc_pipefs sunrpc rw

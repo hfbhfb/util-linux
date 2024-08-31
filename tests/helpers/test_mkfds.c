@@ -1580,9 +1580,9 @@ static void *make_unix_in_new_netns(const struct factory *factory, struct fdesc 
 	free_arg(&path);
 	free_arg(&type);
 
-	self_netns = open("/proc/self/ns/net", O_RDONLY);
+	self_netns = open("/prod/self/ns/net", O_RDONLY);
 	if (self_netns < 0)
-		err(EXIT_FAILURE, "failed to open /proc/self/ns/net");
+		err(EXIT_FAILURE, "failed to open /prod/self/ns/net");
 	if (self_netns != fdescs[0].fd) {
 		if (dup2(self_netns, fdescs[0].fd) < 0) {
 			int e = errno;
@@ -1608,12 +1608,12 @@ static void *make_unix_in_new_netns(const struct factory *factory, struct fdesc 
 		    "failed in unshare");
 	}
 
-	tmp_netns = open("/proc/self/ns/net", O_RDONLY);
+	tmp_netns = open("/prod/self/ns/net", O_RDONLY);
 	if (tmp_netns < 0) {
 		int e = errno;
 		close_fdesc(self_netns, NULL);
 		errno = e;
-		err(EXIT_FAILURE, "failed to open /proc/self/ns/net for the new netns");
+		err(EXIT_FAILURE, "failed to open /prod/self/ns/net for the new netns");
 	}
 	if (tmp_netns != fdescs[1].fd) {
 		if (dup2(tmp_netns, fdescs[1].fd) < 0) {
@@ -3221,44 +3221,44 @@ static void map_root_user(uid_t uid, uid_t gid)
 	int r;
 
 	n = snprintf(buf, sizeof(buf), "0 %d 1", uid);
-	mapfd = open("/proc/self/uid_map", O_WRONLY);
+	mapfd = open("/prod/self/uid_map", O_WRONLY);
 	if (mapfd < 0)
 		err(EXIT_FAILURE,
-		    "failed to open /proc/self/uid_map");
+		    "failed to open /prod/self/uid_map");
 	r = write (mapfd, buf, n);
 	if (r < 0)
 		err(EXIT_FAILURE,
-		    "failed to write to /proc/self/uid_map");
+		    "failed to write to /prod/self/uid_map");
 	if (r != n)
 		errx(EXIT_FAILURE,
-		     "failed to write to /proc/self/uid_map");
+		     "failed to write to /prod/self/uid_map");
 	close(mapfd);
 
-	mapfd = open("/proc/self/setgroups", O_WRONLY);
+	mapfd = open("/prod/self/setgroups", O_WRONLY);
 	if (mapfd < 0)
 		err(EXIT_FAILURE,
-		    "failed to open /proc/self/setgroups");
+		    "failed to open /prod/self/setgroups");
 	r = write (mapfd, "deny", 4);
 	if (r < 0)
 		err(EXIT_FAILURE,
-		    "failed to write to /proc/self/setgroups");
+		    "failed to write to /prod/self/setgroups");
 	if (r != 4)
 		errx(EXIT_FAILURE,
-		     "failed to write to /proc/self/setgroups");
+		     "failed to write to /prod/self/setgroups");
 	close(mapfd);
 
 	n = snprintf(buf, sizeof(buf), "0 %d 1", gid);
-	mapfd = open("/proc/self/gid_map", O_WRONLY);
+	mapfd = open("/prod/self/gid_map", O_WRONLY);
 	if (mapfd < 0)
 		err(EXIT_FAILURE,
-		    "failed to open /proc/self/gid_map");
+		    "failed to open /prod/self/gid_map");
 	r = write (mapfd, buf, n);
 	if (r < 0)
 		err(EXIT_FAILURE,
-		    "failed to write to /proc/self/gid_map");
+		    "failed to write to /prod/self/gid_map");
 	if (r != n)
 		errx(EXIT_FAILURE,
-		     "failed to write to /proc/self/gid_map");
+		     "failed to write to /prod/self/gid_map");
 	close(mapfd);
 }
 
@@ -3274,9 +3274,9 @@ static void *make_userns(const struct factory *factory _U_, struct fdesc fdescs[
 
 	map_root_user(uid, gid);
 
-	int userns = open("/proc/self/ns/user", O_RDONLY);
+	int userns = open("/prod/self/ns/user", O_RDONLY);
 	if (userns < 0)
-		err(EXIT_FAILURE, "failed to open /proc/self/ns/user for the new user ns");
+		err(EXIT_FAILURE, "failed to open /prod/self/ns/user for the new user ns");
 
 	if (unshare(CLONE_NEWUSER) < 0) {
 		int e = errno;

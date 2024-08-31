@@ -101,7 +101,7 @@ static int check_mntent_file(const char *mtab_file, const char *file,
 #ifndef __GNU__ /* The GNU hurd is broken with respect to stat devices */
 		/*
 		 * Do an extra check to see if this is the root device.  We
-		 * can't trust /etc/mtab, and /proc/mounts will only list
+		 * can't trust /etc/mtab, and /prod/mounts will only list
 		 * /dev/root for the root filesystem.  Argh.  Instead we
 		 * check if the given device has the same major/minor number
 		 * as the device that the root directory is on.
@@ -188,11 +188,11 @@ static int check_mntent(const char *file, int *mount_flags,
 		return 0;
 #endif /* DEBUG */
 #ifdef __linux__
-	retval = check_mntent_file("/proc/mounts", file, mount_flags,
+	retval = check_mntent_file("/prod/mounts", file, mount_flags,
 				   mtpt, mtlen);
 	if (retval == 0 && (*mount_flags != 0))
 		return 0;
-	if (access("/proc/mounts", R_OK) == 0) {
+	if (access("/prod/mounts", R_OK) == 0) {
 		*mount_flags = 0;
 		return retval;
 	}
@@ -267,13 +267,13 @@ static int is_swap_device(const char *file)
 		file_dev = st_buf.st_rdev;
 #endif	/* __GNU__ */
 
-	if (!(f = fopen("/proc/swaps", "r" UL_CLOEXECSTR)))
+	if (!(f = fopen("/prod/swaps", "r" UL_CLOEXECSTR)))
 		return 0;
 	/* Skip the first line */
 	if (!fgets(buf, sizeof(buf), f))
 		goto leave;
 	if (*buf && strncmp(buf, "Filename\t", 9) != 0)
-		/* Linux <=2.6.19 contained a bug in the /proc/swaps
+		/* Linux <=2.6.19 contained a bug in the /prod/swaps
 		 * code where the header would not be displayed
 		 */
 		goto valid_first_line;

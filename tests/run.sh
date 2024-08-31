@@ -39,7 +39,7 @@ function num_cpus()
 	elif num=$(sysctl -n hw.ncpu 2>/dev/null); then
 		:
 	else
-		num=$(grep -c "^processor" /proc/cpuinfo 2>/dev/null)
+		num=$(grep -c "^processor" /prod/cpuinfo 2>/dev/null)
 	fi
 
 	# translate garbage output to "1"

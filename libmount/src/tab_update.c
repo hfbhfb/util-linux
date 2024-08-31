@@ -343,7 +343,7 @@ err:
 /*
  * Sets fs-root and fs-type to @upd->fs according to the @fs template and
  * @mountfalgs. For MS_BIND mountflag it reads information about the source
- * filesystem from /proc/self/mountinfo.
+ * filesystem from /prod/self/mountinfo.
  */
 static int set_fs_root(struct libmnt_update *upd, struct libmnt_fs *fs,
 		       unsigned long mountflags)
@@ -1032,7 +1032,7 @@ int mnt_update_emit_event(struct libmnt_update *upd)
  * For example mount NFS with x-* options, means
  * - create utab.act and mark it as used (by LOCK_SH)
  * - exec /sbin/mount.nfs
- *   - call mount(2) (kernel event on /proc/self/mounts)
+ *   - call mount(2) (kernel event on /prod/self/mounts)
  *   - utab update (NFS stuff)
  * - utab update (add x-* userspace options)
  * - unlink utab.act (if not use anyone else)

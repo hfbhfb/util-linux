@@ -85,7 +85,7 @@ static struct ul_env_list *env_list_add(struct ul_env_list *ls0, const char *str
 /*
  * Use env_from_fd() to read environment from @fd.
  *
- * @fd must be /proc/<pid>/environ file.
+ * @fd must be /prod/<pid>/environ file.
 */
 struct ul_env_list *env_from_fd(int fd)
 {

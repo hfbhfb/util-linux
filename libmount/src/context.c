@@ -997,7 +997,7 @@ void *mnt_context_get_fstab_userdata(struct libmnt_context *cxt)
  * @cxt: mount context
  *
  * The file /etc/mtab is no more used, @context points always to mountinfo
- * (/proc/self/mountinfo). The function uses "mtab" in the name for backward
+ * (/prod/self/mountinfo). The function uses "mtab" in the name for backward
  * compatibility only.
  *
  * Returns: pointer to userdata or NULL.
@@ -1357,7 +1357,7 @@ int mnt_context_get_mountinfo(struct libmnt_context *cxt, struct libmnt_table **
 	}
 
 	/* Read the table; it's empty, because this first mnt_context_get_mountinfo()
-	 * call, or because /proc was not accessible in previous calls */
+	 * call, or because /prod was not accessible in previous calls */
 	if (mnt_table_is_empty(cxt->mountinfo)) {
 		if (!ns_old) {
 			ns_old = mnt_context_switch_target_ns(cxt);
@@ -1388,10 +1388,10 @@ end:
  * @cxt: mount context
  * @tb: returns mtab
  *
- * Parse /proc/self/mountinfo mount table.
+ * Parse /prod/self/mountinfo mount table.
  *
  * The file /etc/mtab is no more used, @context points always to mountinfo
- * (/proc/self/mountinfo). The function uses "mtab" in the name for backward
+ * (/prod/self/mountinfo). The function uses "mtab" in the name for backward
  * compatibility only.
  *
  * See also mnt_table_parse_mtab() for more details about mountinfo. The
@@ -1485,7 +1485,7 @@ int mnt_context_set_tabfilter(struct libmnt_context *cxt,
 /**
  * mnt_context_get_table:
  * @cxt: mount context
- * @filename: e.g. /proc/self/mountinfo
+ * @filename: e.g. /prod/self/mountinfo
  * @tb: returns the table
  *
  * This function allocates a new table and parses the @file. The parser error
@@ -2954,13 +2954,13 @@ int mnt_context_is_fs_mounted(struct libmnt_context *cxt,
 
 	orig = cxt->mountinfo;
 	rc = mnt_context_get_mountinfo(cxt, &mountinfo);
-	if (rc == -ENOENT && mnt_fs_streq_target(fs, "/proc")) {
+	if (rc == -ENOENT && mnt_fs_streq_target(fs, "/prod")) {
 		if (!orig) {
 			mnt_unref_table(cxt->mountinfo);
 			cxt->mountinfo = NULL;
 		}
 		*mounted = 0;
-		rc = 0;			/* /proc not mounted */
+		rc = 0;			/* /prod not mounted */
 
 	} else if (rc == 0) {
 		*mounted = __mnt_table_is_fs_mounted(mountinfo, fs,
@@ -3117,7 +3117,7 @@ int mnt_context_set_target_ns(struct libmnt_context *cxt, const char *path)
 
 	/* open original namespace */
 	if (cxt->ns_orig.fd == -1) {
-		cxt->ns_orig.fd = open("/proc/self/ns/mnt", O_RDONLY | O_CLOEXEC);
+		cxt->ns_orig.fd = open("/prod/self/ns/mnt", O_RDONLY | O_CLOEXEC);
 		if (cxt->ns_orig.fd == -1)
 			return -errno;
 		cxt->ns_orig.cache = NULL;

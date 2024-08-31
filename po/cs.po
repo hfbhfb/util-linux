@@ -2098,8 +2098,8 @@ msgid "too many devices"
 msgstr "příliš mnoho zařízení"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "Je /proc připojeno?"
+msgid "Is /prod mounted?"
+msgstr "Je /prod připojeno?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -10857,10 +10857,10 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             výstup formátuje jako seznam\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 " -N, --task <TID>       použije jiný jmenný prostor (soubor\n"
-"                        /proc/<TID>/mountinfo)\n"
+"                        /prod/<TID>/mountinfo)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12739,8 +12739,8 @@ msgid "association between file and process"
 msgstr "vztah mezi souborem a procesem"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
-msgstr "název ovladače blokového zařízení podle /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "název ovladače blokového zařízení podle /prod/devices"
 
 #: misc-utils/lsfd.c:156
 #, fuzzy
@@ -12783,8 +12783,8 @@ msgid "bpf program type (raw)"
 msgstr "druh souboru (surový)"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
-msgstr "název ovladače znakového zařízení podle /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "název ovladače znakového zařízení podle /prod/devices"
 
 #: misc-utils/lsfd.c:180
 msgid "command of the process opening the file"
@@ -12875,8 +12875,8 @@ msgid "length of file mapping (in page)"
 msgstr "délka namapované části souboru (ve stránkách)"
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
-msgstr "název ostatního znakového zařízení podle /proc/misc "
+msgid "misc character device name resolved by /prod/misc"
+msgstr "název ostatního znakového zařízení podle /prod/misc "
 
 #: misc-utils/lsfd.c:246
 msgid "mount id"
@@ -12927,8 +12927,8 @@ msgid "L3 protocol associated with the packet socket"
 msgstr "L3 protokol spojený s packetovým socketem"
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
-msgstr "název blokového zařízení podle /proc/partition"
+msgid "block device name resolved by /prod/partition"
+msgstr "název blokového zařízení podle /prod/partition"
 
 #: misc-utils/lsfd.c:285
 msgid "PID of the process opening the file"
@@ -13216,8 +13216,8 @@ msgid "failed to alloc procfs handler"
 msgstr "alokace deskriptoru procfs selhala"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
-msgid "failed to open /proc"
-msgstr "nepodařilo se otevřít /proc"
+msgid "failed to open /prod"
+msgstr "nepodařilo se otevřít /prod"
 
 #: misc-utils/lsfd.c:1857
 #, fuzzy
@@ -16140,7 +16140,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -16160,7 +16160,7 @@ msgstr ""
 " -m, --no-unmount            neodpojí zařízení, i když je připojeno\n"
 " -M, --no-partitions-unmount neodpojí další oddíly\n"
 " -n, --noop                  nevysunuje, jen ukáže, jestli zařízení existuje\n"
-" -p, --proc                  použije /proc/mounts místo /etc/mtab\n"
+" -p, --proc                  použije /prod/mounts místo /etc/mtab\n"
 " -q, --tape                  vysune pásku\n"
 " -r, --cdrom                 vysune CD-ROM\n"
 " -s, --scsi                  vysune SCSI zařízení\n"
@@ -20090,7 +20090,7 @@ msgstr ""
 #| "     --target-prefix <path>\n"
 #| "                         specifies path used for all mountpoints\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "     --target-prefix <cesta>\n"
@@ -20456,9 +20456,9 @@ msgstr "%s: nepodařilo se získat cestu k zařízení"
 
 #: sys-utils/nsenter.c:223
 #, fuzzy
-#| msgid "failed to open /proc"
+#| msgid "failed to open /prod"
 msgid "failed to open cgroup.procs"
-msgstr "nepodařilo se otevřít /proc"
+msgstr "nepodařilo se otevřít /prod"
 
 #: sys-utils/nsenter.c:235
 #, fuzzy, c-format
@@ -21993,10 +21993,10 @@ msgstr "Vypne stránkování a odkládání do zařízení a souborů.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              vypne všechny odkládací oblasti uvedené v /proc/swaps\n"
+" -a, --all              vypne všechny odkládací oblasti uvedené v /prod/swaps\n"
 " -v, --verbose          upovídaný režim\n"
 
 #: sys-utils/swapoff.c:166
@@ -22557,12 +22557,12 @@ msgid "mount %s on %s failed"
 msgstr "připojení %s do %s selhalo"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "nezdařilo se otevřít /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "nezdařilo se otevřít /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "nezdařilo se zapsat do /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "nezdařilo se zapsat do /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:294
 msgid "eventfd failed"
@@ -28290,13 +28290,13 @@ msgstr "terminál „%s“ není znám, použije se „dump“"
 #~ msgid ""
 #~ " -i, --invert           invert the sense of matching\n"
 #~ " -l, --list             use list format output\n"
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 #~ " -n, --noheadings       don't print column headings\n"
 #~ " -u, --notruncate       don't truncate text in columns\n"
 #~ msgstr ""
 #~ " -i, --invert           obrátí smysl vyhledávacích pravidel\n"
 #~ " -l, --list             výstup ve formátu seznamu\n"
-#~ " -N, --task <tid>       použije jiný jmenný prostor (/proc/<tid>/mountinfo)\n"
+#~ " -N, --task <tid>       použije jiný jmenný prostor (/prod/<tid>/mountinfo)\n"
 #~ " -n, --noheadings       nezobrazí záhlaví sloupců\n"
 #~ " -u, --notruncate       nezkracuje text ve sloupcích\n"
 
@@ -28382,14 +28382,14 @@ msgstr "terminál „%s“ není znám, použije se „dump“"
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount: pozor: Do /etc/mtab nelze zapsat (například systém souborů je pouze\n"
 #~ "       pro čtení). Je možné, že údaje hlášené nástrojem mount(8) nebudou\n"
 #~ "       aktuální. Aktuální informace o přípojných bodech lze zjistit\n"
-#~ "       v souboru /proc/mounts.\n"
+#~ "       v souboru /prod/mounts.\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"
 #~ msgstr "mount: řetězec přepínačů „%s“ je nesprávně uzavřen do uvozovek"

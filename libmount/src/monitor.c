@@ -15,7 +15,7 @@
  * @title: Monitor
  * @short_description: interface to monitor mount tables
  *
- * For example monitor VFS (/proc/self/mountinfo) for changes:
+ * For example monitor VFS (/prod/self/mountinfo) for changes:
  *
  * <informalexample>
  *   <programlisting>
@@ -616,7 +616,7 @@ static int monitor_modify_epoll(struct libmnt_monitor *mn,
 				goto err;
 		}
 		if (me->events & (EPOLLIN | EPOLLET)) {
-			/* Drain initial events generated for /proc/self/mountinfo */
+			/* Drain initial events generated for /prod/self/mountinfo */
 			struct epoll_event events[1];
 			while (epoll_wait(mn->fd, events, 1, 0) > 0);
 		}

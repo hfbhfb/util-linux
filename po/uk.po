@@ -2044,8 +2044,8 @@ msgid "too many devices"
 msgstr "забагато пристроїв"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc змонтовано?"
+msgid "Is /prod mounted?"
+msgstr "/prod змонтовано?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -10708,8 +10708,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             використатися для виведення формат списку\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>       використовувати альтернативний простір назв                          (файл /proc/<tid>/mountinfo)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>       використовувати альтернативний простір назв                          (файл /prod/<tid>/mountinfo)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12545,8 +12545,8 @@ msgid "association between file and process"
 msgstr "прив'язка файла до процесу"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
-msgstr "назва драйвера блокового пристрою, визначена за /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
+msgstr "назва драйвера блокового пристрою, визначена за /prod/devices"
 
 #: misc-utils/lsfd.c:156
 msgid "bpf map id associated with the fd"
@@ -12587,8 +12587,8 @@ msgid "bpf program type (raw)"
 msgstr "тип файла (без обробки)"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
-msgstr "назва драйвера символьного пристрою, яку визначено за /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
+msgstr "назва драйвера символьного пристрою, яку визначено за /prod/devices"
 
 #: misc-utils/lsfd.c:180
 msgid "command of the process opening the file"
@@ -12679,8 +12679,8 @@ msgid "length of file mapping (in page)"
 msgstr "довжина прив'язки файла (на сторінці)"
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
-msgstr "назва драйвера іншого символьного пристрою, яку визначено за /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
+msgstr "назва драйвера іншого символьного пристрою, яку визначено за /prod/misc"
 
 #: misc-utils/lsfd.c:246
 msgid "mount id"
@@ -12731,8 +12731,8 @@ msgid "L3 protocol associated with the packet socket"
 msgstr "протокол L3, який пов'язано із сокетом пакета"
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
-msgstr "назва блокового пристрою, визначена за /proc/partition"
+msgid "block device name resolved by /prod/partition"
+msgstr "назва блокового пристрою, визначена за /prod/partition"
 
 #: misc-utils/lsfd.c:285
 msgid "PID of the process opening the file"
@@ -13013,8 +13013,8 @@ msgid "failed to alloc procfs handler"
 msgstr "не вдалося отримати пам'ять для обробника procfs"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
-msgid "failed to open /proc"
-msgstr "не вдалося відкрити /proc"
+msgid "failed to open /prod"
+msgstr "не вдалося відкрити /prod"
 
 #: misc-utils/lsfd.c:1857
 #, fuzzy
@@ -15907,7 +15907,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -15926,7 +15926,7 @@ msgstr ""
 " -m, --no-unmount            не демонтувати пристрій, навіть якщо його змонтовано\n"
 " -M, --no-partitions-unmount не демонтувати інші розділи\n"
 " -n, --noop                  не від'єднувати, просто вивести знайдені пристрої\n"
-" -p, --proc                  використовувати /proc/mounts замість /etc/mtab\n"
+" -p, --proc                  використовувати /prod/mounts замість /etc/mtab\n"
 " -q, --tape                  виштовхнути стрічковий накопичувач\n"
 " -r, --cdrom                 виштовхнути CD-ROM\n"
 " -s, --scsi                  виштовхнути SCSI-пристрій\n"
@@ -19811,7 +19811,7 @@ msgstr ""
 #| "     --target-prefix <path>\n"
 #| "                         specifies path used for all mountpoints\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "     --target-prefix <шлях>\n"
@@ -20169,9 +20169,9 @@ msgstr "не вдалося встановити шаблон параметрі
 
 #: sys-utils/nsenter.c:223
 #, fuzzy
-#| msgid "failed to open /proc"
+#| msgid "failed to open /prod"
 msgid "failed to open cgroup.procs"
-msgstr "не вдалося відкрити /proc"
+msgstr "не вдалося відкрити /prod"
 
 #: sys-utils/nsenter.c:235
 #, fuzzy, c-format
@@ -21686,10 +21686,10 @@ msgstr "Вимкнути пристрої і файли для поділу на
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              вимкнути всі області свопінгу з /proc/swaps\n"
+" -a, --all              вимкнути всі області свопінгу з /prod/swaps\n"
 " -v, --verbose          режим докладних повідомлень\n"
 
 #: sys-utils/swapoff.c:166
@@ -22241,12 +22241,12 @@ msgid "mount %s on %s failed"
 msgstr "спроба монтування %s до %s завершилася невдало"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "не вдалося відкрити /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "не вдалося відкрити /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "не вдалося виконати запис до /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "не вдалося виконати запис до /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:294
 msgid "eventfd failed"

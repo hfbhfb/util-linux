@@ -130,7 +130,7 @@ ASSOC <``string``>::
 Association between file and process.
 
 BLKDRV <``string``>::
-Block device driver name resolved by `/proc/devices`.
+Block device driver name resolved by `/prod/devices`.
 
 BPF-MAP.ID <``number``>::
 Bpf map ID.
@@ -154,7 +154,7 @@ BPF-PROG.TYPE.RAW <``number``>::
 Bpf program type (raw).
 
 CHRDRV <``string``>::
-Character device driver name resolved by `/proc/devices`.
+Character device driver name resolved by `/prod/devices`.
 
 COMMAND <``string``>::
 Command of the process opening the file.
@@ -244,7 +244,7 @@ KNAME <``string``>::
 // Not only u but also p is decorated with underline.
 //
 Raw file name extracted from
-from ``/proc/``_pid_``/fd/``_fd_ or ``/proc/``_pid_``/map_files/``_region_.
+from ``/prod/``_pid_``/fd/``_fd_ or ``/prod/``_pid_``/map_files/``_region_.
 
 KTHREAD <``boolean``>::
 Whether the process is a kernel thread or not.
@@ -256,7 +256,7 @@ MAPLEN <``number``>::
 Length of file mapping (in page).
 
 MISCDEV <``string``>::
-Misc character device name resolved by `/proc/misc`.
+Misc character device name resolved by `/prod/misc`.
 
 MNTID <``number``>::
 Mount ID.
@@ -297,7 +297,7 @@ pidfd:::
 pid=_TARGET-PID_ comm=_TARGET-COMMAND_ nspid=_TARGET-NSPIDS_
 +
 *lsfd* extracts _TARGET-PID_ and _TARGET-NSPIDS_ from
-``/proc/``_pid_``/fdinfo/``_fd_.
+``/prod/``_pid_``/fdinfo/``_fd_.
 +
 PING:::
 state=_SOCK.STATE_[ id=_PING.ID_][ laddr=_INET.LADDR_ [ raddr=_INET.RADDR_]]
@@ -309,7 +309,7 @@ ptmx:::
 tty-index=_PTMX.TTY-INDEX_
 +
 *lsfd* extracts _PTMX.TTY-INDEX_ from
-``/proc/``_pid_``/fdinfo/``_fd_.
+``/prod/``_pid_``/fdinfo/``_fd_.
 +
 RAW:::
 state=_SOCK.STATE_[ protocol=_RAW.PROTOCOL_ [ laddr=_INET.LADDR_ [ raddr=_INET.RADDR_]]]
@@ -379,7 +379,7 @@ PACKET.PROTOCOL <``string``>::
 L3 protocol associated with the packet socket.
 
 PARTITION <``string``>::
-Block device name resolved by `/proc/partition`.
+Block device name resolved by `/prod/partition`.
 
 PID <``number``>::
 PID of the process opening the file.
@@ -388,7 +388,7 @@ PIDFD.COMM <``string``>::
 Command of the process targeted by the pidfd.
 
 PIDFD.NSPID <``string``>::
-Value of NSpid field in ``/proc/``_pid_``/fdinfo/``_fd_ of the pidfd.
+Value of NSpid field in ``/prod/``_pid_``/fdinfo/``_fd_ of the pidfd.
 +
 Quoted from kernel/fork.c of Linux source tree:
 +
@@ -399,7 +399,7 @@ starting from the current pid namespace of the instance, i.e. the
 Pid field and the first entry in the NSpid field will be identical.
 
 Note that this differs from the Pid and NSpid fields in
-/proc/<pid>/status where Pid and NSpid are always shown relative to
+/prod/<pid>/status where Pid and NSpid are always shown relative to
 the pid namespace of the procfs instance.
 ____
 

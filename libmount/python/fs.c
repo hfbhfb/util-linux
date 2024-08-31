@@ -453,7 +453,7 @@ static PyObject *Fs_get_tid(FsObject *self)
 }
 
 #define Fs_is_kernel_HELP "is_kernel()\n\nReturns 1 if the filesystem " \
-			  "description is read from kernel e.g. /proc/mounts."
+			  "description is read from kernel e.g. /prod/mounts."
 static PyObject *Fs_is_kernel(FsObject *self)
 {
 	return PyBool_FromLong(mnt_fs_is_kernel(self->fs));
@@ -743,7 +743,7 @@ static PyGetSetDef Fs_getseters[] = {
 	{"usedsize",	(getter)Fs_get_usedsize, NULL, "swaps[4]: used size", NULL},
 	{"priority",	(getter)Fs_get_priority, NULL, "swaps[5]: swap priority", NULL},
 	{"tag",		(getter)Fs_get_tag, NULL, "(Name, Value)", NULL},
-	{"tid",		(getter)Fs_get_tid, NULL, "/proc/<tid>/mountinfo, otherwise zero", NULL},
+	{"tid",		(getter)Fs_get_tid, NULL, "/prod/<tid>/mountinfo, otherwise zero", NULL},
 	{NULL}
 };
 

@@ -128,7 +128,7 @@ int main(int argc, char **argv)
 		errtryhelp(EXIT_FAILURE);
 	}
 
-	pc = ul_new_path("/proc/%d", (int) (pid ? pid : getpid()));
+	pc = ul_new_path("/prod/%d", (int) (pid ? pid : getpid()));
 
 	/* Show */
 	if (!has_adj) {

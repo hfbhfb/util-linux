@@ -2087,8 +2087,8 @@ msgid "too many devices"
 msgstr "allt för många enheter"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "Är /proc monterat?"
+msgid "Is /prod mounted?"
+msgstr "Är /prod monterat?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11086,8 +11086,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list              använd listutmatningsformat\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>        använd alternativ namnrymd  (/proc/<tid>/mountinfo-filen)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>        använd alternativ namnrymd  (/prod/<tid>/mountinfo-filen)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -13030,7 +13030,7 @@ msgid "association between file and process"
 msgstr "kan inte skapa barnprocess"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13070,7 +13070,7 @@ msgid "bpf program type (raw)"
 msgstr "filsystemstyp"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13174,7 +13174,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13238,7 +13238,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13581,7 +13581,7 @@ msgstr "misslyckades med att allokera pty-hanterare"
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
 #| msgid "failed to open: %s"
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "misslyckades med att öppna: %s"
 
 #: misc-utils/lsfd.c:1857
@@ -16625,7 +16625,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -16644,7 +16644,7 @@ msgstr ""
 " -m, --no-unmount            avmontera inte enhet även om den är monterad\n"
 " -M, --no-partitions-unmount avmontera inte andra partitioner\n"
 " -n, --noop                  mata inte ut, bara visa enheter som hittats\n"
-" -p, --proc                  använd /proc/mounts istället för /etc/mtab\n"
+" -p, --proc                  använd /prod/mounts istället för /etc/mtab\n"
 " -q, --tape                  mata ut kassett\n"
 " -r, --cdrom                 mata ut CD-ROM\n"
 " -s, --scsi                  mata ut SCSI-enhet\n"
@@ -20670,7 +20670,7 @@ msgstr " --map-user=<uid>|<namn>   mappa aktuell användare till uid (medför --
 #| "     --target-prefix <path>\n"
 #| "                         specifies path use for all mountpoints\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 "     --target-prefix <sökväg>\n"
@@ -22655,10 +22655,10 @@ msgstr "Inaktivera enheter och filer för växling.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              inaktivera alla växlingsytor i  /proc/swaps\n"
+" -a, --all              inaktivera alla växlingsytor i  /prod/swaps\n"
 " -v, --verbose          utförligt läge\n"
 
 #: sys-utils/swapoff.c:166
@@ -23214,12 +23214,12 @@ msgid "mount %s on %s failed"
 msgstr "montering av %s på %s misslyckades"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "misslyckades med att öppna /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "misslyckades med att öppna /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "misslyckades med att skriva till /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "misslyckades med att skriva till /prod/self/timens_offsets"
 
 #: sys-utils/unshare.c:294
 #, fuzzy

@@ -834,7 +834,7 @@ function ts_mount {
 		# skip only if reported fs correctly and if it's not available
 		fs=$(echo "$msg" | sed -n "s/.*type '\(.*\)'$/\1/p")
 		[ "$fs" = "fs_exp" ] \
-		 && grep -qe "[[:space:]]${fs}$" /proc/filesystems &>/dev/null \
+		 && grep -qe "[[:space:]]${fs}$" /prod/filesystems &>/dev/null \
 		 || ts_skip "$msg"
 	fi
 	return $result
@@ -843,10 +843,10 @@ function ts_mount {
 function ts_is_mounted {
 	local DEV=$(ts_canonicalize "$1")
 
-	grep -q "\(^\| \)$DEV " /proc/mounts && return 0
+	grep -q "\(^\| \)$DEV " /prod/mounts && return 0
 
 	if [ "${DEV#/dev/loop/}" != "$DEV" ]; then
-		grep -q "^/dev/loop${DEV#/dev/loop/} " /proc/mounts && return 0
+		grep -q "^/dev/loop${DEV#/dev/loop/} " /prod/mounts && return 0
 	fi
 	return 1
 }

@@ -229,8 +229,8 @@ static void lscpu_context_init_paths(struct lscpu_cxt *cxt)
 	if (cxt->prefix)
 		ul_path_set_prefix(cxt->syscpu, cxt->prefix);
 
-	/* /proc */
-	cxt->procfs = ul_new_path("/proc");
+	/* /prod */
+	cxt->procfs = ul_new_path("/prod");
 	if (!cxt->procfs)
 		err(EXIT_FAILURE, _("failed to initialize procfs handler"));
 	if (cxt->prefix)

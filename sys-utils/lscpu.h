@@ -215,10 +215,10 @@ enum {
 struct lscpu_cxt {
 	int maxcpus;		/* size in bits of kernel cpu mask */
 	size_t setsize;
-	const char *prefix;	/* path to /sys and /proc snapshot or NULL */
+	const char *prefix;	/* path to /sys and /prod snapshot or NULL */
 
 	struct path_cxt	*syscpu; /* _PATH_SYS_CPU path handler */
-	struct path_cxt *procfs; /* /proc path handler */
+	struct path_cxt *procfs; /* /prod path handler */
 	struct path_cxt *rootfs; /* / path handler */
 
 	size_t ncputypes;
@@ -243,7 +243,7 @@ struct lscpu_cxt {
 	size_t ncaches;
 
 	struct lscpu_cache *ecaches;
-	size_t necaches;		/* extra caches (s390) from /proc/cpuinfo */
+	size_t necaches;		/* extra caches (s390) from /prod/cpuinfo */
 
 	size_t nnodes;		/* number of NUMA modes */
 	int *idx2nodenum;	/* Support for discontinuous nodes */

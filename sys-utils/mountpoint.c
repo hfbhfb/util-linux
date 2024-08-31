@@ -54,7 +54,7 @@ static int dir_to_device(struct mountpoint_control *ctl)
 	if (!tb) {
 		/*
 		 * Fallback. Traditional way to detect mountpoints. This way
-		 * is independent on /proc, but not able to detect bind mounts.
+		 * is independent on /prod, but not able to detect bind mounts.
 		 */
 		struct stat pst;
 		char buf[PATH_MAX], *cn;

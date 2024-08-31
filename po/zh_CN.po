@@ -2055,8 +2055,8 @@ msgid "too many devices"
 msgstr "设备过多"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc 挂载了吗？"
+msgid "Is /prod mounted?"
+msgstr "/prod 挂载了吗？"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11007,8 +11007,8 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             使用列表格式的输出\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
-msgstr " -N, --task <tid>       使用替代的名字空间(/proc/<tid>/mountinfo 文件)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
+msgstr " -N, --task <tid>       使用替代的名字空间(/prod/<tid>/mountinfo 文件)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -12933,7 +12933,7 @@ msgid "association between file and process"
 msgstr "无法创建子进程"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -12975,7 +12975,7 @@ msgid "bpf program type (raw)"
 msgstr "文件系统类型"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13079,7 +13079,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13143,7 +13143,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13484,7 +13484,7 @@ msgstr "%s：初始化 procfs 处理函数失败"
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
 #| msgid "failed to open: %s"
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "打开失败：%s"
 
 #: misc-utils/lsfd.c:1857
@@ -16615,7 +16615,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -16634,7 +16634,7 @@ msgstr ""
 " -m, --no-unmount            不卸载设备，即使它已挂臷\n"
 " -M, --no-partitions-unmount 不卸载另外的分区\n"
 " -n, --noop                  不弹出，只显示找到的设备\n"
-" -p, --proc                  使用 /proc/mounts 代替 /etc/mtab\n"
+" -p, --proc                  使用 /prod/mounts 代替 /etc/mtab\n"
 " -q, --tape                  弹出磁带\n"
 " -r, --cdrom                 弹出 CD-ROM\n"
 " -s, --scsi                  弹出 SCSI 设备\n"
@@ -20750,7 +20750,7 @@ msgstr " -r, --map-root-user       将当前用户映射为 root (连带打开 -
 #, fuzzy
 #| msgid " --default                         use default terminal settings\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr " --default                         使用默认终端设置\n"
 
@@ -22802,10 +22802,10 @@ msgstr "禁止将设备和文件用于分页和交换。\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              禁用 /proc/swaps 中的所有交换区\n"
+" -a, --all              禁用 /prod/swaps 中的所有交换区\n"
 " -v, --verbose          verbose mode\n"
 
 #: sys-utils/swapoff.c:166
@@ -23360,12 +23360,12 @@ msgid "mount %s on %s failed"
 msgstr "将 %s 挂载到 %s 失败"
 
 #: sys-utils/unshare.c:224
-msgid "failed to open /proc/self/timens_offsets"
-msgstr "打开 /proc/self/timens_offsets 失败"
+msgid "failed to open /prod/self/timens_offsets"
+msgstr "打开 /prod/self/timens_offsets 失败"
 
 #: sys-utils/unshare.c:227
-msgid "failed to write to /proc/self/timens_offsets"
-msgstr "写入 /proc/self/timens_offsets 失败"
+msgid "failed to write to /prod/self/timens_offsets"
+msgstr "写入 /prod/self/timens_offsets 失败"
 
 #: sys-utils/unshare.c:294
 #, fuzzy
@@ -29095,13 +29095,13 @@ msgstr "终端“%s”未知，将使用默认值“dumb”"
 #~ msgid ""
 #~ " -i, --invert           invert the sense of matching\n"
 #~ " -l, --list             use list format output\n"
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 #~ " -n, --noheadings       don't print column headings\n"
 #~ " -u, --notruncate       don't truncate text in columns\n"
 #~ msgstr ""
 #~ " -i, --invert           反转匹配规则\n"
 #~ " -l, --list             使用列表格式的输出\n"
-#~ " -N, --task <tid>       使用备选名字空间(/proc/<tid>/mountinfo 文件)\n"
+#~ " -N, --task <tid>       使用备选名字空间(/prod/<tid>/mountinfo 文件)\n"
 #~ " -n, --noheadings       不打印列标题\n"
 #~ " -u, --notruncate       不截短列中的文本\n"
 
@@ -29179,14 +29179,14 @@ msgstr "终端“%s”未知，将使用默认值“dumb”"
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount：/etc/mtab 不可写(比如是只读文件系统)。\n"
 #~ "       mount(8) 报告的信息可能不是最新的。\n"
 #~ "       有关系统挂载点的实际信息请检查\n"
-#~ "       /proc/mounts 获取。\n"
+#~ "       /prod/mounts 获取。\n"
 #~ "\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"

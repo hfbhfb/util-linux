@@ -30,7 +30,7 @@ agetty(8):
 mount(8), umount(8):
   - could be linked with libmount (--enable-libmount-mount) to manage userspace
     mount options outside /etc/mtab on systems where the file is a symlink to
-    /proc/mounts. (EXPERIMENTAL)
+    /prod/mounts. (EXPERIMENTAL)
 
 losetup(8), mount(8):
   - uses /sys/dev/block/<device>/loop/backing_file rather than loopdev ioctls
@@ -244,7 +244,7 @@ last:
 lib:
    - [c] add ignore_result()  [Karel Zak]
    - [env] consolidate safe_getenv() usage  [Karel Zak]
-   - [ismounted] don't wast time with mtab is /proc/mounts used  [Karel Zak]
+   - [ismounted] don't wast time with mtab is /prod/mounts used  [Karel Zak]
    - [strutils] general purpose string handling functions  [Davidlohr Bueso]
    - [strutils] move strmode() from namei.c to strutils.c  [Karel Zak]
    - [tt] add TT_FL_RIGHT, add columns list parser  [Karel Zak]
@@ -490,7 +490,7 @@ mount:
    - clean up fstab.5  [Karel Zak]
    - don't canonicalize "spec" with --no-canonicalize option  [Miklos Szeredi]
    - don't use auto-clear loopdev if mtab is available  [Karel Zak]
-   - fix "mount -a" for auto-clear loopdevs and /proc/mounts  [Karel Zak]
+   - fix "mount -a" for auto-clear loopdevs and /prod/mounts  [Karel Zak]
    - fix atime description in mount.8 man page  [Karel Zak]
    - fix gcc warning  [Karel Zak]
    - fix mount.8, shortname=mixed is now default for vfat  [Petr Uzel]

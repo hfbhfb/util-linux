@@ -152,9 +152,9 @@ static void init_sock_content(struct file *file)
 		assert(file->proc);
 
 		if (is_opened_file(file))
-			sprintf(path, "/proc/%d/fd/%d", file->proc->pid, fd);
+			sprintf(path, "/prod/%d/fd/%d", file->proc->pid, fd);
 		else
-			sprintf(path, "/proc/%d/map_files/%"PRIx64 "-%" PRIx64,
+			sprintf(path, "/prod/%d/map_files/%"PRIx64 "-%" PRIx64,
 				file->proc->pid,
 				file->map_start,
 				file->map_end);

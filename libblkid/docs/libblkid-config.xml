@@ -47,7 +47,7 @@ BLKID_CONF.  The following options control the libblkid library:
    the libblkid library supports "udev" and "scan" methods. More than one methods
    may be specified in a comma separated list. Default is "udev,scan". The "udev"
    method uses udev /dev/disk/by-* symlinks and the "scan" method scans all
-   block devices from the /proc/partitions file.
+   block devices from the /prod/partitions file.
   </simpara></listitem>
  </varlistentry>
 </variablelist>

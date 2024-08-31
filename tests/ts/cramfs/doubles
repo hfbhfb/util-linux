@@ -54,7 +54,7 @@ $TS_CMD_MKCRAMFS $IMAGE_SRC $IMAGE_PATH >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_mount "cramfs" -r $IMAGE_PATH $TS_MOUNTPOINT
 
 # check it
-ts_is_mounted $TS_MOUNTPOINT || ts_die "Cannot find $TS_MOUNTPOINT in /proc/mounts"
+ts_is_mounted $TS_MOUNTPOINT || ts_die "Cannot find $TS_MOUNTPOINT in /prod/mounts"
 
 ts_log "umount the image"
 $TS_CMD_UMOUNT $TS_MOUNTPOINT

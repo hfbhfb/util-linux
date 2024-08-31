@@ -53,19 +53,19 @@ ts_run $TESTPROG --ends-with "AAAbbbCCC" "CCC" &> $TS_OUTPUT
 ts_finalize_subtest
 
 ts_init_subtest "mountpoint"
-if [ -d /proc ]; then
-	ts_run $TESTPROG --mountpoint /proc &> $TS_OUTPUT
+if [ -d /prod ]; then
+	ts_run $TESTPROG --mountpoint /prod &> $TS_OUTPUT
 	ts_finalize_subtest
 else
-	ts_skip_subtest "no /proc"
+	ts_skip_subtest "no /prod"
 fi
 
 ts_init_subtest "mountpoint-subdir"
-if [ -d /proc/sys/kernel ]; then
-	ts_run $TESTPROG --mountpoint /proc/sys/kernel &> $TS_OUTPUT
+if [ -d /prod/sys/kernel ]; then
+	ts_run $TESTPROG --mountpoint /prod/sys/kernel &> $TS_OUTPUT
 	ts_finalize_subtest
 else
-	ts_skip_subtest "no /proc"
+	ts_skip_subtest "no /prod"
 fi
 
 ts_init_subtest "mountpoint-root"

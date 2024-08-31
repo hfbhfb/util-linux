@@ -94,7 +94,7 @@ REL_TIME <``string``>::
 *TIME* time formatted as time range.
 
 NS_OFFSET <``number``>::
-Offset of the current namespace to the parent namespace as read from */proc/self/timens_offsets*.
+Offset of the current namespace to the parent namespace as read from */prod/self/timens_offsets*.
 
 
 == AUTHORS

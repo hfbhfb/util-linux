@@ -6,7 +6,7 @@ tmpfs                   /dev/shm                tmpfs   defaults        0 0
 devpts                  /dev/pts                devpts  gid=5,mode=620
   sysfs                   /sys                    sysfs   defaults        0 0
 this is broken line with unexpected number of fields
-proc                    /proc                   proc    defaults        0 0
+proc                    /prod                   proc    defaults        0 0
 # this is comment
 /dev/mapper/foo		/home/foo              ext4	noatime,defaults 1
 

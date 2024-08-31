@@ -93,7 +93,7 @@ static void lsfd_init_debug(void)
 }
 
 /*
- * /proc/$pid/mountinfo entries
+ * /prod/$pid/mountinfo entries
  */
 struct nodev {
 	struct list_head nodevs;
@@ -133,7 +133,7 @@ struct name_manager {
 };
 
 /*
- * /proc/devices entries
+ * /prod/devices entries
  */
 struct devdrv {
 	struct list_head devdrvs;
@@ -178,7 +178,7 @@ static const struct colinfo infos[] = {
 				   N_("association between file and process") },
 	[COL_BLKDRV]           = { "BLKDRV",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_STRING,
-				   N_("block device driver name resolved by /proc/devices") },
+				   N_("block device driver name resolved by /prod/devices") },
 	[COL_BPF_MAP_ID]       = { "BPF-MAP.ID",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_NUMBER,
 				   N_("bpf map id associated with the fd") },
@@ -202,7 +202,7 @@ static const struct colinfo infos[] = {
 				   N_("bpf program type (raw)") },
 	[COL_CHRDRV]           = { "CHRDRV",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_STRING,
-				   N_("character device driver name resolved by /proc/devices") },
+				   N_("character device driver name resolved by /prod/devices") },
 	[COL_COMMAND]          = { "COMMAND",
 				   0.3, SCOLS_FL_TRUNC, SCOLS_JSON_STRING,
 				   N_("command of the process opening the file") },
@@ -268,7 +268,7 @@ static const struct colinfo infos[] = {
 				   N_("length of file mapping (in page)") },
 	[COL_MISCDEV]          = { "MISCDEV",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_STRING,
-				   N_("misc character device name resolved by /proc/misc") },
+				   N_("misc character device name resolved by /prod/misc") },
 	[COL_MNT_ID]           = { "MNTID",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_NUMBER,
 				   N_("mount id") },
@@ -307,7 +307,7 @@ static const struct colinfo infos[] = {
 				   N_("L3 protocol associated with the packet socket") },
 	[COL_PARTITION]        = { "PARTITION",
 				   0,   SCOLS_FL_RIGHT, SCOLS_JSON_STRING,
-				   N_("block device name resolved by /proc/partition") },
+				   N_("block device name resolved by /prod/partition") },
 	[COL_PID]              = { "PID",
 				   5,   SCOLS_FL_RIGHT, SCOLS_JSON_NUMBER,
 				   N_("PID of the process opening the file") },
@@ -843,7 +843,7 @@ static struct file *collect_file_symlink(struct path_cxt *pc,
 
 	if (ul_path_readlink(pc, sym, sizeof(sym), name) < 0)
 		f = new_readlink_error_file(proc, errno, assoc);
-	/* The /proc/#/{fd,ns} often contains the same file (e.g. /dev/tty)
+	/* The /prod/#/{fd,ns} often contains the same file (e.g. /dev/tty)
 	 * more than once. Let's try to reuse the previous file if the real
 	 * path is the same to save stat() call.
 	 */
@@ -899,7 +899,7 @@ static struct file *collect_file_symlink(struct path_cxt *pc,
 	return f;
 }
 
-/* read symlinks from /proc/#/fd
+/* read symlinks from /prod/#/fd
  */
 static void collect_fd_files(struct path_cxt *pc, struct proc *proc,
 			     bool sockets_only)
@@ -1247,9 +1247,9 @@ static void initialize_nodevs(void)
 	for (i = 0; i < NODEV_TABLE_SIZE; i++)
 		INIT_LIST_HEAD(&nodev_table.tables[i]);
 
-	if (stat("/proc/self/ns/mnt", &sb) == 0) {
+	if (stat("/prod/self/ns/mnt", &sb) == 0) {
 		self_mntns_id = sb.st_ino;
-		self_mntns_fd = open("/proc/self/ns/mnt", O_RDONLY);
+		self_mntns_fd = open("/prod/self/ns/mnt", O_RDONLY);
 	}
 }
 
@@ -1652,7 +1652,7 @@ static void initialize_devdrvs(void)
 	INIT_LIST_HEAD(&chrdrvs);
 	INIT_LIST_HEAD(&blkdrvs);
 
-	devices_fp = fopen("/proc/devices", "r");
+	devices_fp = fopen("/prod/devices", "r");
 	if (devices_fp) {
 		read_devices(&chrdrvs, &blkdrvs, devices_fp);
 		fclose(devices_fp);
@@ -1942,7 +1942,7 @@ static void read_process(struct lsfd_control *ctl, struct path_cxt *pc,
 	    || kcmp(proc->leader->pid, proc->pid, KCMP_FS, 0, 0) != 0)
 		collect_fs_files(pc, proc, ctl->sockets_only);
 
-	/* Reading /proc/$pid/mountinfo is expensive.
+	/* Reading /prod/$pid/mountinfo is expensive.
 	 * mnt_namespaces is a table for avoiding reading mountinfo files
 	 * for an identical mnt namespace.
 	 *
@@ -1953,17 +1953,17 @@ static void read_process(struct lsfd_control *ctl, struct path_cxt *pc,
 	 * as a key. If we find the key, we can skip the reading.
 	 *
 	 * To utilize mnt_namespaces, we need $mnt_id.
-	 * So we read /proc/$pid/ns/mnt here. However, we should not read
-	 * /proc/$pid/ns/net here. When reading /proc/$pid/ns/net, we need
+	 * So we read /prod/$pid/ns/mnt here. However, we should not read
+	 * /prod/$pid/ns/net here. When reading /prod/$pid/ns/net, we need
 	 * the information about backing device of "nsfs" file system.
 	 * The information is available in a mountinfo file.
 	 */
 
-	/* 1/3. Read /proc/$pid/ns/mnt */
+	/* 1/3. Read /prod/$pid/ns/mnt */
 	if (proc->mnt_ns == NULL)
 		collect_namespace_files_tophalf(pc, proc);
 
-	/* 2/3. read /proc/$pid/mountinfo unless we have read it already.
+	/* 2/3. read /prod/$pid/mountinfo unless we have read it already.
 	 * The backing device for "nsfs" is solved here.
 	 */
 	if (proc->mnt_ns == NULL || !proc->mnt_ns->read_mountinfo) {
@@ -1981,7 +1981,7 @@ static void read_process(struct lsfd_control *ctl, struct path_cxt *pc,
 		}
 	}
 
-	/* 3/3. read /proc/$pid/ns/{the other namespaces including net}
+	/* 3/3. read /prod/$pid/ns/{the other namespaces including net}
 	 * When reading the information about the net namespace,
 	 * backing device for "nsfs" must be solved.
 	 */
@@ -2008,7 +2008,7 @@ static void read_process(struct lsfd_control *ctl, struct path_cxt *pc,
 	if (ctl->show_xmode)
 		parse_proc_syscall(ctl, pc, pid, proc);
 
-	/* The tasks collecting overwrites @pc by /proc/<task-pid>/. Keep it as
+	/* The tasks collecting overwrites @pc by /prod/<task-pid>/. Keep it as
 	 * the last path based operation in read_process()
 	 */
 	if (ctl->threads && leader == NULL)
@@ -2084,7 +2084,7 @@ static void collect_processes(struct lsfd_control *ctl, const pid_t pids[], int 
 
 	dir = opendir(_PATH_PROC);
 	if (!dir)
-		err(EXIT_FAILURE, _("failed to open /proc"));
+		err(EXIT_FAILURE, _("failed to open /prod"));
 
 	while ((d = readdir(dir))) {
 		pid_t pid;

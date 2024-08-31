@@ -532,7 +532,7 @@ static int loop_scandir(const char *dirname, int **ary, int hasprefix)
 }
 
 /*
- * Set the next *used* loop device according to /proc/partitions.
+ * Set the next *used* loop device according to /prod/partitions.
  *
  * Loop devices smaller than 512 bytes are invisible for this function.
  */
@@ -541,7 +541,7 @@ static int loopcxt_next_from_proc(struct loopdev_cxt *lc)
 	struct loopdev_iter *iter = &lc->iter;
 	char buf[BUFSIZ];
 
-	DBG(ITER, ul_debugobj(iter, "scan /proc/partitions"));
+	DBG(ITER, ul_debugobj(iter, "scan /prod/partitions"));
 
 	if (!iter->proc)
 		iter->proc = fopen(_PATH_PROC_PARTITIONS, "r" UL_CLOEXECSTR);
@@ -631,7 +631,7 @@ int loopcxt_next(struct loopdev_cxt *lc)
 
 	DBG(ITER, ul_debugobj(iter, "next"));
 
-	/* A) Look for used loop devices in /proc/partitions ("losetup -a" only)
+	/* A) Look for used loop devices in /prod/partitions ("losetup -a" only)
 	 */
 	if (iter->flags & LOOPITER_FL_USED) {
 		int rc;

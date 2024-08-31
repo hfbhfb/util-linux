@@ -584,10 +584,10 @@ static int get_filesystems(const char *filename, char ***filesystems, const char
  * man mount:
  *
  * ...mount will try to read the file /etc/filesystems, or, if that does not
- * exist, /proc/filesystems. All of the filesystem  types  listed  there  will
+ * exist, /prod/filesystems. All of the filesystem  types  listed  there  will
  * be tried,  except  for  those  that  are  labeled  "nodev"  (e.g.,  devpts,
  * proc  and  nfs).  If /etc/filesystems ends in a line with a single * only,
- * mount will read /proc/filesystems afterwards.
+ * mount will read /prod/filesystems afterwards.
  */
 int mnt_get_filesystems(char ***filesystems, const char *pattern)
 {
@@ -604,7 +604,7 @@ int mnt_get_filesystems(char ***filesystems, const char *pattern)
 
 	rc = get_filesystems(_PATH_PROC_FILESYSTEMS, filesystems, pattern);
 	if (rc == 1 && *filesystems)
-		rc = 0;			/* /proc/filesystems not found */
+		rc = 0;			/* /prod/filesystems not found */
 
 	return rc;
 }
@@ -970,7 +970,7 @@ done:
 /**
  * mnt_get_swaps_path:
  *
- * Returns: path to /proc/swaps or $LIBMOUNT_SWAPS.
+ * Returns: path to /prod/swaps or $LIBMOUNT_SWAPS.
  */
 const char *mnt_get_swaps_path(void)
 {
@@ -997,7 +997,7 @@ const char *mnt_get_fstab_path(void)
  *
  * Returns: path to /etc/mtab or $LIBMOUNT_MTAB.
  *
- * Deprecated: libmount uses /proc/self/mountinfo only.
+ * Deprecated: libmount uses /prod/self/mountinfo only.
  *
  */
 const char *mnt_get_mtab_path(void)

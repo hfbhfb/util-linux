@@ -793,7 +793,7 @@ mount:
    - use common libs  [Davidlohr Bueso]
    - use new lib/loopdev.c code  [Karel Zak]
 mountpoint:
-   - fallback on stat when /proc isn't mounted  [Karel Zak]
+   - fallback on stat when /prod isn't mounted  [Karel Zak]
    - refactor exit path  [Dave Reisner]
    - return dev_t from dir_to_device  [Dave Reisner]
    - support symbolic and relative paths  [Karel Zak]

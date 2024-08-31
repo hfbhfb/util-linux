@@ -19,7 +19,7 @@ The new features based on this functionality are:
    http://karelzak.blogspot.com/2018/11/lsblk-merge.html
 
 The command umount(8) now supports user unmount for FUSE mounts. The requirement
-is FUSE specific user_id=<uid> in /proc/self/mountinfo for the filesystem.
+is FUSE specific user_id=<uid> in /prod/self/mountinfo for the filesystem.
 
 The command mount(8) now allows to use "--all -o remount". In this case all
 filters (-t and -O) are applied to the table of already mounted filesystems.
@@ -235,7 +235,7 @@ include/strutils:
    - add functions to replace and remove chars from string  [Karel Zak]
    - fix potential null pointer dereference  [Sami Kerola]
 ipcs:
-   - check return value when read from /proc [coverity scan]  [Karel Zak]
+   - check return value when read from /prod [coverity scan]  [Karel Zak]
 last:
    - do not use non-standard __UT_NAMESIZE  [Patrick Steinhardt]
    - fix wtmp user name buffer overflow [asan]  [Sami Kerola]
@@ -298,7 +298,7 @@ libblkid:
    - fix detection of dm-integrity superblock  [Milan Broz]
    - fix detection of dm-integrity superblock version  [Milan Broz]
    - fix possible uninitialized value use [coverity scan]  [Karel Zak]
-   - improve whole-disk detection when read /proc/partitions  [Karel Zak]
+   - improve whole-disk detection when read /prod/partitions  [Karel Zak]
    - make partitions reference counting more robust [coverity scan]  [Karel Zak]
    - remove dependence on libuuid  [Karel Zak]
    - remove unneeded fields from struct bcache_super_block  [Sami Kerola]

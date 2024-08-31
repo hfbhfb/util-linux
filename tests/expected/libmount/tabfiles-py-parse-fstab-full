@@ -49,7 +49,7 @@ fstype: sysfs
 optstr: defaults
 ------ fs:
 source: proc
-target: /proc
+target: /prod
 fstype: proc
 optstr: defaults
 ------ fs:

@@ -1,5 +1,5 @@
 17   62   0:17  /  /sys                             rw,nosuid,nodev,noexec,relatime  shared:6    -  sysfs            sysfs                 rw
-18   62   0:4   /  /proc                            rw,nosuid,nodev,noexec,relatime  shared:5    -  proc             proc                  rw
+18   62   0:4   /  /prod                            rw,nosuid,nodev,noexec,relatime  shared:5    -  proc             proc                  rw
 19   62   0:6   /  /dev                             rw,nosuid                        shared:2    -  devtmpfs         devtmpfs              rw,size=8175740k,nr_inodes=2043935,mode=755
 20   17   0:18  /  /sys/kernel/security             rw,nosuid,nodev,noexec,relatime  shared:7    -  securityfs       securityfs            rw
 21   19   0:19  /  /dev/shm                         rw,nosuid,nodev                  shared:3    -  tmpfs            tmpfs                 rw
@@ -21,12 +21,12 @@
 37   24   0:35  /  /sys/fs/cgroup/freezer           rw,nosuid,nodev,noexec,relatime  shared:19   -  cgroup           cgroup                rw,freezer
 60   17   0:36  /  /sys/kernel/config               rw,relatime                      shared:22   -  configfs         configfs              rw
 62   0    8:4   /  /                                rw,relatime                      shared:1    -  ext4             /dev/sda4             rw,data=ordered
-38   18   0:37  /  /proc/sys/fs/binfmt_misc         rw,relatime                      shared:24   -  autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12781
+38   18   0:37  /  /prod/sys/fs/binfmt_misc         rw,relatime                      shared:24   -  autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12781
 39   17   0:7   /  /sys/kernel/debug                rw,relatime                      shared:25   -  debugfs          debugfs               rw
 40   19   0:38  /  /dev/hugepages                   rw,relatime                      shared:26   -  hugetlbfs        hugetlbfs             rw
 41   19   0:16  /  /dev/mqueue                      rw,relatime                      shared:27   -  mqueue           mqueue                rw
-42   38   0:39  /  /proc/sys/fs/binfmt_misc         rw,relatime                      shared:28   -  binfmt_misc      binfmt_misc           rw
-75   18   0:40  /  /proc/fs/nfsd                    rw,relatime                      shared:29   -  nfsd             nfsd                  rw
+42   38   0:39  /  /prod/sys/fs/binfmt_misc         rw,relatime                      shared:28   -  binfmt_misc      binfmt_misc           rw
+75   18   0:40  /  /prod/fs/nfsd                    rw,relatime                      shared:29   -  nfsd             nfsd                  rw
 77   62   0:41  /  /tmp                             rw,nosuid,nodev                  shared:30   -  tmpfs            tmpfs                 rw
 80   62   8:3   /  /home                            rw,relatime                      shared:31   -  ext4             /dev/sda3             rw,data=ordered
 81   62   8:2   /  /boot                            rw,relatime                      shared:32   -  ext4             /dev/sda2             rw,data=ordered

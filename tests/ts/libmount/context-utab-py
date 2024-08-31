@@ -50,7 +50,7 @@ DEVICE="${TS_DEVICE}1"
 
 udevadm settle
 
-grep -q " $DEVNAME\$" /proc/partitions
+grep -q " $DEVNAME\$" /prod/partitions
 if [ $? -ne 0 ]; then
 	ts_skip "no partition!"
 fi
@@ -70,14 +70,14 @@ ts_init_subtest "mount-by-devname"
 mkdir -p $MOUNTPOINT &>  /dev/null
 $PYTHON $TESTPROG --mount $DEVICE $MOUNTPOINT >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_is_mounted "$DEVICE" || \
-	echo "(by device) cannot find $DEVICE in /proc/mounts" >> $TS_OUTPUT 2>> $TS_ERRLOG
+	echo "(by device) cannot find $DEVICE in /prod/mounts" >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_finalize_subtest
 
 
 ts_init_subtest "umount-by-devname"
 $PYTHON $TESTPROG --umount $DEVICE >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_is_mounted "$DEVICE" &&
-	echo "umount (device) failed: found $DEVICE in /proc/mounts" >> $TS_OUTPUT 2>> $TS_ERRLOG
+	echo "umount (device) failed: found $DEVICE in /prod/mounts" >> $TS_OUTPUT 2>> $TS_ERRLOG
 ts_finalize_subtest
 
 

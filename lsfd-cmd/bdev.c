@@ -126,7 +126,7 @@ static void bdev_class_initialize(void)
 
 	INIT_LIST_HEAD(&partitions);
 
-	part_fp = fopen("/proc/partitions", "r");
+	part_fp = fopen("/prod/partitions", "r");
 	if (part_fp) {
 		read_partitions(&partitions, part_fp);
 		fclose(part_fp);

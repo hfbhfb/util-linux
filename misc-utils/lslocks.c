@@ -95,7 +95,7 @@ static struct colinfo infos[] = {
 static int columns[ARRAY_SIZE(infos) * 2];
 static size_t ncolumns;
 
-static struct libmnt_table *tab;		/* /proc/self/mountinfo */
+static struct libmnt_table *tab;		/* /prod/self/mountinfo */
 
 /* basic output flags */
 static int no_headings;
@@ -236,7 +236,7 @@ static char *get_filename_sz(ino_t inode, pid_t lock_pid, size_t *size)
 	 * iterate the *entire* filesystem searching
 	 * for the damn file.
 	 */
-	snprintf(path, sizeof(path), "/proc/%d/fd/", lock_pid);
+	snprintf(path, sizeof(path), "/prod/%d/fd/", lock_pid);
 	if (!(dirp = opendir(path)))
 		return NULL;
 
@@ -345,7 +345,7 @@ static struct lock *get_lock(char *buf, struct override_info *oinfo, void *fallb
 	     tok = strtok(NULL, " "), i++) {
 
 		/*
-		 * /proc/locks has *exactly* 8 "blocks" of text
+		 * /prod/locks has *exactly* 8 "blocks" of text
 		 * separated by ' ' - check <kernel>/fs/locks.c
 		 */
 		switch (i) {
@@ -499,7 +499,7 @@ static void get_pids_locks(void *locks, void (*add_lock)(void *, struct lock *))
 
 	dir = opendir(_PATH_PROC);
 	if (!dir)
-		err(EXIT_FAILURE, _("failed to open /proc"));
+		err(EXIT_FAILURE, _("failed to open /prod"));
 
 	while ((d = readdir(dir))) {
 		pid_t pid;
@@ -957,8 +957,8 @@ int main(int argc, char *argv[])
 	scols_init_debug(0);
 
 	/* get_pids_locks() get locks related information from "lock:" fields
-	 * of /proc/$pid/fdinfo/$fd as fallback information.
-	 * get_proc_locks() used the fallback information if /proc/locks
+	 * of /prod/$pid/fdinfo/$fd as fallback information.
+	 * get_proc_locks() used the fallback information if /prod/locks
 	 * doesn't provides enough information or provides staled information. */
 	get_pids_locks(&pid_locks, add_to_tree);
 	rc = get_proc_locks(&proc_locks, add_to_list, &pid_locks);

@@ -95,7 +95,7 @@ static int write_id_mapping(idmap_type_t map_type, pid_t pid, const char *buf,
 	char path[PATH_MAX];
 
 	if (geteuid() != 0 && map_type == ID_TYPE_GID) {
-		snprintf(path, sizeof(path), "/proc/%d/setgroups", pid);
+		snprintf(path, sizeof(path), "/prod/%d/setgroups", pid);
 
 		setgroups_fd = open(path, O_WRONLY | O_CLOEXEC | O_NOCTTY);
 		if (setgroups_fd < 0 && errno != ENOENT)
@@ -108,7 +108,7 @@ static int write_id_mapping(idmap_type_t map_type, pid_t pid, const char *buf,
 		}
 	}
 
-	snprintf(path, sizeof(path), "/proc/%d/%cid_map", pid,
+	snprintf(path, sizeof(path), "/prod/%d/%cid_map", pid,
 		 map_type == ID_TYPE_UID ? 'u' : 'g');
 
 	fd = open(path, O_WRONLY | O_CLOEXEC | O_NOCTTY);
@@ -156,7 +156,7 @@ static int map_ids(struct list_head *idmap, pid_t pid)
 					map->nsid, map->hostid, map->range);
 			/*
 			 * The kernel only takes <= 4k for writes to
-			 * /proc/<pid>/{g,u}id_map
+			 * /prod/<pid>/{g,u}id_map
 			 */
 			if (fill <= 0)
 				return errno = EINVAL, -1;
@@ -244,7 +244,7 @@ static int get_userns_fd_from_idmap(struct list_head *idmap)
 		goto err_wait;
 	}
 
-	snprintf(path, sizeof(path), "/proc/%d/ns/user", pid);
+	snprintf(path, sizeof(path), "/prod/%d/ns/user", pid);
 	fd_userns = open(path, O_RDONLY | O_CLOEXEC | O_NOCTTY);
 
 	/* Let child know we've persisted its namespace. */

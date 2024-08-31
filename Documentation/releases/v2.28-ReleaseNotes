@@ -171,7 +171,7 @@ ctrlaltdel:
    - display setting when ran without arguments  [Sami Kerola]
    - improve error messaging  [Sami Kerola]
    - tweak the wording in the man page  [Benno Schulenberg]
-   - use path.h to read /proc  [Karel Zak]
+   - use path.h to read /prod  [Karel Zak]
    - use reboot() provided by libc, assuming it is 1-adic.  [Casper Ti. Vector]
 dmesg:
    - improve grammar and consistency of usage text  [Benno Schulenberg]
@@ -667,7 +667,7 @@ tests:
    - skip BLKDISCARD if unsupported  [Ruediger Meier]
    - skip automake's empty "Testsuite summary"  [Ruediger Meier]
    - skip btrfs tests if version too old  [Ruediger Meier]
-   - skip ipcs test which require /proc  [Ruediger Meier]
+   - skip ipcs test which require /prod  [Ruediger Meier]
    - skip nonroot before checking for progs in PATH  [Ruediger Meier]
    - skip old socat silently  [Ruediger Meier]
    - ts_fdisk_clean(), remove optimal iosize  [Ruediger Meier]

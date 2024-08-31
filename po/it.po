@@ -2232,7 +2232,7 @@ msgstr "%s: %s no è un lp device.\n"
 
 #: disk-utils/fsck.c:1479
 #, fuzzy
-msgid "Is /proc mounted?"
+msgid "Is /prod mounted?"
 msgstr "eseguito umount di %s\n"
 
 #: disk-utils/fsck.c:1487
@@ -11460,7 +11460,7 @@ msgid " -l, --list             use list format output\n"
 msgstr "  -Q, --quiet-output           Nessun output normale\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 
 # FIXME UPSTREAM: unqote
@@ -13373,7 +13373,7 @@ msgid "association between file and process"
 msgstr "impossibile rimuovere l'id %s %s\n"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13410,7 +13410,7 @@ msgid "bpf program type (raw)"
 msgstr "Immettere il tipo di filesystem: "
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13505,7 +13505,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13564,7 +13564,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13869,7 +13869,7 @@ msgstr "Impossibile allocare il buffer.\n"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "%s: impossibile aprire: %s\n"
 
 # FIXME UPSTREAM: unqote
@@ -16898,7 +16898,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -21028,7 +21028,7 @@ msgstr ""
 #: sys-utils/mount.c:500
 #, fuzzy
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr "  -h, --help                   Questa piccola guida all'utilizzo\n"
 
@@ -22995,7 +22995,7 @@ msgstr ""
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
 
@@ -23558,12 +23558,12 @@ msgstr "%s: impossibile rinominare %s in %s: %s\n"
 
 #: sys-utils/unshare.c:224
 #, fuzzy
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "%s: impossibile aprire: %s\n"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "%s: impossibile aprire: %s\n"
 
 #: sys-utils/unshare.c:294

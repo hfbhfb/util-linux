@@ -15,19 +15,19 @@ _ionice_module()
 			;;
 		'-P'|'--pgid')
 			local PGID
-			PGID="$(awk '{print $5}' /proc/*/stat 2>/dev/null | sort -u)"
+			PGID="$(awk '{print $5}' /prod/*/stat 2>/dev/null | sort -u)"
 			COMPREPLY=( $(compgen -W "$PGID" -- $cur) )
 			return 0
 			;;
 		'-p'|'--pid')
 			local PIDS
-			PIDS=$(for I in /proc/[0-9]*; do echo ${I##"/proc/"}; done)
+			PIDS=$(for I in /prod/[0-9]*; do echo ${I##"/prod/"}; done)
 			COMPREPLY=( $(compgen -W "$PIDS" -- $cur) )
 			return 0
 			;;
 		'-u'|'--uid')
 			local UIDS
-			UIDS="$(stat --format='%u' /proc/[0-9]* | sort -u)"
+			UIDS="$(stat --format='%u' /prod/[0-9]* | sort -u)"
 			COMPREPLY=( $(compgen -W "$UIDS" -- $cur) )
 			return 0
 			;;

@@ -19,10 +19,10 @@ TARGET                                 SOURCE                TYPE             VF
 | |-/sys/kernel/config                 configfs              configfs         rw,relatime
 | |-/sys/kernel/debug                  debugfs               debugfs          rw,relatime
 | `-/sys/fs/fuse/connections           fusectl               fusectl          rw,relatime
-|-/proc                                proc                  proc             rw,nosuid,nodev,noexec,relatime
-| |-/proc/sys/fs/binfmt_misc           systemd-1             autofs           rw,relatime
-| | `-/proc/sys/fs/binfmt_misc         binfmt_misc           binfmt_misc      rw,relatime
-| `-/proc/fs/nfsd                      nfsd                  nfsd             rw,relatime
+|-/prod                                proc                  proc             rw,nosuid,nodev,noexec,relatime
+| |-/prod/sys/fs/binfmt_misc           systemd-1             autofs           rw,relatime
+| | `-/prod/sys/fs/binfmt_misc         binfmt_misc           binfmt_misc      rw,relatime
+| `-/prod/fs/nfsd                      nfsd                  nfsd             rw,relatime
 |-/dev                                 devtmpfs              devtmpfs         rw,nosuid
 | |-/dev/shm                           tmpfs                 tmpfs            rw,nosuid,nodev
 | |-/dev/pts                           devpts                devpts           rw,nosuid,noexec,relatime

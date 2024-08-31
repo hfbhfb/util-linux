@@ -76,7 +76,7 @@ function lsfd_strip_type_stream
 function lsfd_make_state_connected
 {
     # Newer kernels report the states of unix dgram sockets created by
-    # sockerpair(2) are "connected" via /proc/net/unix though Older
+    # sockerpair(2) are "connected" via /prod/net/unix though Older
     # kernels report "unconnected".
     #
     # Newer kernels report the states of unix dgram sockets already

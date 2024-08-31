@@ -2858,7 +2858,7 @@ AS_IF([test "x$enable_use_tty_group" = xyes], [
 
 AC_ARG_ENABLE([sulogin-emergency-mount],
   AS_HELP_STRING([--enable-sulogin-emergency-mount],
-		 [use emergency mount of /dev and /proc for sulogin]),
+		 [use emergency mount of /dev and /prod for sulogin]),
   [], [enable_sulogin_emergency_mount=no]
 )
 
@@ -2866,7 +2866,7 @@ AS_IF([test "x$enable_sulogin_emergency_mount" = xyes], [
   AS_IF([test "x$linux_os" = xyes], [ ],
 	[AC_MSG_ERROR([--enable-sulogin-emergency-mount selected for non-linux system])])
   AC_DEFINE([USE_SULOGIN_EMERGENCY_MOUNT], [1],
-	    [Should sulogin use an emergency mount of /dev and /proc?])
+	    [Should sulogin use an emergency mount of /dev and /prod?])
 ])
 
 

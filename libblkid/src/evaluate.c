@@ -38,7 +38,7 @@
  * 2.6 systems and on systems with or without udev. Currently, the libblkid
  * library supports "udev" and "scan" methods. The "udev" method uses udev
  * /dev/disk/by-* symlinks and the "scan" method scans all block devices from
- * the /proc/partitions file. The evaluation could be controlled by the
+ * the /prod/partitions file. The evaluation could be controlled by the
  * /etc/blkid.conf config file. The default is to try "udev" and then "scan"
  * method.
  *

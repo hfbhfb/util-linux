@@ -62,7 +62,7 @@ also restricted by a new command line option --output-limit.
 
 The libblkid provides BitLocker and basic APFS detection now.
 
-The command lsblk is possible to execute against /sys and /proc dumps if command
+The command lsblk is possible to execute against /sys and /prod dumps if command
 line option --sysroot is specified. This allows to prepare regression tests for
 lsblk.  So, if you have a complicated or unusual setup (RAIDs, pools, etc) than
 you can use
@@ -403,7 +403,7 @@ lscpu:
    - fixed part ID for ARM Cortex-M7  [Mark Sheppard]
    - make xasprintf call more robust  [Karel Zak]
    - use new ul_path_* API  [Karel Zak]
-   - use the first VM from /proc/sysinfo  [Karel Zak]
+   - use the first VM from /prod/sysinfo  [Karel Zak]
 lscpu, chcpu:
    - Avoid use of the old CPU macros  [Stanislav Brabec]
 lsipc:
@@ -577,7 +577,7 @@ tests:
    - add empty column test  [Karel Zak]
    - add lsblk test script  [Karel Zak]
    - add mountinfo with empty source  [Karel Zak]
-   - add simple & stupid script to generate lsblk /sys and /proc dump  [Karel Zak]
+   - add simple & stupid script to generate lsblk /sys and /prod dump  [Karel Zak]
    - add simple ATA and NVME lsblk dump  [Karel Zak]
    - add simple LVM lsblk dump  [Karel Zak]
    - check for test_cal  [Karel Zak]

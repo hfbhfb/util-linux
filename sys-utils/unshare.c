@@ -56,7 +56,7 @@
 /* 'private' is kernel default */
 #define UNSHARE_PROPAGATION_DEFAULT	(MS_REC | MS_PRIVATE)
 
-/* /proc namespace files and mountpoints for binds */
+/* /prod namespace files and mountpoints for binds */
 static struct namespace_file {
 	int		type;		/* CLONE_NEW* */
 	const char	*name;		/* ns/<type> */
@@ -191,7 +191,7 @@ static int bind_ns_files(pid_t pid)
 		if (!ns->target)
 			continue;
 
-		snprintf(src, sizeof(src), "/proc/%u/%s", (unsigned) pid, ns->name);
+		snprintf(src, sizeof(src), "/prod/%u/%s", (unsigned) pid, ns->name);
 
 		if (mount(src, ns->target, NULL, MS_BIND, NULL) != 0)
 			err(EXIT_FAILURE, _("mount %s on %s failed"), src, ns->target);
@@ -205,7 +205,7 @@ static ino_t get_mnt_ino(pid_t pid)
 	struct stat st;
 	char path[PATH_MAX];
 
-	snprintf(path, sizeof(path), "/proc/%u/ns/mnt", (unsigned) pid);
+	snprintf(path, sizeof(path), "/prod/%u/ns/mnt", (unsigned) pid);
 
 	if (stat(path, &st) != 0)
 		err(EXIT_FAILURE, _("stat of %s failed"), path);
@@ -219,12 +219,12 @@ static void settime(int64_t offset, clockid_t clk_id)
 
 	len = snprintf(buf, sizeof(buf), "%d %" PRId64 " 0", clk_id, offset);
 
-	fd = open("/proc/self/timens_offsets", O_WRONLY);
+	fd = open("/prod/self/timens_offsets", O_WRONLY);
 	if (fd < 0)
-		err(EXIT_FAILURE, _("failed to open /proc/self/timens_offsets"));
+		err(EXIT_FAILURE, _("failed to open /prod/self/timens_offsets"));
 
 	if (write(fd, buf, len) != len)
-		err(EXIT_FAILURE, _("failed to write to /proc/self/timens_offsets"));
+		err(EXIT_FAILURE, _("failed to write to /prod/self/timens_offsets"));
 
 	close(fd);
 }
@@ -481,7 +481,7 @@ static struct map_range read_subid_range(char *filename, uid_t uid, int identity
 /**
  * read_kernel_map() - Read all available IDs from the kernel
  * @chain: destination list to receive pass-through ID mappings
- * @filename: either /proc/self/uid_map or /proc/self/gid_map
+ * @filename: either /prod/self/uid_map or /prod/self/gid_map
  *
  * This is used by --map-users=all and --map-groups=all to construct
  * pass-through mappings for all IDs available in the parent namespace.
@@ -649,7 +649,7 @@ map_ids_external(const char *idmapper, int ppid, struct map_range *chain)
  * @chain: A linked list of ID range mappings
  *
  * This creates a new uid/gid map for @ppid using a privileged write to
- * /proc/@ppid/@type to set a mapping for each of the ranges in @chain.
+ * /prod/@ppid/@type to set a mapping for each of the ranges in @chain.
  */
 static void map_ids_internal(const char *type, int ppid, struct map_range *chain)
 {
@@ -657,7 +657,7 @@ static void map_ids_internal(const char *type, int ppid, struct map_range *chain
 	unsigned int length = 0;
 	char buffer[4096], *path;
 
-	xasprintf(&path, "/proc/%u/%s", ppid, type);
+	xasprintf(&path, "/prod/%u/%s", ppid, type);
 	for (struct map_range *map = chain; map; map = map->next) {
 		count = snprintf(buffer + length, sizeof(buffer) - length,
 				 "%u %u %u\n",
@@ -955,14 +955,14 @@ int main(int argc, char *argv[])
 			break;
 		case OPT_MOUNTPROC:
 			unshare_flags |= CLONE_NEWNS;
-			procmnt = optarg ? optarg : "/proc";
+			procmnt = optarg ? optarg : "/prod";
 			break;
 		case OPT_MOUNTBINFMT:
 			unshare_flags |= CLONE_NEWNS | CLONE_NEWUSER;
 			binfmt_mnt = optarg;
 			if (!binfmt_mnt) {
 				if (!procmnt)
-					procmnt = "/proc";
+					procmnt = "/prod";
 				binfmt_mnt = _PATH_PROC_BINFMT_MISC;
 			}
 			break;
@@ -1066,7 +1066,7 @@ int main(int argc, char *argv[])
 			unshare_flags |= CLONE_NEWNS | CLONE_NEWUSER;
 			if (!binfmt_mnt) {
 				if (!procmnt)
-					procmnt = "/proc";
+					procmnt = "/prod";
 				binfmt_mnt = _PATH_PROC_BINFMT_MISC;
 			}
 			newinterp = optarg;
@@ -1207,8 +1207,8 @@ int main(int argc, char *argv[])
         if (mapuser != (uid_t) -1 && !usermap)
 		map_id(_PATH_PROC_UIDMAP, mapuser, real_euid);
 
-        /* Since Linux 3.19 unprivileged writing of /proc/self/gid_map
-         * has been disabled unless /proc/self/setgroups is written
+        /* Since Linux 3.19 unprivileged writing of /prod/self/gid_map
+         * has been disabled unless /prod/self/setgroups is written
          * first to permanently disable the ability to call setgroups
          * in that user namespace. */
 	if (mapgroup != (gid_t) -1 && !groupmap) {

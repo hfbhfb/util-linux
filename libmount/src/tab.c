@@ -589,7 +589,7 @@ static inline struct libmnt_fs *get_parent_fs(struct libmnt_table *tb, struct li
 
 /**
  * mnt_table_get_root_fs:
- * @tb: mountinfo file (/proc/self/mountinfo)
+ * @tb: mountinfo file (/prod/self/mountinfo)
  * @root: NULL or returns pointer to the root filesystem (/)
  *
  * The function uses the parent ID from the mountinfo file to determine the
@@ -645,7 +645,7 @@ int mnt_table_get_root_fs(struct libmnt_table *tb, struct libmnt_fs **root)
 
 /**
  * mnt_table_next_child_fs:
- * @tb: mountinfo file (/proc/self/mountinfo)
+ * @tb: mountinfo file (/prod/self/mountinfo)
  * @itr: iterator
  * @parent: parental FS
  * @chld: NULL or returns the next child filesystem
@@ -1117,7 +1117,7 @@ struct libmnt_fs *mnt_table_find_target(struct libmnt_table *tb, const char *pat
 	}
 
 	/* non-canonical path in struct libmnt_table
-	 * -- note that mountpoint in /proc/self/mountinfo is already
+	 * -- note that mountpoint in /prod/self/mountinfo is already
 	 *    canonicalized by the kernel
 	 */
 	mnt_reset_iter(&itr, direction);
@@ -1154,7 +1154,7 @@ struct libmnt_fs *mnt_table_find_target(struct libmnt_table *tb, const char *pat
  * For btrfs returns tab entry for default id.
  *
  * Note that NULL is a valid source path; it will be replaced with "none". The
- * "none" is used in /proc/{mounts,self/mountinfo} for pseudo filesystems.
+ * "none" is used in /prod/{mounts,self/mountinfo} for pseudo filesystems.
  *
  * Returns: a tab entry or NULL.
  */
@@ -1440,7 +1440,7 @@ struct libmnt_fs *mnt_table_find_pair(struct libmnt_table *tb, const char *sourc
 
 /**
  * mnt_table_find_devno
- * @tb: /proc/self/mountinfo
+ * @tb: /prod/self/mountinfo
  * @devno: device number
  * @direction: MNT_ITER_{FORWARD,BACKWARD}
  *
@@ -1615,7 +1615,7 @@ static const char *get_cifs_unc_subdir_path (const char *unc)
 }
 
 /*
- * tb: /proc/self/mountinfo
+ * tb: /prod/self/mountinfo
  * fs: filesystem
  * mountflags: MS_BIND or 0
  * fsroot: fs-root that will probably be used in the mountinfo file
@@ -1898,7 +1898,7 @@ done:
 
 /**
  * mnt_table_is_fs_mounted:
- * @tb: /proc/self/mountinfo file
+ * @tb: /prod/self/mountinfo file
  * @fstab_fs: /etc/fstab entry
  *
  * Checks if the @fstab_fs entry is already in the @tb table. The "swap" is
@@ -2200,7 +2200,7 @@ static int test_is_mounted(struct libmnt_test *ts __attribute__((unused)),
 	if (argc != 2)
 		return -1;
 
-	tb = mnt_new_table_from_file("/proc/self/mountinfo");
+	tb = mnt_new_table_from_file("/prod/self/mountinfo");
 	if (!tb) {
 		fprintf(stderr, "failed to parse mountinfo\n");
 		return -1;

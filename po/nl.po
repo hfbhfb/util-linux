@@ -2118,8 +2118,8 @@ msgid "too many devices"
 msgstr "te veel apparaten"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "Is /proc wel aangekoppeld?"
+msgid "Is /prod mounted?"
+msgstr "Is /prod wel aangekoppeld?"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11181,10 +11181,10 @@ msgid " -l, --list             use list format output\n"
 msgstr "  -l, --list             uitvoer in vorm van lijst produceren\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 "  -N, --task <tid>       alternatieve naamsruimte gebruiken\n"
-"                           (het /proc/<tid>/mountinfo bestand)\n"
+"                           (het /prod/<tid>/mountinfo bestand)\n"
 
 #: misc-utils/findmnt.c:1444
 msgid " -n, --noheadings       don't print column headings\n"
@@ -13095,7 +13095,7 @@ msgid "association between file and process"
 msgstr "kan geen dochterproces starten"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13137,7 +13137,7 @@ msgid "bpf program type (raw)"
 msgstr "bestandssysteemsoort"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13239,7 +13239,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13300,7 +13300,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13637,7 +13637,7 @@ msgstr "reserveren van geheugen voor script-verwerker is mislukt"
 
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "openen van %s is mislukt"
 
 #: misc-utils/lsfd.c:1857
@@ -16671,7 +16671,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -20724,7 +20724,7 @@ msgstr ""
 
 #: sys-utils/mount.c:500
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr ""
 
@@ -22692,10 +22692,10 @@ msgstr "Deactiveert apparaten en bestanden met wisselgeheugen.\n"
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-"  -a, --all          alle wisselgebieden uit /proc/swaps uitschakelen\n"
+"  -a, --all          alle wisselgebieden uit /prod/swaps uitschakelen\n"
 "  -v, --verbose      gedetailleerde uitvoer produceren\n"
 
 #: sys-utils/swapoff.c:166
@@ -23257,12 +23257,12 @@ msgstr "aankoppelen van %s op %s is mislukt"
 
 #: sys-utils/unshare.c:224
 #, fuzzy
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "ontleden van positie is mislukt"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "ontleden van positie is mislukt"
 
 #: sys-utils/unshare.c:294
@@ -28745,14 +28745,14 @@ msgstr "terminal '%s' is onbekend; 'dumb' wordt gebruikt"
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount: Waarschuwing: /etc/mtab is niet schrijfbaar (mogelijk wegens een\n"
 #~ "       alleen-lezen bestandssysteem).  Het kan dus zijn dat de informatie\n"
 #~ "       gerapporteerd door mount(8) niet correct is.  Zie voor actuele\n"
-#~ "       info over aankoppelingspunten het bestand '/proc/mounts'.\n"
+#~ "       info over aankoppelingspunten het bestand '/prod/mounts'.\n"
 #~ "\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"

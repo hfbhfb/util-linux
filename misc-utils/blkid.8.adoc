@@ -33,7 +33,7 @@ ____
 *lsblk*(8) provides more information, better control on output formatting, easy to use in scripts and it does not require root permissions to get actual information. *blkid* reads information directly from devices and for non-root users it returns cached unverified information. *blkid* is mostly designed for system services and to test *libblkid*(3) functionality.
 ____
 
-When _device_ is specified, tokens from only this device are displayed. It is possible to specify multiple _device_ arguments on the command line. If none is given, all partitions or unpartitioned devices which appear in _/proc/partitions_ are shown, if they are recognized.
+When _device_ is specified, tokens from only this device are displayed. It is possible to specify multiple _device_ arguments on the command line. If none is given, all partitions or unpartitioned devices which appear in _/prod/partitions_ are shown, if they are recognized.
 
 *blkid* has two main forms of operation: either searching for a device with a specific NAME=value pair, or displaying NAME=value pairs for one or more specified devices.
 
@@ -168,7 +168,7 @@ _CACHE_FILE=<path>_::
 Overrides the standard location of the cache file. This setting can be overridden by the environment variable *BLKID_FILE*. Default is _/run/blkid/blkid.tab_, or _/etc/blkid.tab_ on systems without a _/run_ directory.
 
 _EVALUATE=<methods>_::
-Defines LABEL and UUID evaluation method(s). Currently, the libblkid library supports the "udev" and "scan" methods. More than one method may be specified in a comma-separated list. Default is "udev,scan". The "udev" method uses udev _/dev/disk/by-*_ symlinks and the "scan" method scans all block devices from the _/proc/partitions_ file.
+Defines LABEL and UUID evaluation method(s). Currently, the libblkid library supports the "udev" and "scan" methods. More than one method may be specified in a comma-separated list. Default is "udev,scan". The "udev" method uses udev _/dev/disk/by-*_ symlinks and the "scan" method scans all block devices from the _/prod/partitions_ file.
 
 == ENVIRONMENT
 

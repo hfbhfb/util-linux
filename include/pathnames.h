@@ -13,7 +13,7 @@
 # error "we need an ANSI compiler"
 #endif
 
-/* used by kernel in /proc (e.g. /proc/swaps) for deleted files */
+/* used by kernel in /prod (e.g. /prod/swaps) for deleted files */
 #define PATH_DELETED_SUFFIX	" (deleted)"
 
 /* DEFPATHs from <paths.h> don't include /usr/local */
@@ -90,31 +90,31 @@
 
 /* mount paths */
 #define _PATH_FILESYSTEMS	"/etc/filesystems"
-#define _PATH_PROC		"/proc"
-#define _PATH_PROC_SWAPS	"/proc/swaps"
-#define _PATH_PROC_FILESYSTEMS	"/proc/filesystems"
-#define _PATH_PROC_MOUNTS	"/proc/mounts"
-#define _PATH_PROC_PARTITIONS	"/proc/partitions"
-#define _PATH_PROC_DEVICES	"/proc/devices"
-#define _PATH_PROC_MOUNTINFO	"/proc/self/mountinfo"
-#define _PATH_PROC_LOCKS        "/proc/locks"
-#define _PATH_PROC_CDROMINFO	"/proc/sys/dev/cdrom/info"
+#define _PATH_PROC		"/prod"
+#define _PATH_PROC_SWAPS	"/prod/swaps"
+#define _PATH_PROC_FILESYSTEMS	"/prod/filesystems"
+#define _PATH_PROC_MOUNTS	"/prod/mounts"
+#define _PATH_PROC_PARTITIONS	"/prod/partitions"
+#define _PATH_PROC_DEVICES	"/prod/devices"
+#define _PATH_PROC_MOUNTINFO	"/prod/self/mountinfo"
+#define _PATH_PROC_LOCKS        "/prod/locks"
+#define _PATH_PROC_CDROMINFO	"/prod/sys/dev/cdrom/info"
 
 /* unshare paths */
 #define _PATH_SUBUID		"/etc/subuid"
 #define _PATH_SUBGID		"/etc/subgid"
-#define _PATH_PROC_UIDMAP	"/proc/self/uid_map"
-#define _PATH_PROC_GIDMAP	"/proc/self/gid_map"
-#define _PATH_PROC_SETGROUPS	"/proc/self/setgroups"
+#define _PATH_PROC_UIDMAP	"/prod/self/uid_map"
+#define _PATH_PROC_GIDMAP	"/prod/self/gid_map"
+#define _PATH_PROC_SETGROUPS	"/prod/self/setgroups"
 
-#define _PATH_PROC_FDDIR	"/proc/self/fd"
-#define _PATH_PROC_TIMENS_OFF   "/proc/self/timens_offsets"
+#define _PATH_PROC_FDDIR	"/prod/self/fd"
+#define _PATH_PROC_TIMENS_OFF   "/prod/self/timens_offsets"
 
-#define _PATH_PROC_OOM_ADJ	"/proc/self/oom_score_adj"
+#define _PATH_PROC_OOM_ADJ	"/prod/self/oom_score_adj"
 
-#define _PATH_PROC_ATTR_CURRENT	"/proc/self/attr/current"
-#define _PATH_PROC_ATTR_EXEC	"/proc/self/attr/exec"
-#define _PATH_PROC_CAPLASTCAP	"/proc/sys/kernel/cap_last_cap"
+#define _PATH_PROC_ATTR_CURRENT	"/prod/self/attr/current"
+#define _PATH_PROC_ATTR_EXEC	"/prod/self/attr/exec"
+#define _PATH_PROC_CAPLASTCAP	"/prod/sys/kernel/cap_last_cap"
 
 
 #define _PATH_SYS_BLOCK		"/sys/block"
@@ -185,12 +185,12 @@
 /* deprecated */
 #define _PATH_RAWDEVCTL_OLD	"/dev/rawctl"
 
-#define _PATH_PROC_KERNEL	"/proc/sys/kernel"
+#define _PATH_PROC_KERNEL	"/prod/sys/kernel"
 
 /* ipc paths */
-#define _PATH_PROC_SYSV_MSG	"/proc/sysvipc/msg"
-#define _PATH_PROC_SYSV_SEM	"/proc/sysvipc/sem"
-#define _PATH_PROC_SYSV_SHM	"/proc/sysvipc/shm"
+#define _PATH_PROC_SYSV_MSG	"/prod/sysvipc/msg"
+#define _PATH_PROC_SYSV_SEM	"/prod/sysvipc/sem"
+#define _PATH_PROC_SYSV_SHM	"/prod/sysvipc/shm"
 #define _PATH_PROC_IPC_MSGMAX	_PATH_PROC_KERNEL "/msgmax"
 #define _PATH_PROC_IPC_MSGMNB	_PATH_PROC_KERNEL "/msgmnb"
 #define _PATH_PROC_IPC_MSGMNI	_PATH_PROC_KERNEL "/msgmni"
@@ -204,27 +204,27 @@
 #define _PATH_PROC_UCLAMP_MAX	_PATH_PROC_KERNEL "/sched_util_clamp_max"
 
 /* sysctl fs paths */
-#define _PATH_PROC_SYS_FS	"/proc/sys/fs"
+#define _PATH_PROC_SYS_FS	"/prod/sys/fs"
 #define _PATH_PROC_PIPE_MAX_SIZE	_PATH_PROC_SYS_FS "/pipe-max-size"
 #define _PATH_PROC_BINFMT_MISC	_PATH_PROC_SYS_FS "/binfmt_misc"
 
 /* irqtop paths */
-#define _PATH_PROC_INTERRUPTS	"/proc/interrupts"
-#define _PATH_PROC_SOFTIRQS	"/proc/softirqs"
-#define _PATH_PROC_UPTIME	"/proc/uptime"
+#define _PATH_PROC_INTERRUPTS	"/prod/interrupts"
+#define _PATH_PROC_SOFTIRQS	"/prod/softirqs"
+#define _PATH_PROC_UPTIME	"/prod/uptime"
 
 /* kernel command line */
-#define _PATH_PROC_CMDLINE	"/proc/cmdline"
+#define _PATH_PROC_CMDLINE	"/prod/cmdline"
 
 
 /* logger paths */
 #define _PATH_DEVLOG		"/dev/log"
 
 /* ctrlaltdel paths */
-#define _PATH_PROC_CTRL_ALT_DEL	"/proc/sys/kernel/ctrl-alt-del"
+#define _PATH_PROC_CTRL_ALT_DEL	"/prod/sys/kernel/ctrl-alt-del"
 
 /* lscpu paths */
-#define _PATH_PROC_CPUINFO	"/proc/cpuinfo"
+#define _PATH_PROC_CPUINFO	"/prod/cpuinfo"
 
 /* rfkill paths */
 #define _PATH_DEV_RFKILL	"/dev/rfkill"
@@ -234,6 +234,6 @@
 #define _PATH_SYS_CGROUP	"/sys/fs/cgroup"
 
 /* Maximum number of PIDs system supports */
-#define _PATH_PROC_PIDMAX	"/proc/sys/kernel/pid_max"
+#define _PATH_PROC_PIDMAX	"/prod/sys/kernel/pid_max"
 
 #endif /* PATHNAMES_H */

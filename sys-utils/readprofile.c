@@ -8,7 +8,7 @@
  *
  * Copyright (C) 1994,1996 Alessandro Rubini (rubini@ipvvis.unipv.it)
  *
- * readprofile.c - used to read /proc/profile
+ * readprofile.c - used to read /prod/profile
  */
 
 /*
@@ -54,7 +54,7 @@
 
 /* These are the defaults */
 static char defaultmap[]="/boot/System.map";
-static char defaultpro[]="/proc/profile";
+static char defaultpro[]="/prod/profile";
 
 static FILE *myopen(char *name, char *mode, int *flag)
 {

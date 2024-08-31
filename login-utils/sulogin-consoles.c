@@ -101,7 +101,7 @@ void emergency_do_umounts(void)
 	if (emergency_flags & MNT_DEVTMPFS)
 		umount2("/dev", MNT_DETACH);
 	if (emergency_flags & MNT_PROCFS)
-		umount2("/proc", MNT_DETACH);
+		umount2("/prod", MNT_DETACH);
 }
 
 void emergency_do_mounts(void)
@@ -118,9 +118,9 @@ void emergency_do_mounts(void)
 		return;
 	}
 
-	if (stat("/proc", &xt) == 0
+	if (stat("/prod", &xt) == 0
 	    && rt.st_dev == xt.st_dev
-	    && mount("proc", "/proc", "proc", MS_RELATIME, NULL) == 0)
+	    && mount("proc", "/prod", "proc", MS_RELATIME, NULL) == 0)
 		emergency_flags |= MNT_PROCFS;
 
 	if (stat("/dev", &xt) == 0
@@ -132,7 +132,7 @@ void emergency_do_mounts(void)
 		mknod("/dev/console", S_IFCHR|S_IRUSR|S_IWUSR,
 					makedev(TTYAUX_MAJOR, 1));
 
-		if (symlink("/proc/self/fd", "/dev/fd") == 0) {
+		if (symlink("/prod/self/fd", "/dev/fd") == 0) {
 			ignore_result( symlink("fd/0", "/dev/stdin") );
 			ignore_result( symlink("fd/1", "/dev/stdout") );
 			ignore_result( symlink("fd/2", "/dev/stderr") );
@@ -364,9 +364,9 @@ static int detect_consoles_from_proc(struct list_head *consoles)
 	FILE *fc = NULL;
 	int maj, min, rc = 1, matches;
 
-	DBG(dbgprint("trying /proc"));
+	DBG(dbgprint("trying /prod"));
 
-	fc = fopen("/proc/consoles", "r" UL_CLOEXECSTR);
+	fc = fopen("/prod/consoles", "r" UL_CLOEXECSTR);
 	if (!fc) {
 		rc = 2;
 		goto done;
@@ -399,7 +399,7 @@ done:
 		closedir(dir);
 	if (fc)
 		fclose(fc);
-	DBG(dbgprint("[/proc rc=%d]", rc));
+	DBG(dbgprint("[/prod rc=%d]", rc));
 	return rc;
 }
 
@@ -474,7 +474,7 @@ static int detect_consoles_from_cmdline(struct list_head *consoles)
 
 	DBG(dbgprint("trying kernel cmdline"));
 
-	cmdline = oneline("/proc/cmdline");
+	cmdline = oneline("/prod/cmdline");
 	if (!cmdline) {
 		rc = 2;
 		goto done;
@@ -724,7 +724,7 @@ int detect_consoles(const char *device, const int fallback, struct list_head *co
 console:
 	/*
 	 * Detection of devices used for Linux system console using
-	 * the /proc/consoles API with kernel 2.6.38 and higher.
+	 * the /prod/consoles API with kernel 2.6.38 and higher.
 	 */
 	rc = detect_consoles_from_proc(consoles);
 	if (rc == 0)

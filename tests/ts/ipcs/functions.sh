@@ -16,15 +16,15 @@
 # GNU General Public License for more details.
 #
 
-test -f /proc/sys/kernel/shmall || ts_skip "no /proc"
+test -f /prod/sys/kernel/shmall || ts_skip "no /prod"
 
 PAGE_SIZE=$($TS_HELPER_SYSINFO pagesize)
 
 # kernel files
 IPCS_PROCFILES=(
-	/proc/sys/kernel/shmmni
-	/proc/sys/kernel/shmall
-	/proc/sys/kernel/shmmax
+	/prod/sys/kernel/shmmni
+	/prod/sys/kernel/shmall
+	/prod/sys/kernel/shmmax
 )
 
 # raw data converted to ipcs-like format
@@ -33,9 +33,9 @@ IPCS_PROCFILES=(
 #	shmmax = from bytes to KBytes
 #
 IPCS_KERNEL_CMD=(
-	"cat /proc/sys/kernel/shmmni"
-	"echo \$(cat /proc/sys/kernel/shmall) / 1024 \* $PAGE_SIZE | bc -l | sed 's/\..*//'"
-	"echo \$(cat /proc/sys/kernel/shmmax) / 1024 | bc -l | sed 's/\..*//'"
+	"cat /prod/sys/kernel/shmmni"
+	"echo \$(cat /prod/sys/kernel/shmall) / 1024 \* $PAGE_SIZE | bc -l | sed 's/\..*//'"
+	"echo \$(cat /prod/sys/kernel/shmmax) / 1024 | bc -l | sed 's/\..*//'"
 )
 
 # data from the ipcs command

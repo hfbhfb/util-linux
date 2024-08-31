@@ -32,7 +32,7 @@ mount(8) and libmount now provides built-in dm-verity support if linked with
 libcryptsetup. This new feature is EXPERIMENTAL and disabled by default; use
 --with-cryptsetup to enable.
 
-libmount now uses poll() syscall to verify /proc/self/mountinfo file consistence
+libmount now uses poll() syscall to verify /prod/self/mountinfo file consistence
 and it re-read the file if modified during previous read call.
 
 mount(8) now provides a new command-line option --target-prefix to mount, for
@@ -282,7 +282,7 @@ libmount:
    - cleanup strdup() use in context, add reg.test  [Karel Zak]
    - do not obscure return code when checking verity options  [Luca Boccassi]
    - don't access struct member, use API  [Karel Zak]
-   - don't use /proc/mounts fallback if filename specified  [Karel Zak]
+   - don't use /prod/mounts fallback if filename specified  [Karel Zak]
    - fix comment referring to passno field  [Patrick Steinhardt]
    - fix free() call on error  [Karel Zak]
    - fix mnt_context_next_remount()  [Karel Zak]

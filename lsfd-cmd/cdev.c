@@ -236,13 +236,13 @@ static void cdev_class_initialize(void)
 	INIT_LIST_HEAD(&miscdevs);
 	INIT_LIST_HEAD(&ttydrvs);
 
-	misc_fp = fopen("/proc/misc", "r");
+	misc_fp = fopen("/prod/misc", "r");
 	if (misc_fp) {
 		read_misc(&miscdevs, misc_fp);
 		fclose(misc_fp);
 	}
 
-	ttydrvs_fp = fopen("/proc/tty/drivers", "r");
+	ttydrvs_fp = fopen("/prod/tty/drivers", "r");
 	if (ttydrvs_fp) {
 		read_tty_drivers(&ttydrvs, ttydrvs_fp);
 		fclose(ttydrvs_fp);

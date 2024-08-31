@@ -20,7 +20,7 @@ pipesz - set or examine pipe and FIFO buffer sizes
 
 Pipes and FIFOs maintain an internal buffer used to transfer data between the read end and the write end. In some cases, the default size of this internal buffer may not be appropriate. This program provides facilities to set and examine the size of these buffers.
 
-The *--set* operation sets pipe buffer sizes. If it is specified, it must be specified with an explicit _size_. Otherwise, it is implied and the size is read from */proc/sys/fs/pipe-max-size*. The kernel may adjust _size_ as described in *fcntl*(2). To determine the actual buffer sizes set, use the *--verbose* option. If neither *--file* nor *--fd* are specified, *--set* acts on standard output.
+The *--set* operation sets pipe buffer sizes. If it is specified, it must be specified with an explicit _size_. Otherwise, it is implied and the size is read from */prod/sys/fs/pipe-max-size*. The kernel may adjust _size_ as described in *fcntl*(2). To determine the actual buffer sizes set, use the *--verbose* option. If neither *--file* nor *--fd* are specified, *--set* acts on standard output.
 
 The *--set* operation permits an optional _command_ to execute after setting the pipe buffer sizes. This command is executed with the adjusted pipes.
 
@@ -41,7 +41,7 @@ Report the size of pipe buffers to standard output and exit. As a special behavi
 Set the size of the pipe buffers, in bytes. This option may be suffixed by _K_, _M_, _G_, _KiB_, _MiB_, or _GiB_ to indicate multiples of 1024. Fractional values are supported in this case. Additional suffixes are supported but are unlikely to be useful. If this option is not specified, a default value is used, as described above. If this option is specified multiple times, a warning is emitted and only the last-specified _size_ is used. As a special behavior, if neither *--file* nor *--fd* are specified, standard output is adjusted. It is an error to specify this option in combination with *--get*.
 
 *-f*, *--file* _path_::
-Set the buffer size of the FIFO or pipe at _path_, relative to the current working directory. You may specify this option multiple times to affect different files, and you may do so in combination with *--fd*. Generally, this option is used with FIFOs, but it will also operate on anonymous pipes such as those found in */proc/PID/fd*. Changes to the buffer size of FIFOs are not preserved across system restarts.
+Set the buffer size of the FIFO or pipe at _path_, relative to the current working directory. You may specify this option multiple times to affect different files, and you may do so in combination with *--fd*. Generally, this option is used with FIFOs, but it will also operate on anonymous pipes such as those found in */prod/PID/fd*. Changes to the buffer size of FIFOs are not preserved across system restarts.
 
 *-n*, *--fd* _fd_::
 Set the buffer size of the pipe or FIFO passed to *pipesz* as the specified file descriptor number. You may specify this option multiple times to affect different file descriptors, and you may do so in combination with *--file*. Shorthand options are provided for the common cases of fd 0 (stdin), fd 1 (stdout), and fd 2 (stderr). These should suffice in most cases.
@@ -77,12 +77,12 @@ Sets the pipe buffer size of a service FIFO to 1,048,576 bytes. If the buffer si
 *echo* hello | *pipesz* -g::
 Prints the size of pipe used by the shell to pass input to *pipesz*. Since *pipesz* does not read standard input, it may also report 6 unread bytes in the pipe, depending on relative timings.
 
-*find* /proc/_PID_/fd -exec *pipesz* -gqf '{}' ';'::
+*find* /prod/_PID_/fd -exec *pipesz* -gqf '{}' ';'::
 Prints the size and number of unread bytes of all pipes in use by _PID_. If some pipes are routinely full, *pipesz* might be able to mitigate a processing bottleneck.
 
 == NOTES
 
-Linux supports adjusting the size of pipe buffers since kernel 2.6.35. This release also introduced */proc/sys/fs/pipe-max-size*.
+Linux supports adjusting the size of pipe buffers since kernel 2.6.35. This release also introduced */prod/sys/fs/pipe-max-size*.
 
 This program uses *fcntl*(2) *F_GETPIPE_SZ*/*F_SETPIPE_SZ* to get and set pipe buffer sizes.
 

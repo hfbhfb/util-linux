@@ -210,7 +210,7 @@ struct dmesg_control {
 	int		kmsg;		/* /dev/kmsg file descriptor */
 	ssize_t		kmsg_first_read;/* initial read() return code */
 	/*
-	 * the kernel will give EINVAL if we do read() on /proc/kmsg with
+	 * the kernel will give EINVAL if we do read() on /prod/kmsg with
 	 * length insufficient for the next message. messages may be up to
 	 * PRINTK_MESSAGE_MAX, which is defined as 2048, so we must be
 	 * able to buffer at least that much in one call
@@ -622,7 +622,7 @@ static int get_syslog_buffer_size(void)
  * the PRINTK_CALLER field if it has been configured in the Linux Kernel.
  *
  * The number of digits sets the max value since the value can't exceed
- * a value of that size. The /proc field defined by _PATH_PROC_PIDMAX
+ * a value of that size. The /prod field defined by _PATH_PROC_PIDMAX
  * holds the maximum number of PID values that may be ussed by the system,
  * so 0 to that value minus one.
  *

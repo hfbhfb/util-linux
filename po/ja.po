@@ -2056,8 +2056,8 @@ msgid "too many devices"
 msgstr "デバイスが多すぎます"
 
 #: disk-utils/fsck.c:1479
-msgid "Is /proc mounted?"
-msgstr "/proc をマウントしていますか？"
+msgid "Is /prod mounted?"
+msgstr "/prod をマウントしていますか？"
 
 #: disk-utils/fsck.c:1487
 #, c-format
@@ -11019,7 +11019,7 @@ msgid " -l, --list             use list format output\n"
 msgstr " -l, --list             一覧形式で出力します\n"
 
 #: misc-utils/findmnt.c:1443
-msgid " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+msgid " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 msgstr ""
 
 #: misc-utils/findmnt.c:1444
@@ -13030,7 +13030,7 @@ msgid "association between file and process"
 msgstr "子プロセスを作成できません"
 
 #: misc-utils/lsfd.c:153
-msgid "block device driver name resolved by /proc/devices"
+msgid "block device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:156
@@ -13072,7 +13072,7 @@ msgid "bpf program type (raw)"
 msgstr "ファイルシステムの種類"
 
 #: misc-utils/lsfd.c:177
-msgid "character device driver name resolved by /proc/devices"
+msgid "character device driver name resolved by /prod/devices"
 msgstr ""
 
 #: misc-utils/lsfd.c:180
@@ -13176,7 +13176,7 @@ msgid "length of file mapping (in page)"
 msgstr ""
 
 #: misc-utils/lsfd.c:243
-msgid "misc character device name resolved by /proc/misc"
+msgid "misc character device name resolved by /prod/misc"
 msgstr ""
 
 #: misc-utils/lsfd.c:246
@@ -13240,7 +13240,7 @@ msgid "L3 protocol associated with the packet socket"
 msgstr ""
 
 #: misc-utils/lsfd.c:282
-msgid "block device name resolved by /proc/partition"
+msgid "block device name resolved by /prod/partition"
 msgstr ""
 
 #: misc-utils/lsfd.c:285
@@ -13581,7 +13581,7 @@ msgstr "pty ハンドラの割り当てに失敗しました"
 #: misc-utils/lsfd.c:1805 misc-utils/lslocks.c:508
 #, fuzzy
 #| msgid "failed to open: %s"
-msgid "failed to open /proc"
+msgid "failed to open /prod"
 msgstr "開けません： %s"
 
 #: misc-utils/lsfd.c:1857
@@ -14082,7 +14082,7 @@ msgstr ""
 " -m, --no-unmount            マウント済みの場合、アンマウントを行わないようにします\n"
 " -M, --no-partitions-unmount 他のパーティションをアンマウントしないようにします\n"
 " -n, --noop                  実際の取り出しは行わず、見つかったデバイスを表示します\n"
-" -p, --proc                  /etc/mtab ではなく /proc/mounts を使用するようにします\n"
+" -p, --proc                  /etc/mtab ではなく /prod/mounts を使用するようにします\n"
 " -q, --tape                  テープメディアを取り出します\n"
 " -r, --cdrom                 CD-ROM メディアを取り出します\n"
 " -s, --scsi                  SCSI デバイスを取り出します\n"
@@ -16705,7 +16705,7 @@ msgstr ""
 " -m, --no-unmount            マウント済みの場合、アンマウントを行わないようにします\n"
 " -M, --no-partitions-unmount 他のパーティションをアンマウントしないようにします\n"
 " -n, --noop                  実際の取り出しは行わず、見つかったデバイスを表示します\n"
-" -p, --proc                  /etc/mtab ではなく /proc/mounts を使用するようにします\n"
+" -p, --proc                  /etc/mtab ではなく /prod/mounts を使用するようにします\n"
 " -q, --tape                  テープメディアを取り出します\n"
 " -r, --cdrom                 CD-ROM メディアを取り出します\n"
 " -s, --scsi                  SCSI デバイスを取り出します\n"
@@ -17264,7 +17264,7 @@ msgid ""
 " -m, --no-unmount            do not unmount device even if it is mounted\n"
 " -M, --no-partitions-unmount do not unmount another partitions\n"
 " -n, --noop                  don't eject, just show device found\n"
-" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+" -p, --proc                  use /prod/mounts instead of /etc/mtab\n"
 " -q, --tape                  eject tape\n"
 " -r, --cdrom                 eject CD-ROM\n"
 " -s, --scsi                  eject SCSI device\n"
@@ -17283,7 +17283,7 @@ msgstr ""
 " -m, --no-unmount            マウント済みの場合、アンマウントを行わないようにします\n"
 " -M, --no-partitions-unmount 他のパーティションをアンマウントしないようにします\n"
 " -n, --noop                  実際の取り出しは行わず、見つかったデバイスを表示します\n"
-" -p, --proc                  /etc/mtab ではなく /proc/mounts を使用するようにします\n"
+" -p, --proc                  /etc/mtab ではなく /prod/mounts を使用するようにします\n"
 " -q, --tape                  テープメディアを取り出します\n"
 " -r, --cdrom                 CD-ROM メディアを取り出します\n"
 " -s, --scsi                  SCSI デバイスを取り出します\n"
@@ -21597,7 +21597,7 @@ msgstr ""
 #, fuzzy
 #| msgid " --default                         use default terminal settings\n"
 msgid ""
-"     --map-users /proc/<pid>/ns/user\n"
+"     --map-users /prod/<pid>/ns/user\n"
 "                         specify the user namespace for an ID-mapped mount\n"
 msgstr " --default                         端末のデフォルト設定を使用します\n"
 
@@ -23735,10 +23735,10 @@ msgstr ""
 
 #: sys-utils/swapoff.c:160
 msgid ""
-" -a, --all              disable all swaps from /proc/swaps\n"
+" -a, --all              disable all swaps from /prod/swaps\n"
 " -v, --verbose          verbose mode\n"
 msgstr ""
-" -a, --all              /proc/swaps にあるすべてのスワップを無効にします\n"
+" -a, --all              /prod/swaps にあるすべてのスワップを無効にします\n"
 " -v, --verbose          冗長出力を行います\n"
 
 #: sys-utils/swapoff.c:166
@@ -24321,13 +24321,13 @@ msgstr "%s を %s にマウントする処理が失敗しました"
 #: sys-utils/unshare.c:224
 #, fuzzy
 #| msgid "failed to parse offset"
-msgid "failed to open /proc/self/timens_offsets"
+msgid "failed to open /prod/self/timens_offsets"
 msgstr "開始位置の解釈に失敗しました"
 
 #: sys-utils/unshare.c:227
 #, fuzzy
 #| msgid "failed to parse offset"
-msgid "failed to write to /proc/self/timens_offsets"
+msgid "failed to write to /prod/self/timens_offsets"
 msgstr "開始位置の解釈に失敗しました"
 
 #: sys-utils/unshare.c:294
@@ -29670,7 +29670,7 @@ msgstr "端末 `%s' は不明な端末です。 `dumb' として処理します"
 #~ "     --bytes              display swap size in bytes in --show output\n"
 #~ " -v, --verbose            verbose mode\n"
 #~ msgstr ""
-#~ " -a, --all          /proc/swaps にあるすべてのスワップを有効にします\n"
+#~ " -a, --all          /prod/swaps にあるすべてのスワップを有効にします\n"
 #~ " -d, --discard[=<ポリシー>]\n"
 #~ "                    デバイスが対応している場合に\n"
 #~ "                    スワップの破棄を有効化します\n"
@@ -30294,13 +30294,13 @@ msgstr "端末 `%s' は不明な端末です。 `dumb' として処理します"
 #~ msgid ""
 #~ " -i, --invert           invert the sense of matching\n"
 #~ " -l, --list             use list format output\n"
-#~ " -N, --task <tid>       use alternative namespace (/proc/<tid>/mountinfo file)\n"
+#~ " -N, --task <tid>       use alternative namespace (/prod/<tid>/mountinfo file)\n"
 #~ " -n, --noheadings       don't print column headings\n"
 #~ " -u, --notruncate       don't truncate text in columns\n"
 #~ msgstr ""
 #~ " -i, --invert           適合処理の判断を逆にします\n"
 #~ " -l, --list             一覧形式で出力します\n"
-#~ " -N, --task <tid>       代替の名前領域を使用します (/proc/<tid>/mountinfo ファイル)\n"
+#~ " -N, --task <tid>       代替の名前領域を使用します (/prod/<tid>/mountinfo ファイル)\n"
 #~ " -n, --noheadings       列のヘッダを表示しないようにします\n"
 #~ " -u, --notruncate       列方向にテキストを切り詰めないようにします\n"
 
@@ -30381,13 +30381,13 @@ msgstr "端末 `%s' は不明な端末です。 `dumb' として処理します"
 #~ "mount: warning: /etc/mtab is not writable (e.g. read-only filesystem).\n"
 #~ "       It's possible that information reported by mount(8) is not\n"
 #~ "       up to date. For actual information about system mount points\n"
-#~ "       check the /proc/mounts file.\n"
+#~ "       check the /prod/mounts file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
 #~ "mount: 警告: /etc/mtab に書き込むことができません (読み込み専用のファイルシステムです) 。\n"
 #~ "       そのため mount(8) を実行しても、最新の情報を表示できない可能性があります。\n"
-#~ "       最新の情報は /proc/mounts ファイルをご覧ください。\n"
+#~ "       最新の情報は /prod/mounts ファイルをご覧ください。\n"
 #~ "\n"
 
 #~ msgid "mount: improperly quoted option string '%s'"

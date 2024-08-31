@@ -680,7 +680,7 @@ int mnt_fs_get_propagation(struct libmnt_fs *fs, unsigned long *flags)
  * mnt_fs_is_kernel:
  * @fs: filesystem
  *
- * Returns: 1 if the filesystem description is read from kernel e.g. /proc/mounts.
+ * Returns: 1 if the filesystem description is read from kernel e.g. /prod/mounts.
  */
 int mnt_fs_is_kernel(struct libmnt_fs *fs)
 {
@@ -1251,7 +1251,7 @@ int mnt_fs_set_passno(struct libmnt_fs *fs, int passno)
 
 /**
  * mnt_fs_get_root:
- * @fs: /proc/self/mountinfo entry
+ * @fs: /prod/self/mountinfo entry
  *
  * Returns: root of the mount within the filesystem or NULL
  */
@@ -1274,7 +1274,7 @@ int mnt_fs_set_root(struct libmnt_fs *fs, const char *path)
 
 /**
  * mnt_fs_get_swaptype:
- * @fs: /proc/swaps entry
+ * @fs: /prod/swaps entry
  *
  * Returns: swap type or NULL
  */
@@ -1285,7 +1285,7 @@ const char *mnt_fs_get_swaptype(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_size:
- * @fs: /proc/swaps entry
+ * @fs: /prod/swaps entry
  *
  * Returns: size
  */
@@ -1296,7 +1296,7 @@ off_t mnt_fs_get_size(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_usedsize:
- * @fs: /proc/swaps entry
+ * @fs: /prod/swaps entry
  *
  * Returns: used size
  */
@@ -1307,7 +1307,7 @@ off_t mnt_fs_get_usedsize(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_priority:
- * @fs: /proc/swaps entry
+ * @fs: /prod/swaps entry
  *
  * Returns: priority
  */
@@ -1318,7 +1318,7 @@ int mnt_fs_get_priority(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_set_priority:
- * @fs: /proc/swaps entry
+ * @fs: /prod/swaps entry
  * @prio: priority
  *
  * Since: 2.28
@@ -1358,7 +1358,7 @@ int mnt_fs_set_bindsrc(struct libmnt_fs *fs, const char *src)
 
 /**
  * mnt_fs_get_id:
- * @fs: /proc/self/mountinfo entry
+ * @fs: /prod/self/mountinfo entry
  *
  * Returns: mount ID (unique identifier of the mount) or negative number in case of error.
  */
@@ -1369,7 +1369,7 @@ int mnt_fs_get_id(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_parent_id:
- * @fs: /proc/self/mountinfo entry
+ * @fs: /prod/self/mountinfo entry
  *
  * Returns: parent mount ID or negative number in case of error.
  */
@@ -1380,7 +1380,7 @@ int mnt_fs_get_parent_id(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_devno:
- * @fs: /proc/self/mountinfo entry
+ * @fs: /prod/self/mountinfo entry
  *
  * Returns: value of st_dev for files on filesystem or 0 in case of error.
  */
@@ -1391,7 +1391,7 @@ dev_t mnt_fs_get_devno(struct libmnt_fs *fs)
 
 /**
  * mnt_fs_get_tid:
- * @fs: /proc/tid/mountinfo entry
+ * @fs: /prod/tid/mountinfo entry
  *
  * Returns: TID (task ID) for filesystems read from the mountinfo file
  */
@@ -1508,7 +1508,7 @@ int mnt_fs_append_comment(struct libmnt_fs *fs, const char *comm)
  *	2) realpath(@target) with @fs->target
  *
  *	3) realpath(@target) with realpath(@fs->target) if @fs is not from
- *	   /proc/self/mountinfo.
+ *	   /prod/self/mountinfo.
  *
  *	   However, if mnt_cache_set_targets(cache, mtab) was called, and the
  *	   path @target or @fs->target is found in the @mtab, the canonicalization is

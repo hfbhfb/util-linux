@@ -309,7 +309,7 @@ irqtop:
    - cleanup sort stuff  [Karel Zak]
    - cleanup struct irq_stat use  [Karel Zak]
    - display number of new interupts in-between updates  [Sami Kerola]
-   - do not use fixed size /proc/interrupts line buffer  [Sami Kerola]
+   - do not use fixed size /prod/interrupts line buffer  [Sami Kerola]
    - don't print header for --once  [Karel Zak]
    - fix all warnings  [zhenwei pi]
    - fix open file descriptor leak  [Sami Kerola]

@@ -95,7 +95,7 @@ kill --verbose --timeout 1000 TERM --timeout 1000 KILL \
         --signal QUIT 12345
 ....
 *-d*, *--show-process-state* _pid_::
-Decode signal related fields in /proc/_pid_/status.
+Decode signal related fields in /prod/_pid_/status.
 +
 ....
 $ kill -d $$

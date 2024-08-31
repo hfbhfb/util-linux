@@ -776,7 +776,7 @@ static void init_nsfs_file_content(struct file *file)
 	if (!file->name)
 		return;
 
-	xasprintf(&proc_fname, "/proc/%d/fd/%d",
+	xasprintf(&proc_fname, "/prod/%d/fd/%d",
 		  file->proc->pid, file->association);
 	ns_fd = open(proc_fname, O_RDONLY);
 	free(proc_fname);

@@ -1,6 +1,6 @@
 MAJMIN  TARGET                           TYPE             SOURCE                FS-OPTS
 0:17    /sys                             sysfs            sysfs                 rw
-0:4     /proc                            proc             proc                  rw
+0:4     /prod                            proc             proc                  rw
 0:6     /dev                             devtmpfs         devtmpfs              rw,size=8175740k,nr_inodes=204
                                                                                 3935,mode=755
 0:18    /sys/kernel/security             securityfs       securityfs            rw
@@ -25,14 +25,14 @@ MAJMIN  TARGET                           TYPE             SOURCE                
 0:35    /sys/fs/cgroup/freezer           cgroup           cgroup                rw,freezer
 0:36    /sys/kernel/config               configfs         configfs              rw
 8:4     /                                ext4             /dev/sda4             rw,data=ordered
-0:37    /proc/sys/fs/binfmt_misc         autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minp
+0:37    /prod/sys/fs/binfmt_misc         autofs           systemd-1             rw,fd=37,pgrp=1,timeout=0,minp
                                                                                 roto=5,maxproto=5,direct,pipe_
                                                                                 ino=12781
 0:7     /sys/kernel/debug                debugfs          debugfs               rw
 0:38    /dev/hugepages                   hugetlbfs        hugetlbfs             rw
 0:16    /dev/mqueue                      mqueue           mqueue                rw
-0:39    /proc/sys/fs/binfmt_misc         binfmt_misc      binfmt_misc           rw
-0:40    /proc/fs/nfsd                    nfsd             nfsd                  rw
+0:39    /prod/sys/fs/binfmt_misc         binfmt_misc      binfmt_misc           rw
+0:40    /prod/fs/nfsd                    nfsd             nfsd                  rw
 0:41    /tmp                             tmpfs            tmpfs                 rw
 8:3     /home                            ext4             /dev/sda3             rw,data=ordered
 8:2     /boot                            ext4             /dev/sda2             rw,data=ordered

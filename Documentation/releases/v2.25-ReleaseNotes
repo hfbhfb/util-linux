@@ -1148,7 +1148,7 @@ tests:
    - cal  take account week numbers when determing month length  [Sami Kerola]
    - cal(1) is year is limited to signed 32 bit value  [Sami Kerola]
    - call ts_init_env as early as possible  [Ruediger Meier]
-   - check /proc availability, and go-around if it is incomplete  [Sami Kerola]
+   - check /prod availability, and go-around if it is incomplete  [Sami Kerola]
    - check commands needed for running a test exist  [Sami Kerola]
    - check for mkfs.ext{2,3,4}  [Ruediger Meier]
    - check kill all user processes  [Sami Kerola]

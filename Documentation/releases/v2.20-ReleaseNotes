@@ -27,7 +27,7 @@ findmnt(8), partx(8), lsblk(8)
 
 findmnt(8):
   - supports new command line options "--poll" and "--timeout" to monitor
-    /proc/self/mountinfo changes
+    /prod/self/mountinfo changes
 
 ionice(1):
   - supports human-readable scheduling class names, for example:
@@ -703,7 +703,7 @@ lscpu:
    - add support for books  [Heiko Carstens]
    - cleanup usage()  [Karel Zak]
    - detect VMware hypervisor  [Stephen Hemminger]
-   - detect sun4{u,v} in /proc/cpuinfo for sparc64  [Karel Zak]
+   - detect sun4{u,v} in /prod/cpuinfo for sparc64  [Karel Zak]
    - extend --parse functionality  [Karel Zak]
    - fix bogomips detection for s390  [Heiko Carstens]
    - fix compiler warnings [-Wsign-compare]  [Karel Zak]

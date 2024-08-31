@@ -390,7 +390,7 @@ static int exec_helper(struct libmnt_context *cxt)
 	DBG(CXT, ul_debugobj(cxt, "mount: executing helper %s", cxt->helper));
 
 	if (ns_tgt->fd != -1
-	    && asprintf(&namespace, "/proc/%i/fd/%i",
+	    && asprintf(&namespace, "/prod/%i/fd/%i",
 			getpid(), ns_tgt->fd) == -1) {
 		return -ENOMEM;
 	}
@@ -658,7 +658,7 @@ static int do_mount_by_pattern(struct libmnt_context *cxt, const char *pattern)
 	DBG(CXT, ul_debugobj(cxt, "trying to mount by FS pattern '%s'", pattern));
 
 	/*
-	 * Apply pattern to /etc/filesystems and /proc/filesystems
+	 * Apply pattern to /etc/filesystems and /prod/filesystems
 	 */
 	ns_old = mnt_context_switch_origin_ns(cxt);
 	if (!ns_old)

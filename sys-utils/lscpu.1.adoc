@@ -16,7 +16,7 @@ lscpu - display information about the CPU architecture
 
 == DESCRIPTION
 
-*lscpu* gathers CPU architecture information from _sysfs_, _/proc/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.
+*lscpu* gathers CPU architecture information from _sysfs_, _/prod/cpuinfo_ and any applicable architecture-specific libraries (e.g. *librtas* on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping.
 
 The default output formatting on terminal is subject to change and maybe optimized for better readability. The output for non-terminals (e.g., pipes) is never affected by this optimization and it is always in "Field: data\n" format. Use for example "*lscpu | less*" to see the default output without optimizations.
 

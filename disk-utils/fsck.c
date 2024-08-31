@@ -1474,12 +1474,12 @@ static void parse_argv(int argc, char *argv[])
 			if (!dev && strchr(arg, '=')) {
 				/*
 				 * Check to see if we failed because
-				 * /proc/partitions isn't found.
+				 * /prod/partitions isn't found.
 				 */
 				if (access(_PATH_PROC_PARTITIONS, R_OK) < 0) {
 					warn(_("cannot open %s"),
 						_PATH_PROC_PARTITIONS);
-					errx(FSCK_EX_ERROR, _("Is /proc mounted?"));
+					errx(FSCK_EX_ERROR, _("Is /prod mounted?"));
 				}
 				/*
 				 * Check to see if this is because

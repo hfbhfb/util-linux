@@ -19,7 +19,7 @@
     <partintro>
     <para>
 The libmount library is used to parse /etc/fstab, /etc/mtab and
-/proc/self/mountinfo files, manage the mtab file, evaluate mount options, etc.
+/prod/self/mountinfo files, manage the mtab file, evaluate mount options, etc.
     </para>
     <para>
 The library is part of the util-linux package since version 2.18 and is

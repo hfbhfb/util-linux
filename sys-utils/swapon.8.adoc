@@ -24,7 +24,7 @@ The device or file used is given by the _specialfile_ parameter. It may be of th
 
 Calls to *swapon* normally occur in the system boot scripts making all swap devices available, so that the paging and swapping activity is interleaved across several devices and files.
 
-*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/proc/swaps_ or _/etc/fstab_).
+*swapoff* disables swapping on the specified devices and files. When the *-a* flag is given, swapping is disabled on all known swap devices and files (as found in _/prod/swaps_ or _/etc/fstab_).
 
 == OPTIONS
 
@@ -53,7 +53,7 @@ Silently skip devices that do not exist. The _/etc/fstab_ mount option *nofail* 
 Reinitialize (exec mkswap) the swap space if its page size does not match that of the current running kernel. *mkswap*(8) initializes the whole device and does not check for bad blocks.
 
 *-L* _label_::
-Use the partition that has the specified _label_. (For this, access to _/proc/partitions_ is needed.)
+Use the partition that has the specified _label_. (For this, access to _/prod/partitions_ is needed.)
 
 *-o*, *--options* _opts_::
 Specify swap options by an __fstab__-compatible comma-separated string. For example:
@@ -66,7 +66,7 @@ The _opts_ string is evaluated last and overrides all other command line options
 Specify the priority of the swap device. _priority_ is a value between 0 and 32767. Higher numbers indicate higher priority. See *swapon*(2) for a full description of swap priorities. Add **pri=**__value__ to the option field of _/etc/fstab_ for use with *swapon -a*. When no priority is defined, Linux kernel defaults to negative numbers.
 
 *-s*, *--summary*::
-Display swap usage summary by device. Equivalent to *cat /proc/swaps*. This output format is DEPRECATED in favour of *--show* that provides better control on output data.
+Display swap usage summary by device. Equivalent to *cat /prod/swaps*. This output format is DEPRECATED in favour of *--show* that provides better control on output data.
 
 *--show*[**=**__column__...]::
 Display a definable table of swap areas. See the *--help* output for a list of available columns.

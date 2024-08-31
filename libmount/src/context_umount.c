@@ -63,7 +63,7 @@ static int __mountinfo_find_umount_fs(struct libmnt_context *cxt,
 
 	/*
 	 * The mount table may be huge, and on systems with utab we have to
-	 * merge userspace mount options into /proc/self/mountinfo. This all is
+	 * merge userspace mount options into /prod/self/mountinfo. This all is
 	 * expensive. The tab filter can be used to filter out entries, then a mount
 	 * table and utab are very tiny files.
 	 *
@@ -201,7 +201,7 @@ int mnt_context_find_umount_fs(struct libmnt_context *cxt,
 /* Check if there is something important in the utab file. The parsed utab is
  * stored in context->utab and deallocated by mnt_free_context().
  *
- * This function exists to avoid (if possible) /proc/self/mountinfo usage, so
+ * This function exists to avoid (if possible) /prod/self/mountinfo usage, so
  * don't use things like mnt_resolve_target(), mnt_context_get_mountinfo() etc here.
  * See lookup_umount_fs() for more details.
  */
@@ -352,7 +352,7 @@ static int lookup_umount_fs_by_mountinfo(struct libmnt_context *cxt, const char 
  * applies the result to cxt->fs. This function is a umount replacement for
  * mnt_context_apply_fstab(). Use mnt_context_tab_applied() to check the result.
  *
- * The goal is to minimize situations when we need to parse /proc/self/mountinfo.
+ * The goal is to minimize situations when we need to parse /prod/self/mountinfo.
  */
 static int lookup_umount_fs(struct libmnt_context *cxt)
 {
@@ -688,7 +688,7 @@ static int exec_helper(struct libmnt_context *cxt)
 	}
 
 	if (ns_tgt->fd != -1
-	    && asprintf(&namespace, "/proc/%i/fd/%i",
+	    && asprintf(&namespace, "/prod/%i/fd/%i",
 			getpid(), ns_tgt->fd) == -1) {
 		return -ENOMEM;
 	}

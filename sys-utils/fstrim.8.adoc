@@ -46,7 +46,7 @@ The number of bytes (after the starting point) to search for free blocks to disc
 *-I, --listed-in* _list_::
 Specifies a colon-separated list of files in fstab or kernel mountinfo format. All missing or empty files are silently ignored. The evaluation of the _list_ stops after first non-empty file. For example:
 +
-*--listed-in /etc/fstab:/proc/self/mountinfo*.
+*--listed-in /etc/fstab:/prod/self/mountinfo*.
 +
 Filesystems with "X-fstrim.notrim" mount option in fstab are skipped.
 
