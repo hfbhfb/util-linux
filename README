@@ -1,4 +1,8 @@
 
+# build 编译镜像
+make
+make push #推送镜像
+
 				  util-linux
 
 		util-linux is a random collection of Linux utilities
