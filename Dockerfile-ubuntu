@@ -1,4 +1,4 @@
-FROM docker.io/library/ubuntu:noble-20240801 as builder
+FROM docker.io/library/ubuntu:noble-20240801
 # ENV DEBIAN_FRONTEND=noninteractive # 环境变量
 # ENV LANG=C.UTF-8  # 环境变量
 # RUN sed -i 's@http://archive.ubuntu.com/ubuntu/@http://mirrors.aliyun.com/ubuntu/@g' /etc/apt/sources.list # 更换源
@@ -22,6 +22,3 @@ RUN bash ./configure --disable-dependency-tracking
 RUN make
 # RUN bash make
 
-
-FROM docker.io/library/ubuntu:noble-20240801 
-COPY --from=builder /util-linux/nsenter /usr/bin/nsenter-prod
