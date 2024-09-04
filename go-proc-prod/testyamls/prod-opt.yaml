@@ -1,0 +1,54 @@
+
+# 定义testapp2的Deployment
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: prod-opt1
+  name: prod-opt1
+spec:
+  serviceName: "prod-opt1"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-opt1
+  template:
+    metadata:
+      labels:
+        app: prod-opt1
+    spec:
+      containers:
+      - name: container0
+        image: swr.cn-north-4.myhuaweicloud.com/hfbbg4/proxy-prod:v0.1  
+        command: ["/bin/bash","-c"," export targetip=10.0.230.176; export whichnsenter=nsenter-prod; export targetcommand='tcpdump -nnSX ;date;sleep 2;date;sleep 2;ip a;' ; proxy-prod -t 25328524 ;while true; do  date; sleep 13; done"]
+        resources:
+          requests:
+            memory: 10Mi
+            cpu: 12m
+          limits:
+            memory: 200Mi
+            cpu: 100m
+        volumeMounts:
+        - mountPath: /prod
+          name: prochost
+          readOnly: true
+        - mountPath: /var/run
+          name: varrunhost
+          readOnly: true
+        securityContext:
+          runAsUser: 0    #设置以ROOT用户运行容器
+          privileged: true   #拥有特权
+      volumes:
+      - hostPath:
+          path: /proc
+          type: DirectoryOrCreate
+        name: prochost
+      - hostPath:
+          path: /var/run
+          type: DirectoryOrCreate
+        name: varrunhost
+      hostNetwork: true
+      terminationGracePeriodSeconds: 5 # 优雅退出时间,默认为30秒
+
+
+

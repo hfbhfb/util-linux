@@ -3,6 +3,11 @@
 make
 make push #推送镜像
 
+# go-proc-prod
+cd go-proc-prod
+make
+
+
 				  util-linux
 
 		util-linux is a random collection of Linux utilities

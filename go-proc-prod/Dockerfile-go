@@ -1,0 +1,26 @@
+
+FROM golang:1.22  as builder-go
+ENV GOPROXY="https://goproxy.cn,direct"
+ENV CGO_ENABLED=0
+ENV GO111MODULE=on
+LABEL stage=mybin
+WORKDIR /mytools1
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+COPY . .
+RUN go build -o proxy-prod
+
+FROM swr.cn-north-4.myhuaweicloud.com/hfbbg4/util-linux:util-linux  as builder-nsenter
+
+# ssh dd
+# docker run -it docker.io/library/ubuntu:noble-20240801 bash
+# dive swr.cn-north-4.myhuaweicloud.com/hfbbg4/proxy-prod:v0.1
+FROM docker.io/library/ubuntu:noble-20240801 
+RUN sed -i 's@http://archive.ubuntu.com/ubuntu/@http://mirrors.aliyun.com/ubuntu/@g' /etc/apt/sources.list.d/ubuntu.sources # 更换源
+RUN apt-get update
+RUN apt-get install -y iproute2
+RUN apt-get install -y net-tools
+RUN apt-get install -y tcpdump
+COPY --from=builder-nsenter /usr/bin/nsenter-prod /usr/bin/nsenter-prod
+COPY --from=builder-go /mytools1/proxy-prod /usr/bin/proxy-prod
